@@ -4,7 +4,7 @@
 // Escapes: 71 70 7= 7! 7< 7> 7G 7g 7gG 7GG 7gg 7c 7C
 // Escapes: D= = DR D+ = DF D- = DC Du* = DM D* = DnF Du<< = DnC D<< = DO D& D| Du/ D/ Du% D%
 // Format: spritenum imagefile depth xpos ypos xsize ysize xrel yrel zoom flags
-    0 * 4	 FD 03 00 00
+    0 * 4	 75 06 00 00
     1 * 205	 14 "C" 
 		"INFO"
 			"T" "NAME" 00 "JP+ Bridges 0.5" 00
@@ -278,8 +278,7 @@
 //    Stone Bridge 01
 //================
                          //this number increases by 3 with each bridge
-   77 * 73	 04 06 FF 03 12 DC "Stone Arch Viaduct" 00 "Stone Arch Rail Viaduct" 00 "Stone Arch Road Viaduct" 00 //define texts first so we can reference them in properties below
-
+   77 * 73	 04 06 FF 03 03 DC "Stone Arch Viaduct" 00 "Stone Arch Rail Viaduct" 00 "Stone Arch Road Viaduct" 00 //define texts first so we can reference them in properties below
 
    78 * 32	 00 06 0A 01 01 //adjust properties of (id 01)
 			 08 00 //intro date
@@ -289,9 +288,9 @@
 			 0C FA 00 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
 			 0F 00 00 00 00 //long format intro date
-			 10 12 DC //purchase text. these texts #s increase in line with above
-			 11 13 DC //rail bridge info window
-			 12 14 DC //road bridge info window
+			 10 03 DC //purchase text. these texts #s increase in line with above
+			 11 04 DC //rail bridge info window
+			 12 05 DC //road bridge info window
 
 //this reserves some sprites into temp. params
    79 * 9	 0D 00 \D= \DR FE FF 08 1C 00 //this "main" param is used to allocate all of the graphics via the following action 6
@@ -523,7 +522,8 @@ EB 90 1E 03  ED 90 1E 03  EA 90 1E 03  EC 90 1E 03 //mono ramp: northern end X, 
 //   BRICK Bridge 02
 //================
                          //this number increases by 3 with each bridge
-  151 * 58	 04 06 FF 03 03 DC "Brick Viaduct" 00 "Brick Rail Viaduct" 00 "Brick Road Viaduct" 00 //define texts first so we can reference them in properties below
+  151 * 58	 04 06 FF 03 06 DC "Brick Viaduct" 00 "Brick Rail Viaduct" 00 "Brick Road Viaduct" 00 //define texts first so we can reference them in properties below
+
 
   152 * 32	 00 06 0A 01 02 //adjust properties of fourth bridge (id 03)
 			 08 00 //intro date
@@ -533,9 +533,9 @@ EB 90 1E 03  ED 90 1E 03  EA 90 1E 03  EC 90 1E 03 //mono ramp: northern end X, 
 			 0C A0 00 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
 			 0F 00 00 00 00 //long format intro date
-			 10 03 DC //purchase text. these texts #s increase in line with above
-			 11 04 DC //rail bridge info window
-			 12 05 DC //road bridge info window
+			 10 06 DC //purchase text. these texts #s increase in line with above
+			 11 07 DC //rail bridge info window
+			 12 08 DC //road bridge info window
 
 	//this reserves some sprites into temp. params
   153 * 9	 0D 00 \D= \DR FE FF 08 34 00 //this "main" param is used to allocate all of the graphics via the following action 6
@@ -815,7 +815,7 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 
 
 //================
-//    Bridge 03 Modern Cable Suspension Bridge
+//    Bridge 03 CABLE STAYED Bridge
 //================
                          //this number increases by 3 with each bridge
   273 * 76	 04 06 FF 03 09 DC "Cable-Stayed Bridge" 00 "Cable-Stayed Rail Bridge" 00 "Cable-Stayed Road Bridge" 00 //define texts first so we can reference them in properties below
@@ -1107,15 +1107,136 @@ EB 90 20 03  ED 90 20 03  EA 90 20 03  EC 90 20 03 //mono ramp: northern end X, 
 
 
 
+//================
+//   Dummy sprites to act as buffer
+//================
+
+
+	//this reserves some sprites into temp. params
+  395 * 9	 0D 00 \D= \DR FE FF 08 34 00 //this "main" param is used to allocate all of the graphics via the following action 6
+  396 * 9	 0D 01 \D+ 00 FF 01 00 00 00 //each sprite then gets its own param # to use in the final action 6's which determine placement
+  397 * 9	 0D 02 \D+ 00 FF 02 00 00 00
+  398 * 9	 0D 03 \D+ 00 FF 03 00 00 00
+  399 * 9	 0D 04 \D+ 00 FF 04 00 00 00
+  400 * 9	 0D 05 \D+ 00 FF 05 00 00 00
+  401 * 9	 0D 06 \D+ 00 FF 06 00 00 00
+  402 * 9	 0D 07 \D+ 00 FF 07 00 00 00
+  403 * 9	 0D 08 \D+ 00 FF 08 00 00 00
+  404 * 9	 0D 09 \D+ 00 FF 09 00 00 00
+  405 * 9	 0D 0A \D+ 00 FF 0A 00 00 00
+  406 * 9	 0D 0B \D+ 00 FF 0B 00 00 00
+  407 * 9	 0D 0C \D+ 00 FF 0C 00 00 00
+  408 * 9	 0D 0D \D+ 00 FF 0D 00 00 00
+  409 * 9	 0D 0E \D+ 00 FF 0E 00 00 00
+  410 * 9	 0D 0F \D+ 00 FF 0F 00 00 00
+  411 * 9	 0D 10 \D+ 00 FF 10 00 00 00
+  412 * 9	 0D 11 \D+ 00 FF 11 00 00 00
+  413 * 9	 0D 12 \D+ 00 FF 12 00 00 00
+  414 * 9	 0D 13 \D+ 00 FF 13 00 00 00
+  415 * 9	 0D 14 \D+ 00 FF 14 00 00 00
+  416 * 9	 0D 15 \D+ 00 FF 15 00 00 00
+  417 * 9	 0D 16 \D+ 00 FF 16 00 00 00
+  418 * 9	 0D 17 \D+ 00 FF 17 00 00 00
+  419 * 9	 0D 18 \D+ 00 FF 18 00 00 00
+  420 * 9	 0D 19 \D+ 00 FF 19 00 00 00
+  421 * 9	 0D 1A \D+ 00 FF 1A 00 00 00
+  422 * 9	 0D 1B \D+ 00 FF 1B 00 00 00
+  423 * 9	 0D 1C \D+ 00 FF 1C 00 00 00
+  424 * 9	 0D 1D \D+ 00 FF 1D 00 00 00
+  425 * 9	 0D 1E \D+ 00 FF 1E 00 00 00
+  426 * 9	 0D 1F \D+ 00 FF 1F 00 00 00
+  427 * 9	 0D 20 \D+ 00 FF 20 00 00 00
+  428 * 9	 0D 21 \D+ 00 FF 21 00 00 00
+  429 * 9	 0D 22 \D+ 00 FF 22 00 00 00
+  430 * 9	 0D 23 \D+ 00 FF 23 00 00 00
+  431 * 9	 0D 24 \D+ 00 FF 24 00 00 00
+  432 * 9	 0D 25 \D+ 00 FF 25 00 00 00
+  433 * 9	 0D 26 \D+ 00 FF 26 00 00 00
+  434 * 9	 0D 27 \D+ 00 FF 27 00 00 00
+  435 * 9	 0D 28 \D+ 00 FF 28 00 00 00
+  436 * 9	 0D 29 \D+ 00 FF 29 00 00 00
+  437 * 9	 0D 2A \D+ 00 FF 2A 00 00 00
+  438 * 9	 0D 2B \D+ 00 FF 2B 00 00 00
+  439 * 9	 0D 2C \D+ 00 FF 2C 00 00 00
+  440 * 9	 0D 2D \D+ 00 FF 2D 00 00 00
+  441 * 9	 0D 2E \D+ 00 FF 2E 00 00 00
+  442 * 9	 0D 2F \D+ 00 FF 2F 00 00 00
+  443 * 9	 0D 30 \D+ 00 FF 30 00 00 00
+  444 * 9	 0D 31 \D+ 00 FF 31 00 00 00
+  445 * 9	 0D 32 \D+ 00 FF 32 00 00 00
+  446 * 9	 0D 33 \D+ 00 FF 33 00 00 00
+
+   //this allocates the following graphics (realsprites) into the sprites which were reserved earlier (in the order they are defined below)
+  447 * 5	 06 00 02 03 FF 
+	//sprite number 00 00 (the first sprite below) now gets changed to whatever number the grm picked for the first of the reserved sprites, then each subsequent sprite
+	//is allocated that number + 1 (which corresponds to the number of the param above)
+  448 * 5	 0A 01 34 00 00
+
+//rail
+  449 sprites/gfx/flyingjunction_rails.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 00
+  450 sprites/gfx/flyingjunction_rails.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 01
+  451 sprites/gfx/flyingjunction_rails.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 02
+  452 sprites/gfx/flyingjunction_rails.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 03
+  453 sprites/gfx/flyingjunction_rails.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 04
+  454 sprites/gfx/flyingjunction_rails.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 05
+  455 sprites/gfx/flyingjunction_rails.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 06
+  456 sprites/gfx/flyingjunction_rails.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 07
+  457 sprites/gfx/flyingjunction_rails.png  8bpp  545     1    36   24  -25   -14 normal //pillar x 08
+  458 sprites/gfx/flyingjunction_rails.png  8bpp  585     1    36   24   -9   -14 normal //pillar y 09
+  459 sprites/gfx/flyingjunction_rails.png  8bpp  1      57    64   78  -31  -42 normal //0-3 back x 0A
+  460 sprites/gfx/flyingjunction_rails.png  8bpp  69     57    64   78  -55  -54 normal //0-3 front x 0B
+  461 sprites/gfx/flyingjunction_rails.png  8bpp  137    57    64   78  -31  -42 normal //0-3 back y 0C
+  462 sprites/gfx/flyingjunction_rails.png  8bpp  205    57    64   78  -7  -54 normal //0-3 front y 0D
+  463 sprites/gfx/flyingjunction_rails.png  8bpp  273    57    64   78  -31  -42 normal //1-2 back x 0E
+  464 sprites/gfx/flyingjunction_rails.png  8bpp  341    57    64   78  -55  -54 normal //1-2 front x 0F
+  465 sprites/gfx/flyingjunction_rails.png  8bpp  409    57    64   78  -31  -42 normal //1-2 back y 10
+  466 sprites/gfx/flyingjunction_rails.png  8bpp  477    57    64   78  -7  -54 normal //1-2 front y 11
+  467 sprites/gfx/flyingjunction_rails.png  8bpp  545    57    64   78  -31  -42 normal //4 back x 12
+  468 sprites/gfx/flyingjunction_rails.png  8bpp  613    57    64   78  -55  -54 normal //4 front x 13
+  469 sprites/gfx/flyingjunction_rails.png  8bpp  681    57    64   78  -31  -42 normal //4 back y 14
+  470 sprites/gfx/flyingjunction_rails.png  8bpp  749    57    64   78  -7  -54 normal //4 front y 15
+  471 sprites/gfx/flyingjunction_rails.png  8bpp  817    57    64   78  -31  -42 normal //5 back x 16
+  472 sprites/gfx/flyingjunction_rails.png  8bpp  885    57    64   78  -55  -54 normal //5 front x 17
+  473 sprites/gfx/flyingjunction_rails.png  8bpp  953    57    64   78  -31  -42 normal //5 back y 18
+  474 sprites/gfx/flyingjunction_rails.png  8bpp  1021    57    64   78  -7  -54 normal //5 front y 19
+//road
+  475 sprites/gfx/brick_road.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 1A
+  476 sprites/gfx/brick_road.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 1B
+  477 sprites/gfx/brick_road.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 1C
+  478 sprites/gfx/brick_road.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 1D
+  479 sprites/gfx/brick_road.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 1E
+  480 sprites/gfx/brick_road.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 1F
+  481 sprites/gfx/brick_road.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 20
+  482 sprites/gfx/brick_road.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 21
+  483 sprites/gfx/brick_road.png  8bpp  545     1    38   24  -26   -14 normal //pillar x 22
+  484 sprites/gfx/brick_road.png  8bpp  585     1    38   24   -10   -14 normal //pillar y 23
+  485 sprites/gfx/brick_road.png  8bpp  1      57    64   78  -31  -42 normal //0-3 back x 24
+  486 sprites/gfx/brick_road.png  8bpp  69     57    64   78  -55  -54 normal //0-3 front x 25
+  487 sprites/gfx/brick_road.png  8bpp  137    57    64   78  -31  -42 normal //0-3 back y 26
+  488 sprites/gfx/brick_road.png  8bpp  205    57    64   78  -7  -54 normal //0-3 front y 27
+  489 sprites/gfx/brick_road.png  8bpp  273    57    64   78  -31  -42 normal //1-2 back x 28
+  490 sprites/gfx/brick_road.png  8bpp  341    57    64   78  -55  -54 normal //1-2 front x 29
+  491 sprites/gfx/brick_road.png  8bpp  409    57    64   78  -31  -42 normal //1-2 back y 2A
+  492 sprites/gfx/brick_road.png  8bpp  477    57    64   78  -7  -54 normal //1-2 front y 2B
+  493 sprites/gfx/brick_road.png  8bpp  545    57    64   100  -31  -64 normal //4 back x 2C
+  494 sprites/gfx/brick_road.png  8bpp  613    57    64   100  -55  -76 normal //4 front x 2D
+  495 sprites/gfx/brick_road.png  8bpp  681    57    64   100  -31  -64 normal //4 back y 2E
+  496 sprites/gfx/brick_road.png  8bpp  749    57    64   100  -7  -76 normal //4 front y 2F
+  497 sprites/gfx/brick_road.png  8bpp  817    57    64   100  -31  -64 normal //5 back x 30
+  498 sprites/gfx/brick_road.png  8bpp  885    57    64   100  -55  -76 normal //5 front x 31
+  499 sprites/gfx/brick_road.png  8bpp  953    57    64   100  -31  -64 normal //5 back y 32
+  500 sprites/gfx/brick_road.png  8bpp  1021    57    64   100  -7  -76 normal //5 front y 33
+
+
 
 
 //================
-//   SUSPENSION TEST Bridge 04
+//   SUSPENSION  Bridge 04
 //================
                          //this number increases by 3 with each bridge
-  395 * 58	 04 06 FF 03 0C DC "Brick Viaduct" 00 "Brick Rail Viaduct" 00 "Brick Road Viaduct" 00 //define texts first so we can reference them in properties below
+  501 * 46	 04 06 FF 03 0C DC "Tied Arch" 00 "Tied Arch Rail" 00 "Tied Arch Road" 00 //define texts first so we can reference them in properties below
 
-  396 * 32	 00 06 0A 01 04 //adjust properties of fourth bridge (id 03)
+  502 * 32	 00 06 0A 01 04 //adjust properties of (id 04)
 			 08 00 //intro date
 			 09 00 //min length
 			 0A FF //max length
@@ -1128,128 +1249,160 @@ EB 90 20 03  ED 90 20 03  EA 90 20 03  EC 90 20 03 //mono ramp: northern end X, 
 			 12 0E DC //road bridge info window
 
 	//this reserves some sprites into temp. params
-  397 * 9	 0D 00 \D= \DR FE FF 08 34 00 //this "main" param is used to allocate all of the graphics via the following action 6
-  398 * 9	 0D 01 \D+ 00 FF 01 00 00 00 //each sprite then gets its own param # to use in the final action 6's which determine placement
-  399 * 9	 0D 02 \D+ 00 FF 02 00 00 00
-  400 * 9	 0D 03 \D+ 00 FF 03 00 00 00
-  401 * 9	 0D 04 \D+ 00 FF 04 00 00 00
-  402 * 9	 0D 05 \D+ 00 FF 05 00 00 00
-  403 * 9	 0D 06 \D+ 00 FF 06 00 00 00
-  404 * 9	 0D 07 \D+ 00 FF 07 00 00 00
-  405 * 9	 0D 08 \D+ 00 FF 08 00 00 00
-  406 * 9	 0D 09 \D+ 00 FF 09 00 00 00
-  407 * 9	 0D 0A \D+ 00 FF 0A 00 00 00
-  408 * 9	 0D 0B \D+ 00 FF 0B 00 00 00
-  409 * 9	 0D 0C \D+ 00 FF 0C 00 00 00
-  410 * 9	 0D 0D \D+ 00 FF 0D 00 00 00
-  411 * 9	 0D 0E \D+ 00 FF 0E 00 00 00
-  412 * 9	 0D 0F \D+ 00 FF 0F 00 00 00
-  413 * 9	 0D 10 \D+ 00 FF 10 00 00 00
-  414 * 9	 0D 11 \D+ 00 FF 11 00 00 00
-  415 * 9	 0D 12 \D+ 00 FF 12 00 00 00
-  416 * 9	 0D 13 \D+ 00 FF 13 00 00 00
-  417 * 9	 0D 14 \D+ 00 FF 14 00 00 00
-  418 * 9	 0D 15 \D+ 00 FF 15 00 00 00
-  419 * 9	 0D 16 \D+ 00 FF 16 00 00 00
-  420 * 9	 0D 17 \D+ 00 FF 17 00 00 00
-  421 * 9	 0D 18 \D+ 00 FF 18 00 00 00
-  422 * 9	 0D 19 \D+ 00 FF 19 00 00 00
-  423 * 9	 0D 1A \D+ 00 FF 1A 00 00 00
-  424 * 9	 0D 1B \D+ 00 FF 1B 00 00 00
-  425 * 9	 0D 1C \D+ 00 FF 1C 00 00 00
-  426 * 9	 0D 1D \D+ 00 FF 1D 00 00 00
-  427 * 9	 0D 1E \D+ 00 FF 1E 00 00 00
-  428 * 9	 0D 1F \D+ 00 FF 1F 00 00 00
-  429 * 9	 0D 20 \D+ 00 FF 20 00 00 00
-  430 * 9	 0D 21 \D+ 00 FF 21 00 00 00
-  431 * 9	 0D 22 \D+ 00 FF 22 00 00 00
-  432 * 9	 0D 23 \D+ 00 FF 23 00 00 00
-  433 * 9	 0D 24 \D+ 00 FF 24 00 00 00
-  434 * 9	 0D 25 \D+ 00 FF 25 00 00 00
-  435 * 9	 0D 26 \D+ 00 FF 26 00 00 00
-  436 * 9	 0D 27 \D+ 00 FF 27 00 00 00
-  437 * 9	 0D 28 \D+ 00 FF 28 00 00 00
-  438 * 9	 0D 29 \D+ 00 FF 29 00 00 00
-  439 * 9	 0D 2A \D+ 00 FF 2A 00 00 00
-  440 * 9	 0D 2B \D+ 00 FF 2B 00 00 00
-  441 * 9	 0D 2C \D+ 00 FF 2C 00 00 00
-  442 * 9	 0D 2D \D+ 00 FF 2D 00 00 00
-  443 * 9	 0D 2E \D+ 00 FF 2E 00 00 00
-  444 * 9	 0D 2F \D+ 00 FF 2F 00 00 00
-  445 * 9	 0D 30 \D+ 00 FF 30 00 00 00
-  446 * 9	 0D 31 \D+ 00 FF 31 00 00 00
-  447 * 9	 0D 32 \D+ 00 FF 32 00 00 00
-  448 * 9	 0D 33 \D+ 00 FF 33 00 00 00
+  503 * 9	 0D 20 \D= \DR FE FF 08 3C 00 //this "main" param is used to allocate all of the graphics via the following action 6
+  504 * 9	 0D 21 \D+ 10 FF 01 00 00 00 //each sprite then gets its own param # to use in the final action 6's which determine placement
+  505 * 9	 0D 22 \D+ 10 FF 02 00 00 00
+  506 * 9	 0D 23 \D+ 10 FF 03 00 00 00
+  507 * 9	 0D 24 \D+ 10 FF 04 00 00 00
+  508 * 9	 0D 25 \D+ 10 FF 05 00 00 00
+  509 * 9	 0D 26 \D+ 10 FF 06 00 00 00
+  510 * 9	 0D 27 \D+ 10 FF 07 00 00 00
+  511 * 9	 0D 28 \D+ 10 FF 08 00 00 00
+  512 * 9	 0D 29 \D+ 10 FF 09 00 00 00
+  513 * 9	 0D 2A \D+ 10 FF 0A 00 00 00
+  514 * 9	 0D 2B \D+ 10 FF 0B 00 00 00
+  515 * 9	 0D 2C \D+ 10 FF 0C 00 00 00
+  516 * 9	 0D 2D \D+ 10 FF 0D 00 00 00
+  517 * 9	 0D 2E \D+ 10 FF 0E 00 00 00
+  518 * 9	 0D 2F \D+ 10 FF 0F 00 00 00
+  519 * 9	 0D 30 \D+ 10 FF 10 00 00 00
+  520 * 9	 0D 31 \D+ 10 FF 11 00 00 00
+  521 * 9	 0D 32 \D+ 10 FF 12 00 00 00
+  522 * 9	 0D 33 \D+ 10 FF 13 00 00 00
+  523 * 9	 0D 34 \D+ 10 FF 14 00 00 00
+  524 * 9	 0D 35 \D+ 10 FF 15 00 00 00
+  525 * 9	 0D 36 \D+ 10 FF 16 00 00 00
+  526 * 9	 0D 37 \D+ 10 FF 17 00 00 00
+  527 * 9	 0D 38 \D+ 10 FF 18 00 00 00
+  528 * 9	 0D 39 \D+ 10 FF 19 00 00 00
+  529 * 9	 0D 3A \D+ 10 FF 1A 00 00 00
+  530 * 9	 0D 3B \D+ 10 FF 1B 00 00 00
+  531 * 9	 0D 3C \D+ 10 FF 1C 00 00 00
+  532 * 9	 0D 3D \D+ 10 FF 1D 00 00 00
+  533 * 9	 0D 3E \D+ 10 FF 1E 00 00 00
+  534 * 9	 0D 3F \D+ 10 FF 1F 00 00 00
+  535 * 9	 0D 40 \D+ 10 FF 20 00 00 00
+  536 * 9	 0D 41 \D+ 10 FF 21 00 00 00
+  537 * 9	 0D 42 \D+ 10 FF 22 00 00 00
+  538 * 9	 0D 43 \D+ 10 FF 23 00 00 00
+  539 * 9	 0D 44 \D+ 10 FF 24 00 00 00
+  540 * 9	 0D 45 \D+ 10 FF 25 00 00 00
+  541 * 9	 0D 46 \D+ 10 FF 26 00 00 00
+  542 * 9	 0D 47 \D+ 10 FF 27 00 00 00
+  543 * 9	 0D 48 \D+ 10 FF 28 00 00 00
+  544 * 9	 0D 49 \D+ 10 FF 29 00 00 00
+  545 * 9	 0D 4A \D+ 10 FF 2A 00 00 00
+  546 * 9	 0D 4B \D+ 10 FF 2B 00 00 00
+  547 * 9	 0D 4C \D+ 10 FF 2C 00 00 00
+  548 * 9	 0D 4D \D+ 10 FF 2D 00 00 00
+  549 * 9	 0D 4E \D+ 10 FF 2E 00 00 00
+  550 * 9	 0D 4F \D+ 10 FF 2F 00 00 00
+  551 * 9	 0D 50 \D+ 10 FF 30 00 00 00
+  552 * 9	 0D 51 \D+ 10 FF 31 00 00 00
+  553 * 9	 0D 52 \D+ 10 FF 32 00 00 00
+  554 * 9	 0D 53 \D+ 10 FF 33 00 00 00
+  555 * 9	 0D 54 \D+ 10 FF 34 00 00 00
+  556 * 9	 0D 55 \D+ 10 FF 35 00 00 00
+  557 * 9	 0D 56 \D+ 10 FF 36 00 00 00
+  558 * 9	 0D 57 \D+ 10 FF 37 00 00 00
+  559 * 9	 0D 58 \D+ 10 FF 38 00 00 00
+  560 * 9	 0D 59 \D+ 10 FF 39 00 00 00
+  561 * 9	 0D 5A \D+ 10 FF 3A 00 00 00
+  562 * 9	 0D 5B \D+ 10 FF 3B 00 00 00
+  563 * 9	 0D 5C \D+ 10 FF 3C 00 00 00
+  564 * 9	 0D 5D \D+ 10 FF 3D 00 00 00
+  565 * 9	 0D 5E \D+ 10 FF 3E 00 00 00
+  566 * 9	 0D 5F \D+ 10 FF 3F 00 00 00
+  567 * 9	 0D 60 \D+ 10 FF 40 00 00 00
+  568 * 9	 0D 61 \D+ 10 FF 41 00 00 00
+  569 * 9	 0D 62 \D+ 10 FF 42 00 00 00
+  570 * 9	 0D 63 \D+ 10 FF 43 00 00 00
 
    //this allocates the following graphics (realsprites) into the sprites which were reserved earlier (in the order they are defined below)
-  449 * 5	 06 00 02 03 FF 
+  571 * 5	 06 10 02 03 FF 
 	//sprite number 00 00 (the first sprite below) now gets changed to whatever number the grm picked for the first of the reserved sprites, then each subsequent sprite
 	//is allocated that number + 1 (which corresponds to the number of the param above)
-  450 * 5	 0A 01 34 00 00
+  572 * 5	 0A 01 44 00 00
 
 //rail
-  451 sprites/gfx/flyingjunction_rails.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 00
-  452 sprites/gfx/flyingjunction_rails.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 01
-  453 sprites/gfx/flyingjunction_rails.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 02
-  454 sprites/gfx/flyingjunction_rails.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 03
-  455 sprites/gfx/flyingjunction_rails.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 04
-  456 sprites/gfx/flyingjunction_rails.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 05
-  457 sprites/gfx/flyingjunction_rails.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 06
-  458 sprites/gfx/flyingjunction_rails.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 07
-  459 sprites/gfx/flyingjunction_rails.png  8bpp  545     1    36   24  -25   -14 normal //pillar x 08
-  460 sprites/gfx/flyingjunction_rails.png  8bpp  585     1    36   24   -9   -14 normal //pillar y 09
-  461 sprites/gfx/flyingjunction_rails.png  8bpp  1      57    64   78  -31  -42 normal //0-3 back x 0A
-  462 sprites/gfx/flyingjunction_rails.png  8bpp  69     57    64   78  -55  -54 normal //0-3 front x 0B
-  463 sprites/gfx/flyingjunction_rails.png  8bpp  137    57    64   78  -31  -42 normal //0-3 back y 0C
-  464 sprites/gfx/flyingjunction_rails.png  8bpp  205    57    64   78  -7  -54 normal //0-3 front y 0D
-  465 sprites/gfx/flyingjunction_rails.png  8bpp  273    57    64   78  -31  -42 normal //1-2 back x 0E
-  466 sprites/gfx/flyingjunction_rails.png  8bpp  341    57    64   78  -55  -54 normal //1-2 front x 0F
-  467 sprites/gfx/flyingjunction_rails.png  8bpp  409    57    64   78  -31  -42 normal //1-2 back y 10
-  468 sprites/gfx/flyingjunction_rails.png  8bpp  477    57    64   78  -7  -54 normal //1-2 front y 11
-  469 sprites/gfx/flyingjunction_rails.png  8bpp  545    57    64   78  -31  -42 normal //4 back x 12
-  470 sprites/gfx/flyingjunction_rails.png  8bpp  613    57    64   78  -55  -54 normal //4 front x 13
-  471 sprites/gfx/flyingjunction_rails.png  8bpp  681    57    64   78  -31  -42 normal //4 back y 14
-  472 sprites/gfx/flyingjunction_rails.png  8bpp  749    57    64   78  -7  -54 normal //4 front y 15
-  473 sprites/gfx/flyingjunction_rails.png  8bpp  817    57    64   78  -31  -42 normal //5 back x 16
-  474 sprites/gfx/flyingjunction_rails.png  8bpp  885    57    64   78  -55  -54 normal //5 front x 17
-  475 sprites/gfx/flyingjunction_rails.png  8bpp  953    57    64   78  -31  -42 normal //5 back y 18
-  476 sprites/gfx/flyingjunction_rails.png  8bpp  1021    57    64   78  -7  -54 normal //5 front y 19
+  573 sprites/gfx/suspension_test.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 10
+  574 sprites/gfx/suspension_test.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 11
+  575 sprites/gfx/suspension_test.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 12
+  576 sprites/gfx/suspension_test.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 13
+  577 sprites/gfx/suspension_test.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 14
+  578 sprites/gfx/suspension_test.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 15
+  579 sprites/gfx/suspension_test.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 16
+  580 sprites/gfx/suspension_test.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 17
+  581 sprites/gfx/suspension_test.png  8bpp  545     1    36   24  -25   -14 normal //pillar x 18
+  582 sprites/gfx/suspension_test.png  8bpp  585     1    36   24   -9   -14 normal //pillar y 19
+  583 sprites/gfx/suspension_test.png  8bpp  1      57    64   100  -31  -64 normal //0-3 back x 1A
+  584 sprites/gfx/suspension_test.png  8bpp  69     57    64   100  -55  -76 normal //0-3 front x 1B
+  585 sprites/gfx/suspension_test.png  8bpp  137    57    64   100  -31  -64 normal //0-3 back y 1C
+  586 sprites/gfx/suspension_test.png  8bpp  205    57    64   100  -7  -76 normal //0-3 front y 1D
+  587 sprites/gfx/suspension_test.png  8bpp  273    57    64   100  -31  -64 normal //1-2 back x 1E
+  588 sprites/gfx/suspension_test.png  8bpp  341    57    64   100  -55  -76 normal //1-2 front x 1F
+  589 sprites/gfx/suspension_test.png  8bpp  409    57    64   100  -31  -64 normal //1-2 back y 20
+  590 sprites/gfx/suspension_test.png  8bpp  477    57    64   100  -7  -76 normal //1-2 front y 21
+  591 sprites/gfx/suspension_test.png  8bpp  545    57    64   100  -31  -64 normal //4 back x 22
+  592 sprites/gfx/suspension_test.png  8bpp  613    57    64   100  -55  -76 normal //4 front x 23
+  593 sprites/gfx/suspension_test.png  8bpp  681    57    64   100  -31  -64 normal //4 back y 24
+  594 sprites/gfx/suspension_test.png  8bpp  749    57    64   100  -7  -76 normal //4 front y 25
+  595 sprites/gfx/suspension_test.png  8bpp  817    57    64   100  -31  -64 normal //5 back x 26
+  596 sprites/gfx/suspension_test.png  8bpp  885    57    64   100  -55  -76 normal //5 front x 27
+  597 sprites/gfx/suspension_test.png  8bpp  953    57    64   100  -31  -64 normal //5 back y 28
+  598 sprites/gfx/suspension_test.png  8bpp  1021    57    64   100  -7  -76 normal //5 front y 29
+  599 sprites/gfx/suspension_test.png  8bpp  1      200    64   100  -31  -64 normal //0-3 back x 2A
+  600 sprites/gfx/suspension_test.png  8bpp  69     200    64   100  -55  -76 normal //0-3 front x 2B
+  601 sprites/gfx/suspension_test.png  8bpp  137    200    64   100  -31  -64 normal //0-3 back y 2C
+  602 sprites/gfx/suspension_test.png  8bpp  205    200    64   100  -7  -76 normal //0-3 front y 2D
+  603 sprites/gfx/suspension_test.png  8bpp  273    200    64   100  -31  -64 normal //1-2 back x 2E
+  604 sprites/gfx/suspension_test.png  8bpp  341    200    64   100  -55  -76 normal //1-2 front x 2F
+  605 sprites/gfx/suspension_test.png  8bpp  409    200    64   100  -31  -64 normal //1-2 back y 30
+  606 sprites/gfx/suspension_test.png  8bpp  477    200    64   100  -7  -76 normal //1-2 front y 31  
 //road
-  477 sprites/gfx/sustest.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 1A
-  478 sprites/gfx/sustest.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 1B
-  479 sprites/gfx/sustest.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 1C
-  480 sprites/gfx/sustest.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 1D
-  481 sprites/gfx/sustest.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 1E
-  482 sprites/gfx/sustest.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 1F
-  483 sprites/gfx/sustest.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 20
-  484 sprites/gfx/sustest.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 21
-  485 sprites/gfx/sustest.png  8bpp  545     1    38   24  -26   -14 normal //pillar x 22
-  486 sprites/gfx/sustest.png  8bpp  585     1    38   24   -10   -14 normal //pillar y 23
-  487 sprites/gfx/sustest.png  8bpp  1      57    64   100  -31  -64 normal //0-3 back x 24
-  488 sprites/gfx/sustest.png  8bpp  69     57    64   100  -55  -76 normal //0-3 front x 25
-  489 sprites/gfx/sustest.png  8bpp  137    57    64   100  -31  -64 normal //0-3 back y 26
-  490 sprites/gfx/sustest.png  8bpp  205    57    64   100  -7  -76 normal //0-3 front y 27
-  491 sprites/gfx/sustest.png  8bpp  273    57    64   100  -31  -64 normal //1-2 back x 28
-  492 sprites/gfx/sustest.png  8bpp  341    57    64   100  -55  -76 normal //1-2 front x 29
-  493 sprites/gfx/sustest.png  8bpp  409    57    64   100  -31  -64 normal //1-2 back y 2A
-  494 sprites/gfx/sustest.png  8bpp  477    57    64   100  -7  -76 normal //1-2 front y 2B
-  495 sprites/gfx/sustest.png  8bpp  545    57    64   100  -31  -64 normal //4 back x 2C
-  496 sprites/gfx/sustest.png  8bpp  613    57    64   100  -55  -76 normal //4 front x 2D
-  497 sprites/gfx/sustest.png  8bpp  681    57    64   100  -31  -64 normal //4 back y 2E
-  498 sprites/gfx/sustest.png  8bpp  749    57    64   100  -7  -76 normal //4 front y 2F
-  499 sprites/gfx/sustest.png  8bpp  817    57    64   100  -31  -64 normal //5 back x 30
-  500 sprites/gfx/sustest.png  8bpp  885    57    64   100  -55  -76 normal //5 front x 31
-  501 sprites/gfx/sustest.png  8bpp  953    57    64   100  -31  -64 normal //5 back y 32
-  502 sprites/gfx/sustest.png  8bpp  1021    57    64   100  -7  -76 normal //5 front y 33
+  607 sprites/gfx/suspension_test.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 32
+  608 sprites/gfx/suspension_test.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 33
+  609 sprites/gfx/suspension_test.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 34
+  610 sprites/gfx/suspension_test.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 35
+  611 sprites/gfx/suspension_test.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 36
+  612 sprites/gfx/suspension_test.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 37
+  613 sprites/gfx/suspension_test.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 38
+  614 sprites/gfx/suspension_test.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 39
+  615 sprites/gfx/suspension_test.png  8bpp  545     1    38   24  -26   -14 normal //pillar x 3A
+  616 sprites/gfx/suspension_test.png  8bpp  585     1    38   24   -10   -14 normal //pillar y 3B
+  617 sprites/gfx/suspension_test.png  8bpp  1      57    64   100  -31  -64 normal //0-3 back x 3C
+  618 sprites/gfx/suspension_test.png  8bpp  69     57    64   100  -55  -76 normal //0-3 front x 3D
+  619 sprites/gfx/suspension_test.png  8bpp  137    57    64   100  -31  -64 normal //0-3 back y 3E
+  620 sprites/gfx/suspension_test.png  8bpp  205    57    64   100  -7  -76 normal //0-3 front y 3F
+  621 sprites/gfx/suspension_test.png  8bpp  273    57    64   100  -31  -64 normal //1-2 back x 40
+  622 sprites/gfx/suspension_test.png  8bpp  341    57    64   100  -55  -76 normal //1-2 front x 41
+  623 sprites/gfx/suspension_test.png  8bpp  409    57    64   100  -31  -64 normal //1-2 back y 42
+  624 sprites/gfx/suspension_test.png  8bpp  477    57    64   100  -7  -76 normal //1-2 front y 43
+  625 sprites/gfx/suspension_test.png  8bpp  545    57    64   100  -31  -64 normal //4 back x 44
+  626 sprites/gfx/suspension_test.png  8bpp  613    57    64   100  -55  -76 normal //4 front x 45
+  627 sprites/gfx/suspension_test.png  8bpp  681    57    64   100  -31  -64 normal //4 back y 46
+  628 sprites/gfx/suspension_test.png  8bpp  749    57    64   100  -7  -76 normal //4 front y 47
+  629 sprites/gfx/suspension_test.png  8bpp  817    57    64   100  -31  -64 normal //5 back x 48
+  630 sprites/gfx/suspension_test.png  8bpp  885    57    64   100  -55  -76 normal //5 front x 49
+  631 sprites/gfx/suspension_test.png  8bpp  953    57    64   100  -31  -64 normal //5 back y 4A
+  632 sprites/gfx/suspension_test.png  8bpp  1021    57    64   100  -7  -76 normal //5 front y 4B
+  633 sprites/gfx/suspension_test.png  8bpp  1      200    64   100  -31  -64 normal //0-3 back x 4C
+  634 sprites/gfx/suspension_test.png  8bpp  69     200    64   100  -55  -76 normal //0-3 front x 4D
+  635 sprites/gfx/suspension_test.png  8bpp  137    200    64   100  -31  -64 normal //0-3 back y 4E
+  636 sprites/gfx/suspension_test.png  8bpp  205    200    64   100  -7  -76 normal //0-3 front y 4F
+  637 sprites/gfx/suspension_test.png  8bpp  273    200    64   100  -31  -64 normal //1-2 back x 50
+  638 sprites/gfx/suspension_test.png  8bpp  341    200    64   100  -55  -76 normal //1-2 front x 51
+  639 sprites/gfx/suspension_test.png  8bpp  409    200    64   100  -31  -64 normal //1-2 back y 52
+  640 sprites/gfx/suspension_test.png  8bpp  477    200    64   100  -7  -76 normal //1-2 front y 53
 
 
    //and finally these action 6's tell where to place each of the reserved sprites (organized by table layout for easier viewing)
    //Ack, I had to split them up individually because there aren't enough hex ids to do all in one
-  503 * 26	 06
-			 0A 02 08    0B 02 0C    //rail x (part 0 should probably never have pillars set)
-			 0C 02 18    0D 02 1C    //rail y
-			 24 02 28    25 02 2C    //road x
-			 26 02 38    27 02 3C    //road y
+  641 * 26	 06
+			 2A 02 08    2B 02 0C    //rail x (part 0 should probably never have pillars set)
+			 2C 02 18    2D 02 1C    //rail y
+			 4C 02 28    4D 02 2C    //road x
+			 4E 02 38    4F 02 3C    //road y
 			     //mono x
 			     //mono y
 			     //mlev x
@@ -1257,7 +1410,7 @@ EB 90 20 03  ED 90 20 03  EA 90 20 03  EC 90 20 03 //mono ramp: northern end X, 
 			 FF
 
 // BRICK BRIDGE (08)
-  504 * 136	 00 06 01 01 04 0D 00 01 //action 00 bridges(06), 01 property, 01 ID, ID 02, prop 0D, tableID 00, 01 tables
+  642 * 136	 00 06 01 01 04 0D 00 01 //action 00 bridges(06), 01 property, 01 ID, ID 02, prop 0D, tableID 00, 01 tables
 //table 00
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
@@ -1268,11 +1421,11 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  505 * 38	 06
-			 0E 02 08    0F 02 0C    08 02 10    //rail x
-			 10 02 18    11 02 1C    09 02 20    //rail y
-			 28 02 28    29 02 2C    22 02 30    //road x
-			 2A 02 38    2B 02 3C    23 02 40    //road y
+  643 * 26	 06
+			 2E 02 08    2F 02 0C        //rail x
+			 30 02 18    31 02 1C        //rail y
+			 50 02 28    51 02 2C        //road x
+			 52 02 38    53 02 3C        //road y
 			     //mono x
 			     //mono y
 			     //mlev x
@@ -1280,7 +1433,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 01
-  506 * 136	 00 06 01 01 04 0D 01 01
+  644 * 136	 00 06 01 01 04 0D 01 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -1290,11 +1443,11 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  507 * 32	 06
-			 0E 02 08    0F 02 0C    08 02 10    //rail x
-			 10 02 18    11 02 1C    09 02 20    //rail y
-			 28 02 28    29 02 2C        //road x
-			 2A 02 38    2B 02 3C        //road y
+  645 * 26	 06
+			 3E 02 08    3F 02 0C        //rail x
+			 40 02 18    41 02 1C        //rail y
+			 60 02 28    61 02 2C        //road x
+			 62 02 38    63 02 3C        //road y
 			     //mono x
 			     //mono y
 			     //mlev x
@@ -1302,7 +1455,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 02
-  508 * 136	 00 06 01 01 04 0D 02 01
+  646 * 136	 00 06 01 01 04 0D 02 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -1312,11 +1465,11 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  509 * 32	 06
-			 0A 02 08    0B 02 0C    08 02 10    //rail x
-			 0C 02 18    0D 02 1C    09 02 20    //rail y
-			 24 02 28    25 02 2C        //road x
-			 26 02 38    27 02 3C        //road y
+  647 * 26	 06
+			 3A 02 08    3B 02 0C        //rail x
+			 3C 02 18    3D 02 1C        //rail y
+			 5C 02 28    5D 02 2C        //road x
+			 5E 02 38    5F 02 3C        //road y
 			     //mono x
 			     //mono y
 			     //mlev x
@@ -1324,7 +1477,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 03
-  510 * 136	 00 06 01 01 04 0D 03 01
+  648 * 136	 00 06 01 01 04 0D 03 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -1334,11 +1487,11 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  511 * 32	 06
-			 12 02 08    13 02 0C    08 02 10    //rail x
-			 14 02 18    15 02 1C    09 02 20    //rail y
-			 2C 02 28    2D 02 2C        //road x
-			 2E 02 38    2F 02 3C        //road y
+  649 * 26	 06
+			 32 02 08    33 02 0C        //rail x
+			 34 02 18    35 02 1C        //rail y
+			 54 02 28    55 02 2C        //road x
+			 56 02 38    57 02 3C        //road y
 			     //mono x
 			     //mono y
 			     //mlev x
@@ -1346,7 +1499,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 04
-  512 * 136	 00 06 01 01 04 0D 04 01
+  650 * 136	 00 06 01 01 04 0D 04 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -1356,11 +1509,11 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  513 * 32	 06
-			 16 02 08    17 02 0C    08 02 10    //rail x
-			 18 02 18    19 02 1C    09 02 20    //rail y
-			 30 02 28    31 02 2C        //road x
-			 32 02 38    33 02 3C        //road y
+  651 * 26	 06
+			 36 02 08    37 02 0C        //rail x
+			 38 02 18    39 02 1C        //rail y
+			 58 02 28    59 02 2C        //road x
+			 5A 02 38    5B 02 3C        //road y
 			     //mono x
 			     //mono y
 			     //mlev x
@@ -1368,7 +1521,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 05
-  514 * 136	 00 06 01 01 04 0D 05 01
+  652 * 136	 00 06 01 01 04 0D 05 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -1378,8 +1531,300 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  515 * 50	 06
-			 00 02 08    01 04 0C    02 02 10    03 02 14    //rail flat
+  653 * 50	 06
+			 20 02 08    21 04 0C    22 02 10    23 02 14    //rail flat
+			 24 02 18    25 02 1C    26 02 20    27 02 24    //rail ramp
+			 42 02 28    43 02 2C    44 02 30    45 02 34    //road flat
+			 46 02 38    47 02 3C    48 02 40    49 02 44    //road ramp
+			     //mono flat
+			     //mono ramp
+			     //mlev flat
+			     //mlev ramp
+			 FF
+
+//table 06
+  654 * 136	 00 06 01 01 04 0D 06 01
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail flat: northern end X, northern end Y, southern end X, southern end Y //08, 0C, 10, 14
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail ramp: northern end X, northern end Y, southern end X, southern end Y //18, 1C, 20, 24
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //road flat: northern end X, northern end Y, southern end X, southern end Y //28, 2C, 30, 34
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //road ramp: northern end X, northern end Y, southern end X, southern end Y //38, 3C, 40, 44
+E7 90 23 03  E9 90 23 03  E6 90 23 03  E8 90 23 03 //mono flat: northern end X, northern end Y, southern end X, southern end Y 
+EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, northern end Y, southern end X, southern end Y 
+0F 91 23 03  11 91 23 03  0E 91 23 03  10 91 23 03 //mlev flat: northern end X, northern end Y, southern end X, southern end Y 
+13 91 23 03  15 91 23 03  12 91 23 03  14 91 23 03 //mlev ramp: northern end X, northern end Y, southern end X, southern end Y //78, 7C, 80, 84
+
+
+
+
+//================
+//  ARCH GIRDER Bridge 05
+//================
+                         //this number increases by 3 with each bridge
+  655 * 73	 04 06 FF 03 0F DC "Steel Truss Bridge" 00 "Steel Truss Rail Bridge" 00 "Steel Truss Road Bridge" 00 //define texts first so we can reference them in properties below
+
+  656 * 32	 00 06 0A 01 05 //adjust properties of bridge id 08
+			 08 00 //intro date
+			 09 02 //min length
+			 0A FF //max length
+			 0B 3E //cost factor
+			 0C 64 00 //max speed
+			 0E 01 //flags (set to 01 to disable far pillars)
+			 0F 00 00 07 80 //long format intro date
+			 10 0F DC //purchase text
+			 11 10 DC //rail bridge info window
+			 12 11 DC //road bridge info window
+
+	//this reserves some sprites into temp. params
+  657 * 9	 0D 00 \D= \DR FE FF 08 34 00 //this "main" param is used to allocate all of the graphics via the following action 6
+  658 * 9	 0D 01 \D+ 00 FF 01 00 00 00 //each sprite then gets its own param # to use in the final action 6's which determine placement
+  659 * 9	 0D 02 \D+ 00 FF 02 00 00 00
+  660 * 9	 0D 03 \D+ 00 FF 03 00 00 00
+  661 * 9	 0D 04 \D+ 00 FF 04 00 00 00
+  662 * 9	 0D 05 \D+ 00 FF 05 00 00 00
+  663 * 9	 0D 06 \D+ 00 FF 06 00 00 00
+  664 * 9	 0D 07 \D+ 00 FF 07 00 00 00
+  665 * 9	 0D 08 \D+ 00 FF 08 00 00 00
+  666 * 9	 0D 09 \D+ 00 FF 09 00 00 00
+  667 * 9	 0D 0A \D+ 00 FF 0A 00 00 00
+  668 * 9	 0D 0B \D+ 00 FF 0B 00 00 00
+  669 * 9	 0D 0C \D+ 00 FF 0C 00 00 00
+  670 * 9	 0D 0D \D+ 00 FF 0D 00 00 00
+  671 * 9	 0D 0E \D+ 00 FF 0E 00 00 00
+  672 * 9	 0D 0F \D+ 00 FF 0F 00 00 00
+  673 * 9	 0D 10 \D+ 00 FF 10 00 00 00
+  674 * 9	 0D 11 \D+ 00 FF 11 00 00 00
+  675 * 9	 0D 12 \D+ 00 FF 12 00 00 00
+  676 * 9	 0D 13 \D+ 00 FF 13 00 00 00
+  677 * 9	 0D 14 \D+ 00 FF 14 00 00 00
+  678 * 9	 0D 15 \D+ 00 FF 15 00 00 00
+  679 * 9	 0D 16 \D+ 00 FF 16 00 00 00
+  680 * 9	 0D 17 \D+ 00 FF 17 00 00 00
+  681 * 9	 0D 18 \D+ 00 FF 18 00 00 00
+  682 * 9	 0D 19 \D+ 00 FF 19 00 00 00
+  683 * 9	 0D 1A \D+ 00 FF 1A 00 00 00
+  684 * 9	 0D 1B \D+ 00 FF 1B 00 00 00
+  685 * 9	 0D 1C \D+ 00 FF 1C 00 00 00
+  686 * 9	 0D 1D \D+ 00 FF 1D 00 00 00
+  687 * 9	 0D 1E \D+ 00 FF 1E 00 00 00
+  688 * 9	 0D 1F \D+ 00 FF 1F 00 00 00
+  689 * 9	 0D 20 \D+ 00 FF 20 00 00 00
+  690 * 9	 0D 21 \D+ 00 FF 21 00 00 00
+  691 * 9	 0D 22 \D+ 00 FF 22 00 00 00
+  692 * 9	 0D 23 \D+ 00 FF 23 00 00 00
+  693 * 9	 0D 24 \D+ 00 FF 24 00 00 00
+  694 * 9	 0D 25 \D+ 00 FF 25 00 00 00
+  695 * 9	 0D 26 \D+ 00 FF 26 00 00 00
+  696 * 9	 0D 27 \D+ 00 FF 27 00 00 00
+  697 * 9	 0D 28 \D+ 00 FF 28 00 00 00
+  698 * 9	 0D 29 \D+ 00 FF 29 00 00 00
+  699 * 9	 0D 2A \D+ 00 FF 2A 00 00 00
+  700 * 9	 0D 2B \D+ 00 FF 2B 00 00 00
+  701 * 9	 0D 2C \D+ 00 FF 2C 00 00 00
+  702 * 9	 0D 2D \D+ 00 FF 2D 00 00 00
+  703 * 9	 0D 2E \D+ 00 FF 2E 00 00 00
+  704 * 9	 0D 2F \D+ 00 FF 2F 00 00 00
+  705 * 9	 0D 30 \D+ 00 FF 30 00 00 00
+  706 * 9	 0D 31 \D+ 00 FF 31 00 00 00
+  707 * 9	 0D 32 \D+ 00 FF 32 00 00 00
+  708 * 9	 0D 33 \D+ 00 FF 33 00 00 00
+
+   //this allocates the following graphics (realsprites) into the sprites which were reserved earlier (in the order they are defined below)
+  709 * 5	 06 00 02 03 FF 
+	//sprite number 00 00 (the first sprite below) now gets changed to whatever number the grm picked for the first of the reserved sprites, then each subsequent sprite
+	//is allocated that number + 1 (which corresponds to the number of the param above)
+  710 * 5	 0A 01 34 00 00
+//rail
+  711 sprites/gfx/arch_truss_rail.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 00
+  712 sprites/gfx/arch_truss_rail.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 01
+  713 sprites/gfx/arch_truss_rail.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 02
+  714 sprites/gfx/arch_truss_rail.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 03
+  715 sprites/gfx/arch_truss_rail.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 04
+  716 sprites/gfx/arch_truss_rail.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 05
+  717 sprites/gfx/arch_truss_rail.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 06
+  718 sprites/gfx/arch_truss_rail.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 07
+  719 sprites/gfx/arch_truss_rail.png  8bpp  545     1    36   24  -25   -14 normal //pillar x 08
+  720 sprites/gfx/arch_truss_rail.png  8bpp  585     1    36   24   -9   -14 normal //pillar y 09
+  721 sprites/gfx/arch_truss_rail.png  8bpp  1      57    64   78  -31  -42 normal //0-3 back x 0A
+  722 sprites/gfx/arch_truss_rail.png  8bpp  69     57    64   78  -55  -54 normal //0-3 front x 0B
+  723 sprites/gfx/arch_truss_rail.png  8bpp  137    57    64   78  -31  -42 normal //0-3 back y 0C
+  724 sprites/gfx/arch_truss_rail.png  8bpp  205    57    64   78  -7  -54 normal //0-3 front y 0D
+  725 sprites/gfx/arch_truss_rail.png  8bpp  273    57    64   78  -31  -42 normal //1-2 back x 0E
+  726 sprites/gfx/arch_truss_rail.png  8bpp  341    57    64   78  -55  -54 normal //1-2 front x 0F
+  727 sprites/gfx/arch_truss_rail.png  8bpp  409    57    64   78  -31  -42 normal //1-2 back y 10
+  728 sprites/gfx/arch_truss_rail.png  8bpp  477    57    64   78  -7  -54 normal //1-2 front y 11
+  729 sprites/gfx/arch_truss_rail.png  8bpp  545    57    64   78  -31  -42 normal //4 back x 12
+  730 sprites/gfx/arch_truss_rail.png  8bpp  613    57    64   78  -55  -54 normal //4 front x 13
+  731 sprites/gfx/arch_truss_rail.png  8bpp  681    57    64   78  -31  -42 normal //4 back y 14
+  732 sprites/gfx/arch_truss_rail.png  8bpp  749    57    64   78  -7  -54 normal //4 front y 15
+  733 sprites/gfx/arch_truss_rail.png  8bpp  817    57    64   78  -31  -42 normal //5 back x 16
+  734 sprites/gfx/arch_truss_rail.png  8bpp  885    57    64   78  -55  -54 normal //5 front x 17
+  735 sprites/gfx/arch_truss_rail.png  8bpp  953    57    64   78  -31  -42 normal //5 back y 18
+  736 sprites/gfx/arch_truss_rail.png  8bpp  1021    57    64   78  -7  -54 normal //5 front y 19 
+//road
+  737 sprites/gfx/arch_truss_road.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 1A
+  738 sprites/gfx/arch_truss_road.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 1B
+  739 sprites/gfx/arch_truss_road.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 1C
+  740 sprites/gfx/arch_truss_road.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 1D
+  741 sprites/gfx/arch_truss_road.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 1E
+  742 sprites/gfx/arch_truss_road.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 1F
+  743 sprites/gfx/arch_truss_road.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 20
+  744 sprites/gfx/arch_truss_road.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 21
+  745 sprites/gfx/arch_truss_road.png  8bpp  545     1    36   24  -25   -14 normal //pillar x 22  
+  746 sprites/gfx/arch_truss_road.png  8bpp  585     1    36   24  -9   -14 normal //pillar x 23 
+  747 sprites/gfx/arch_truss_road.png  8bpp  1      57    64   100  -31  -64 normal //0-3 back x 24
+  748 sprites/gfx/arch_truss_road.png  8bpp  69     57    64   100  -55  -76 normal //0-3 front x 25
+  749 sprites/gfx/arch_truss_road.png  8bpp  137    57    64   100  -31  -64 normal //0-3 back y 26
+  750 sprites/gfx/arch_truss_road.png  8bpp  205    57    64   100  -7  -76 normal //0-3 front y 27
+  751 sprites/gfx/arch_truss_road.png  8bpp  273    57    64   100  -31  -64 normal //1-2 back x 28
+  752 sprites/gfx/arch_truss_road.png  8bpp  341    57    64   100  -55  -76 normal //1-2 front x 29
+  753 sprites/gfx/arch_truss_road.png  8bpp  409    57    64   100  -31  -64 normal //1-2 back y 2A
+  754 sprites/gfx/arch_truss_road.png  8bpp  477    57    64   100  -7  -76 normal //1-2 front y 2B
+  755 sprites/gfx/arch_truss_road.png  8bpp  545    57    64   100  -31  -64 normal //4 back x 2C
+  756 sprites/gfx/arch_truss_road.png  8bpp  613    57    64   100  -55  -76 normal //4 front x 2D
+  757 sprites/gfx/arch_truss_road.png  8bpp  681    57    64   100  -31  -64 normal //4 back y 2E
+  758 sprites/gfx/arch_truss_road.png  8bpp  749    57    64   100  -7  -76 normal //4 front y 2F
+  759 sprites/gfx/arch_truss_road.png  8bpp  817    57    64   100  -31  -64 normal //5 back x 30
+  760 sprites/gfx/arch_truss_road.png  8bpp  885    57    64   100  -55  -76 normal //5 front x 31
+  761 sprites/gfx/arch_truss_road.png  8bpp  953    57    64   100  -31  -64 normal //5 back y 32
+  762 sprites/gfx/arch_truss_road.png  8bpp  1021    57    64   100  -7  -76 normal //5 front y 33
+
+   //and finally these action 6's tell where to place each of the reserved sprites (organized by table layout for easier viewing)
+   //Ack, I had to split them up individually because there aren't enough hex ids to do all in one
+  763 * 26	 06
+			 0A 02 08    0B 02 0C    //rail x (part 0 should probably never have pillars set)
+			 0C 02 18    0D 02 1C    //rail y
+			 24 02 28    25 02 2C    //road x
+			 26 02 38    27 02 3C    //road y
+			     //mono x
+			     //mono y
+			     //mlev x
+			     //mlev y
+			 FF
+
+// STEEL TRESTLE bridge (02)
+  764 * 136	 00 06 01 01 05 0D 00 01 //action 00 bridges(06), 01 property, 01 ID, ID 02, prop 0D, tableID 00, 01 tables
+//table 00
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
+E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+
+  765 * 26	 06
+			 0E 02 08    0F 02 0C    //rail x
+			 10 02 18    11 02 1C    //rail y
+			 28 02 28    29 02 2C    //road x
+			 2A 02 38    2B 02 3C    //road y
+			     //mono x
+			     //mono y
+			     //mlev x
+			     //mlev y
+			 FF
+
+//table 01
+  766 * 136	 00 06 01 01 05 0D 01 01
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
+E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+
+  767 * 26	 06
+			 0E 02 08    0F 02 0C    //rail x
+			 10 02 18    11 02 1C    //rail y
+			 28 02 28    29 02 2C    //road x
+			 2A 02 38    2B 02 3C    //road y
+			     //mono x
+			     //mono y
+			     //mlev x
+			     //mlev y
+			 FF
+
+//table 02
+  768 * 136	 00 06 01 01 05 0D 02 01
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
+E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+
+  769 * 38	 06
+			 0A 02 08    0B 02 0C    08 02 10    //rail x
+			 0C 02 18    0D 02 1C    09 02 20    //rail y
+			 24 02 28    25 02 2C    22 02 30    //road x
+			 26 02 38    27 02 3C    23 02 40    //road y
+			     //mono x
+			     //mono y
+			     //mlev x
+			     //mlev y
+			 FF
+
+//table 03
+  770 * 136	 00 06 01 01 05 0D 03 01
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
+E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+
+  771 * 26	 06
+			 12 02 08    13 02 0C    //rail x
+			 14 02 18    15 02 1C    //rail y
+			 2C 02 28    2D 02 2C    //road x
+			 2E 02 38    2F 02 3C    //road y
+			     //mono x
+			     //mono y
+			     //mlev x
+			     //mlev y
+			 FF
+
+//table 04
+  772 * 136	 00 06 01 01 05 0D 04 01
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
+E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+
+  773 * 38	 06
+			 16 02 08    17 02 0C    08 02 10    //rail x
+			 18 02 18    19 02 1C    09 02 20    //rail y
+			 30 02 28    31 02 2C    22 02 30    //road x
+			 32 02 38    33 02 3C    23 02 40    //road y
+			     //mono x
+			     //mono y
+			     //mlev x
+			     //mlev y
+			 FF
+
+//table 05
+  774 * 136	 00 06 01 01 05 0D 05 01
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
+E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+
+  775 * 50	 06
+			 00 02 08    01 02 0C    02 02 10    03 02 14    //rail flat
 			 04 02 18    05 02 1C    06 02 20    07 02 24    //rail ramp
 			 1A 02 28    1B 02 2C    1C 02 30    1D 02 34    //road flat
 			 1E 02 38    1F 02 3C    20 02 40    21 02 44    //road ramp
@@ -1390,7 +1835,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 06
-  516 * 136	 00 06 01 01 04 0D 06 01
+  776 * 136	 00 06 01 01 05 0D 06 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail flat: northern end X, northern end Y, southern end X, southern end Y //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail ramp: northern end X, northern end Y, southern end X, southern end Y //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //road flat: northern end X, northern end Y, southern end X, southern end Y //28, 2C, 30, 34
@@ -1404,14 +1849,460 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 
 
 
+//================
+//   Dummy sprites to act as buffer
+//================
+
+
+	//this reserves some sprites into temp. params
+  777 * 9	 0D 00 \D= \DR FE FF 08 34 00 //this "main" param is used to allocate all of the graphics via the following action 6
+  778 * 9	 0D 01 \D+ 00 FF 01 00 00 00 //each sprite then gets its own param # to use in the final action 6's which determine placement
+  779 * 9	 0D 02 \D+ 00 FF 02 00 00 00
+  780 * 9	 0D 03 \D+ 00 FF 03 00 00 00
+  781 * 9	 0D 04 \D+ 00 FF 04 00 00 00
+  782 * 9	 0D 05 \D+ 00 FF 05 00 00 00
+  783 * 9	 0D 06 \D+ 00 FF 06 00 00 00
+  784 * 9	 0D 07 \D+ 00 FF 07 00 00 00
+  785 * 9	 0D 08 \D+ 00 FF 08 00 00 00
+  786 * 9	 0D 09 \D+ 00 FF 09 00 00 00
+  787 * 9	 0D 0A \D+ 00 FF 0A 00 00 00
+  788 * 9	 0D 0B \D+ 00 FF 0B 00 00 00
+  789 * 9	 0D 0C \D+ 00 FF 0C 00 00 00
+  790 * 9	 0D 0D \D+ 00 FF 0D 00 00 00
+  791 * 9	 0D 0E \D+ 00 FF 0E 00 00 00
+  792 * 9	 0D 0F \D+ 00 FF 0F 00 00 00
+  793 * 9	 0D 10 \D+ 00 FF 10 00 00 00
+  794 * 9	 0D 11 \D+ 00 FF 11 00 00 00
+  795 * 9	 0D 12 \D+ 00 FF 12 00 00 00
+  796 * 9	 0D 13 \D+ 00 FF 13 00 00 00
+  797 * 9	 0D 14 \D+ 00 FF 14 00 00 00
+  798 * 9	 0D 15 \D+ 00 FF 15 00 00 00
+  799 * 9	 0D 16 \D+ 00 FF 16 00 00 00
+  800 * 9	 0D 17 \D+ 00 FF 17 00 00 00
+  801 * 9	 0D 18 \D+ 00 FF 18 00 00 00
+  802 * 9	 0D 19 \D+ 00 FF 19 00 00 00
+  803 * 9	 0D 1A \D+ 00 FF 1A 00 00 00
+  804 * 9	 0D 1B \D+ 00 FF 1B 00 00 00
+  805 * 9	 0D 1C \D+ 00 FF 1C 00 00 00
+  806 * 9	 0D 1D \D+ 00 FF 1D 00 00 00
+  807 * 9	 0D 1E \D+ 00 FF 1E 00 00 00
+  808 * 9	 0D 1F \D+ 00 FF 1F 00 00 00
+  809 * 9	 0D 20 \D+ 00 FF 20 00 00 00
+  810 * 9	 0D 21 \D+ 00 FF 21 00 00 00
+  811 * 9	 0D 22 \D+ 00 FF 22 00 00 00
+  812 * 9	 0D 23 \D+ 00 FF 23 00 00 00
+  813 * 9	 0D 24 \D+ 00 FF 24 00 00 00
+  814 * 9	 0D 25 \D+ 00 FF 25 00 00 00
+  815 * 9	 0D 26 \D+ 00 FF 26 00 00 00
+  816 * 9	 0D 27 \D+ 00 FF 27 00 00 00
+  817 * 9	 0D 28 \D+ 00 FF 28 00 00 00
+  818 * 9	 0D 29 \D+ 00 FF 29 00 00 00
+  819 * 9	 0D 2A \D+ 00 FF 2A 00 00 00
+  820 * 9	 0D 2B \D+ 00 FF 2B 00 00 00
+  821 * 9	 0D 2C \D+ 00 FF 2C 00 00 00
+  822 * 9	 0D 2D \D+ 00 FF 2D 00 00 00
+  823 * 9	 0D 2E \D+ 00 FF 2E 00 00 00
+  824 * 9	 0D 2F \D+ 00 FF 2F 00 00 00
+  825 * 9	 0D 30 \D+ 00 FF 30 00 00 00
+  826 * 9	 0D 31 \D+ 00 FF 31 00 00 00
+  827 * 9	 0D 32 \D+ 00 FF 32 00 00 00
+  828 * 9	 0D 33 \D+ 00 FF 33 00 00 00
+
+   //this allocates the following graphics (realsprites) into the sprites which were reserved earlier (in the order they are defined below)
+  829 * 5	 06 00 02 03 FF 
+	//sprite number 00 00 (the first sprite below) now gets changed to whatever number the grm picked for the first of the reserved sprites, then each subsequent sprite
+	//is allocated that number + 1 (which corresponds to the number of the param above)
+  830 * 5	 0A 01 34 00 00
+
+//rail
+  831 sprites/gfx/flyingjunction_rails.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 00
+  832 sprites/gfx/flyingjunction_rails.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 01
+  833 sprites/gfx/flyingjunction_rails.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 02
+  834 sprites/gfx/flyingjunction_rails.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 03
+  835 sprites/gfx/flyingjunction_rails.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 04
+  836 sprites/gfx/flyingjunction_rails.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 05
+  837 sprites/gfx/flyingjunction_rails.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 06
+  838 sprites/gfx/flyingjunction_rails.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 07
+  839 sprites/gfx/flyingjunction_rails.png  8bpp  545     1    36   24  -25   -14 normal //pillar x 08
+  840 sprites/gfx/flyingjunction_rails.png  8bpp  585     1    36   24   -9   -14 normal //pillar y 09
+  841 sprites/gfx/flyingjunction_rails.png  8bpp  1      57    64   78  -31  -42 normal //0-3 back x 0A
+  842 sprites/gfx/flyingjunction_rails.png  8bpp  69     57    64   78  -55  -54 normal //0-3 front x 0B
+  843 sprites/gfx/flyingjunction_rails.png  8bpp  137    57    64   78  -31  -42 normal //0-3 back y 0C
+  844 sprites/gfx/flyingjunction_rails.png  8bpp  205    57    64   78  -7  -54 normal //0-3 front y 0D
+  845 sprites/gfx/flyingjunction_rails.png  8bpp  273    57    64   78  -31  -42 normal //1-2 back x 0E
+  846 sprites/gfx/flyingjunction_rails.png  8bpp  341    57    64   78  -55  -54 normal //1-2 front x 0F
+  847 sprites/gfx/flyingjunction_rails.png  8bpp  409    57    64   78  -31  -42 normal //1-2 back y 10
+  848 sprites/gfx/flyingjunction_rails.png  8bpp  477    57    64   78  -7  -54 normal //1-2 front y 11
+  849 sprites/gfx/flyingjunction_rails.png  8bpp  545    57    64   78  -31  -42 normal //4 back x 12
+  850 sprites/gfx/flyingjunction_rails.png  8bpp  613    57    64   78  -55  -54 normal //4 front x 13
+  851 sprites/gfx/flyingjunction_rails.png  8bpp  681    57    64   78  -31  -42 normal //4 back y 14
+  852 sprites/gfx/flyingjunction_rails.png  8bpp  749    57    64   78  -7  -54 normal //4 front y 15
+  853 sprites/gfx/flyingjunction_rails.png  8bpp  817    57    64   78  -31  -42 normal //5 back x 16
+  854 sprites/gfx/flyingjunction_rails.png  8bpp  885    57    64   78  -55  -54 normal //5 front x 17
+  855 sprites/gfx/flyingjunction_rails.png  8bpp  953    57    64   78  -31  -42 normal //5 back y 18
+  856 sprites/gfx/flyingjunction_rails.png  8bpp  1021    57    64   78  -7  -54 normal //5 front y 19
+//road
+  857 sprites/gfx/brick_road.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 1A
+  858 sprites/gfx/brick_road.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 1B
+  859 sprites/gfx/brick_road.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 1C
+  860 sprites/gfx/brick_road.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 1D
+  861 sprites/gfx/brick_road.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 1E
+  862 sprites/gfx/brick_road.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 1F
+  863 sprites/gfx/brick_road.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 20
+  864 sprites/gfx/brick_road.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 21
+  865 sprites/gfx/brick_road.png  8bpp  545     1    38   24  -26   -14 normal //pillar x 22
+  866 sprites/gfx/brick_road.png  8bpp  585     1    38   24   -10   -14 normal //pillar y 23
+  867 sprites/gfx/brick_road.png  8bpp  1      57    64   78  -31  -42 normal //0-3 back x 24
+  868 sprites/gfx/brick_road.png  8bpp  69     57    64   78  -55  -54 normal //0-3 front x 25
+  869 sprites/gfx/brick_road.png  8bpp  137    57    64   78  -31  -42 normal //0-3 back y 26
+  870 sprites/gfx/brick_road.png  8bpp  205    57    64   78  -7  -54 normal //0-3 front y 27
+  871 sprites/gfx/brick_road.png  8bpp  273    57    64   78  -31  -42 normal //1-2 back x 28
+  872 sprites/gfx/brick_road.png  8bpp  341    57    64   78  -55  -54 normal //1-2 front x 29
+  873 sprites/gfx/brick_road.png  8bpp  409    57    64   78  -31  -42 normal //1-2 back y 2A
+  874 sprites/gfx/brick_road.png  8bpp  477    57    64   78  -7  -54 normal //1-2 front y 2B
+  875 sprites/gfx/brick_road.png  8bpp  545    57    64   100  -31  -64 normal //4 back x 2C
+  876 sprites/gfx/brick_road.png  8bpp  613    57    64   100  -55  -76 normal //4 front x 2D
+  877 sprites/gfx/brick_road.png  8bpp  681    57    64   100  -31  -64 normal //4 back y 2E
+  878 sprites/gfx/brick_road.png  8bpp  749    57    64   100  -7  -76 normal //4 front y 2F
+  879 sprites/gfx/brick_road.png  8bpp  817    57    64   100  -31  -64 normal //5 back x 30
+  880 sprites/gfx/brick_road.png  8bpp  885    57    64   100  -55  -76 normal //5 front x 31
+  881 sprites/gfx/brick_road.png  8bpp  953    57    64   100  -31  -64 normal //5 back y 32
+  882 sprites/gfx/brick_road.png  8bpp  1021    57    64   100  -7  -76 normal //5 front y 33
+
+
+
+
+//================
+//   BIG ARCH  Bridge 06
+//================
+                         //this number increases by 3 with each bridge
+  883 * 46	 04 06 FF 03 12 DC "Tied Arch" 00 "Tied Arch Rail" 00 "Tied Arch Road" 00 //define texts first so we can reference them in properties below
+
+  884 * 32	 00 06 0A 01 06 //adjust properties of fourth bridge (id 03)
+			 08 00 //intro date
+			 09 00 //min length
+			 0A FF //max length
+			 0B 42 //cost factor
+			 0C A0 00 //max speed
+			 0E 01 //flags (set to 01 to disable far pillars)
+			 0F 00 00 00 00 //long format intro date
+			 10 12 DC //purchase text. these texts #s increase in line with above
+			 11 13 DC //rail bridge info window
+			 12 14 DC //road bridge info window
+
+	//this reserves some sprites into temp. params
+  885 * 9	 0D 20 \D= \DR FE FF 08 3C 00 //this "main" param is used to allocate all of the graphics via the following action 6
+  886 * 9	 0D 21 \D+ 10 FF 01 00 00 00 //each sprite then gets its own param # to use in the final action 6's which determine placement
+  887 * 9	 0D 22 \D+ 10 FF 02 00 00 00
+  888 * 9	 0D 23 \D+ 10 FF 03 00 00 00
+  889 * 9	 0D 24 \D+ 10 FF 04 00 00 00
+  890 * 9	 0D 25 \D+ 10 FF 05 00 00 00
+  891 * 9	 0D 26 \D+ 10 FF 06 00 00 00
+  892 * 9	 0D 27 \D+ 10 FF 07 00 00 00
+  893 * 9	 0D 28 \D+ 10 FF 08 00 00 00
+  894 * 9	 0D 29 \D+ 10 FF 09 00 00 00
+  895 * 9	 0D 2A \D+ 10 FF 0A 00 00 00
+  896 * 9	 0D 2B \D+ 10 FF 0B 00 00 00
+  897 * 9	 0D 2C \D+ 10 FF 0C 00 00 00
+  898 * 9	 0D 2D \D+ 10 FF 0D 00 00 00
+  899 * 9	 0D 2E \D+ 10 FF 0E 00 00 00
+  900 * 9	 0D 2F \D+ 10 FF 0F 00 00 00
+  901 * 9	 0D 30 \D+ 10 FF 10 00 00 00
+  902 * 9	 0D 31 \D+ 10 FF 11 00 00 00
+  903 * 9	 0D 32 \D+ 10 FF 12 00 00 00
+  904 * 9	 0D 33 \D+ 10 FF 13 00 00 00
+  905 * 9	 0D 34 \D+ 10 FF 14 00 00 00
+  906 * 9	 0D 35 \D+ 10 FF 15 00 00 00
+  907 * 9	 0D 36 \D+ 10 FF 16 00 00 00
+  908 * 9	 0D 37 \D+ 10 FF 17 00 00 00
+  909 * 9	 0D 38 \D+ 10 FF 18 00 00 00
+  910 * 9	 0D 39 \D+ 10 FF 19 00 00 00
+  911 * 9	 0D 3A \D+ 10 FF 1A 00 00 00
+  912 * 9	 0D 3B \D+ 10 FF 1B 00 00 00
+  913 * 9	 0D 3C \D+ 10 FF 1C 00 00 00
+  914 * 9	 0D 3D \D+ 10 FF 1D 00 00 00
+  915 * 9	 0D 3E \D+ 10 FF 1E 00 00 00
+  916 * 9	 0D 3F \D+ 10 FF 1F 00 00 00
+  917 * 9	 0D 40 \D+ 10 FF 20 00 00 00
+  918 * 9	 0D 41 \D+ 10 FF 21 00 00 00
+  919 * 9	 0D 42 \D+ 10 FF 22 00 00 00
+  920 * 9	 0D 43 \D+ 10 FF 23 00 00 00
+  921 * 9	 0D 44 \D+ 10 FF 24 00 00 00
+  922 * 9	 0D 45 \D+ 10 FF 25 00 00 00
+  923 * 9	 0D 46 \D+ 10 FF 26 00 00 00
+  924 * 9	 0D 47 \D+ 10 FF 27 00 00 00
+  925 * 9	 0D 48 \D+ 10 FF 28 00 00 00
+  926 * 9	 0D 49 \D+ 10 FF 29 00 00 00
+  927 * 9	 0D 4A \D+ 10 FF 2A 00 00 00
+  928 * 9	 0D 4B \D+ 10 FF 2B 00 00 00
+  929 * 9	 0D 4C \D+ 10 FF 2C 00 00 00
+  930 * 9	 0D 4D \D+ 10 FF 2D 00 00 00
+  931 * 9	 0D 4E \D+ 10 FF 2E 00 00 00
+  932 * 9	 0D 4F \D+ 10 FF 2F 00 00 00
+  933 * 9	 0D 50 \D+ 10 FF 30 00 00 00
+  934 * 9	 0D 51 \D+ 10 FF 31 00 00 00
+  935 * 9	 0D 52 \D+ 10 FF 32 00 00 00
+  936 * 9	 0D 53 \D+ 10 FF 33 00 00 00
+  937 * 9	 0D 54 \D+ 10 FF 34 00 00 00
+  938 * 9	 0D 55 \D+ 10 FF 35 00 00 00
+  939 * 9	 0D 56 \D+ 10 FF 36 00 00 00
+  940 * 9	 0D 57 \D+ 10 FF 37 00 00 00
+  941 * 9	 0D 58 \D+ 10 FF 38 00 00 00
+  942 * 9	 0D 59 \D+ 10 FF 39 00 00 00
+  943 * 9	 0D 5A \D+ 10 FF 3A 00 00 00
+  944 * 9	 0D 5B \D+ 10 FF 3B 00 00 00
+  945 * 9	 0D 5C \D+ 10 FF 3C 00 00 00
+  946 * 9	 0D 5D \D+ 10 FF 3D 00 00 00
+  947 * 9	 0D 5E \D+ 10 FF 3E 00 00 00
+  948 * 9	 0D 5F \D+ 10 FF 3F 00 00 00
+  949 * 9	 0D 60 \D+ 10 FF 40 00 00 00
+  950 * 9	 0D 61 \D+ 10 FF 41 00 00 00
+  951 * 9	 0D 62 \D+ 10 FF 42 00 00 00
+  952 * 9	 0D 63 \D+ 10 FF 43 00 00 00
+
+   //this allocates the following graphics (realsprites) into the sprites which were reserved earlier (in the order they are defined below)
+  953 * 5	 06 10 02 03 FF 
+	//sprite number 00 00 (the first sprite below) now gets changed to whatever number the grm picked for the first of the reserved sprites, then each subsequent sprite
+	//is allocated that number + 1 (which corresponds to the number of the param above)
+  954 * 5	 0A 01 44 00 00
+
+//rail
+  955 sprites/gfx/archtest.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 10
+  956 sprites/gfx/archtest.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 11
+  957 sprites/gfx/archtest.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 12
+  958 sprites/gfx/archtest.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 13
+  959 sprites/gfx/archtest.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 14
+  960 sprites/gfx/archtest.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 15
+  961 sprites/gfx/archtest.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 16
+  962 sprites/gfx/archtest.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 17
+  963 sprites/gfx/archtest.png  8bpp  545     1    36   24  -25   -14 normal //pillar x 18
+  964 sprites/gfx/archtest.png  8bpp  585     1    36   24   -9   -14 normal //pillar y 19
+  965 sprites/gfx/archtest.png  8bpp  1      57    64   100  -31  -64 normal //0-3 back x 1A
+  966 sprites/gfx/archtest.png  8bpp  69     57    64   100  -55  -76 normal //0-3 front x 1B
+  967 sprites/gfx/archtest.png  8bpp  137    57    64   100  -31  -64 normal //0-3 back y 1C
+  968 sprites/gfx/archtest.png  8bpp  205    57    64   100  -7  -76 normal //0-3 front y 1D
+  969 sprites/gfx/archtest.png  8bpp  273    57    64   100  -31  -64 normal //1-2 back x 1E
+  970 sprites/gfx/archtest.png  8bpp  341    57    64   100  -55  -76 normal //1-2 front x 1F
+  971 sprites/gfx/archtest.png  8bpp  409    57    64   100  -31  -64 normal //1-2 back y 20
+  972 sprites/gfx/archtest.png  8bpp  477    57    64   100  -7  -76 normal //1-2 front y 21
+  973 sprites/gfx/archtest.png  8bpp  545    57    64   100  -31  -64 normal //4 back x 22
+  974 sprites/gfx/archtest.png  8bpp  613    57    64   100  -55  -76 normal //4 front x 23
+  975 sprites/gfx/archtest.png  8bpp  681    57    64   100  -31  -64 normal //4 back y 24
+  976 sprites/gfx/archtest.png  8bpp  749    57    64   100  -7  -76 normal //4 front y 25
+  977 sprites/gfx/archtest.png  8bpp  817    57    64   100  -31  -64 normal //5 back x 26
+  978 sprites/gfx/archtest.png  8bpp  885    57    64   100  -55  -76 normal //5 front x 27
+  979 sprites/gfx/archtest.png  8bpp  953    57    64   100  -31  -64 normal //5 back y 28
+  980 sprites/gfx/archtest.png  8bpp  1021    57    64   100  -7  -76 normal //5 front y 29
+  981 sprites/gfx/archtest.png  8bpp  1      200    64   100  -31  -64 normal //0-3 back x 2A
+  982 sprites/gfx/archtest.png  8bpp  69     200    64   100  -55  -76 normal //0-3 front x 2B
+  983 sprites/gfx/archtest.png  8bpp  137    200    64   100  -31  -64 normal //0-3 back y 2C
+  984 sprites/gfx/archtest.png  8bpp  205    200    64   100  -7  -76 normal //0-3 front y 2D
+  985 sprites/gfx/archtest.png  8bpp  273    200    64   100  -31  -64 normal //1-2 back x 2E
+  986 sprites/gfx/archtest.png  8bpp  341    200    64   100  -55  -76 normal //1-2 front x 2F
+  987 sprites/gfx/archtest.png  8bpp  409    200    64   100  -31  -64 normal //1-2 back y 30
+  988 sprites/gfx/archtest.png  8bpp  477    200    64   100  -7  -76 normal //1-2 front y 31  
+//road
+  989 sprites/gfx/archtest.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 32
+  990 sprites/gfx/archtest.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 33
+  991 sprites/gfx/archtest.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 34
+  992 sprites/gfx/archtest.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 35
+  993 sprites/gfx/archtest.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 36
+  994 sprites/gfx/archtest.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 37
+  995 sprites/gfx/archtest.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 38
+  996 sprites/gfx/archtest.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 39
+  997 sprites/gfx/archtest.png  8bpp  545     1    38   24  -26   -14 normal //pillar x 3A
+  998 sprites/gfx/archtest.png  8bpp  585     1    38   24   -10   -14 normal //pillar y 3B
+  999 sprites/gfx/archtest.png  8bpp  1      57    64   100  -31  -64 normal //0-3 back x 3C
+ 1000 sprites/gfx/archtest.png  8bpp  69     57    64   100  -55  -76 normal //0-3 front x 3D
+ 1001 sprites/gfx/archtest.png  8bpp  137    57    64   100  -31  -64 normal //0-3 back y 3E
+ 1002 sprites/gfx/archtest.png  8bpp  205    57    64   100  -7  -76 normal //0-3 front y 3F
+ 1003 sprites/gfx/archtest.png  8bpp  273    57    64   100  -31  -64 normal //1-2 back x 40
+ 1004 sprites/gfx/archtest.png  8bpp  341    57    64   100  -55  -76 normal //1-2 front x 41
+ 1005 sprites/gfx/archtest.png  8bpp  409    57    64   100  -31  -64 normal //1-2 back y 42
+ 1006 sprites/gfx/archtest.png  8bpp  477    57    64   100  -7  -76 normal //1-2 front y 43
+ 1007 sprites/gfx/archtest.png  8bpp  545    57    64   100  -31  -64 normal //4 back x 44
+ 1008 sprites/gfx/archtest.png  8bpp  613    57    64   100  -55  -76 normal //4 front x 45
+ 1009 sprites/gfx/archtest.png  8bpp  681    57    64   100  -31  -64 normal //4 back y 46
+ 1010 sprites/gfx/archtest.png  8bpp  749    57    64   100  -7  -76 normal //4 front y 47
+ 1011 sprites/gfx/archtest.png  8bpp  817    57    64   100  -31  -64 normal //5 back x 48
+ 1012 sprites/gfx/archtest.png  8bpp  885    57    64   100  -55  -76 normal //5 front x 49
+ 1013 sprites/gfx/archtest.png  8bpp  953    57    64   100  -31  -64 normal //5 back y 4A
+ 1014 sprites/gfx/archtest.png  8bpp  1021    57    64   100  -7  -76 normal //5 front y 4B
+ 1015 sprites/gfx/archtest.png  8bpp  1      200    64   100  -31  -64 normal //0-3 back x 4C
+ 1016 sprites/gfx/archtest.png  8bpp  69     200    64   100  -55  -76 normal //0-3 front x 4D
+ 1017 sprites/gfx/archtest.png  8bpp  137    200    64   100  -31  -64 normal //0-3 back y 4E
+ 1018 sprites/gfx/archtest.png  8bpp  205    200    64   100  -7  -76 normal //0-3 front y 4F
+ 1019 sprites/gfx/archtest.png  8bpp  273    200    64   100  -31  -64 normal //1-2 back x 50
+ 1020 sprites/gfx/archtest.png  8bpp  341    200    64   100  -55  -76 normal //1-2 front x 51
+ 1021 sprites/gfx/archtest.png  8bpp  409    200    64   100  -31  -64 normal //1-2 back y 52
+ 1022 sprites/gfx/archtest.png  8bpp  477    200    64   100  -7  -76 normal //1-2 front y 53
+
+
+   //and finally these action 6's tell where to place each of the reserved sprites (organized by table layout for easier viewing)
+   //Ack, I had to split them up individually because there aren't enough hex ids to do all in one
+ 1023 * 26	 06
+			 2A 02 08    2B 02 0C    //rail x (part 0 should probably never have pillars set)
+			 2C 02 18    2D 02 1C    //rail y
+			 4C 02 28    4D 02 2C    //road x
+			 4E 02 38    4F 02 3C    //road y
+			     //mono x
+			     //mono y
+			     //mlev x
+			     //mlev y
+			 FF
+
+// BRICK BRIDGE (08)
+ 1024 * 136	 00 06 01 01 06 0D 00 01 //action 00 bridges(06), 01 property, 01 ID, ID 02, prop 0D, tableID 00, 01 tables
+//table 00
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
+E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+
+ 1025 * 26	 06
+			 2E 02 08    2F 02 0C        //rail x
+			 30 02 18    31 02 1C        //rail y
+			 50 02 28    51 02 2C        //road x
+			 52 02 38    53 02 3C        //road y
+			     //mono x
+			     //mono y
+			     //mlev x
+			     //mlev y
+			 FF
+
+//table 01
+ 1026 * 136	 00 06 01 01 06 0D 01 01
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
+E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+
+ 1027 * 26	 06
+			 3E 02 08    3F 02 0C        //rail x
+			 40 02 18    41 02 1C        //rail y
+			 60 02 28    61 02 2C        //road x
+			 62 02 38    63 02 3C        //road y
+			     //mono x
+			     //mono y
+			     //mlev x
+			     //mlev y
+			 FF
+
+//table 02
+ 1028 * 136	 00 06 01 01 06 0D 02 01
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
+E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+
+ 1029 * 26	 06
+			 3A 02 08    3B 02 0C        //rail x
+			 3C 02 18    3D 02 1C        //rail y
+			 5C 02 28    5D 02 2C        //road x
+			 5E 02 38    5F 02 3C        //road y
+			     //mono x
+			     //mono y
+			     //mlev x
+			     //mlev y
+			 FF
+
+//table 03
+ 1030 * 136	 00 06 01 01 06 0D 03 01
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
+E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+
+ 1031 * 26	 06
+			 32 02 08    33 02 0C        //rail x
+			 34 02 18    35 02 1C        //rail y
+			 54 02 28    55 02 2C        //road x
+			 56 02 38    57 02 3C        //road y
+			     //mono x
+			     //mono y
+			     //mlev x
+			     //mlev y
+			 FF
+
+//table 04
+ 1032 * 136	 00 06 01 01 06 0D 04 01
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
+E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+
+ 1033 * 26	 06
+			 36 02 08    37 02 0C        //rail x
+			 38 02 18    39 02 1C        //rail y
+			 58 02 28    59 02 2C        //road x
+			 5A 02 38    5B 02 3C        //road y
+			     //mono x
+			     //mono y
+			     //mlev x
+			     //mlev y
+			 FF
+
+//table 05
+ 1034 * 136	 00 06 01 01 06 0D 05 01
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
+E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+
+ 1035 * 50	 06
+			 20 02 08    21 04 0C    22 02 10    23 02 14    //rail flat
+			 24 02 18    25 02 1C    26 02 20    27 02 24    //rail ramp
+			 42 02 28    43 02 2C    44 02 30    45 02 34    //road flat
+			 46 02 38    47 02 3C    48 02 40    49 02 44    //road ramp
+			     //mono flat
+			     //mono ramp
+			     //mlev flat
+			     //mlev ramp
+			 FF
+
+//table 06
+ 1036 * 136	 00 06 01 01 06 0D 06 01
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail flat: northern end X, northern end Y, southern end X, southern end Y //08, 0C, 10, 14
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail ramp: northern end X, northern end Y, southern end X, southern end Y //18, 1C, 20, 24
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //road flat: northern end X, northern end Y, southern end X, southern end Y //28, 2C, 30, 34
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //road ramp: northern end X, northern end Y, southern end X, southern end Y //38, 3C, 40, 44
+E7 90 23 03  E9 90 23 03  E6 90 23 03  E8 90 23 03 //mono flat: northern end X, northern end Y, southern end X, southern end Y 
+EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, northern end Y, southern end X, southern end Y 
+0F 91 23 03  11 91 23 03  0E 91 23 03  10 91 23 03 //mlev flat: northern end X, northern end Y, southern end X, southern end Y 
+13 91 23 03  15 91 23 03  12 91 23 03  14 91 23 03 //mlev ramp: northern end X, northern end Y, southern end X, southern end Y //78, 7C, 80, 84
+
 
 //================
 //  STEEL GIRDER Bridge 07
 //================
                          //this number increases by 3 with each bridge
-  517 * 73	 04 06 FF 03 06 DC "Steel Truss Bridge" 00 "Steel Truss Rail Bridge" 00 "Steel Truss Road Bridge" 00 //define texts first so we can reference them in properties below
+ 1037 * 73	 04 06 FF 03 15 DC "Steel Truss Bridge" 00 "Steel Truss Rail Bridge" 00 "Steel Truss Road Bridge" 00 //define texts first so we can reference them in properties below
 
-  518 * 32	 00 06 0A 01 07 //adjust properties of bridge id 07
+ 1038 * 32	 00 06 0A 01 07 //adjust properties of bridge id 07
 			 08 00 //intro date
 			 09 02 //min length
 			 0A FF //max length
@@ -1419,127 +2310,127 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 			 0C 64 00 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
 			 0F 00 00 07 80 //long format intro date
-			 10 06 DC //purchase text
-			 11 07 DC //rail bridge info window
-			 12 08 DC //road bridge info window
+			 10 15 DC //purchase text
+			 11 16 DC //rail bridge info window
+			 12 17 DC //road bridge info window
 
 	//this reserves some sprites into temp. params
-  519 * 9	 0D 00 \D= \DR FE FF 08 34 00 //this "main" param is used to allocate all of the graphics via the following action 6
-  520 * 9	 0D 01 \D+ 00 FF 01 00 00 00 //each sprite then gets its own param # to use in the final action 6's which determine placement
-  521 * 9	 0D 02 \D+ 00 FF 02 00 00 00
-  522 * 9	 0D 03 \D+ 00 FF 03 00 00 00
-  523 * 9	 0D 04 \D+ 00 FF 04 00 00 00
-  524 * 9	 0D 05 \D+ 00 FF 05 00 00 00
-  525 * 9	 0D 06 \D+ 00 FF 06 00 00 00
-  526 * 9	 0D 07 \D+ 00 FF 07 00 00 00
-  527 * 9	 0D 08 \D+ 00 FF 08 00 00 00
-  528 * 9	 0D 09 \D+ 00 FF 09 00 00 00
-  529 * 9	 0D 0A \D+ 00 FF 0A 00 00 00
-  530 * 9	 0D 0B \D+ 00 FF 0B 00 00 00
-  531 * 9	 0D 0C \D+ 00 FF 0C 00 00 00
-  532 * 9	 0D 0D \D+ 00 FF 0D 00 00 00
-  533 * 9	 0D 0E \D+ 00 FF 0E 00 00 00
-  534 * 9	 0D 0F \D+ 00 FF 0F 00 00 00
-  535 * 9	 0D 10 \D+ 00 FF 10 00 00 00
-  536 * 9	 0D 11 \D+ 00 FF 11 00 00 00
-  537 * 9	 0D 12 \D+ 00 FF 12 00 00 00
-  538 * 9	 0D 13 \D+ 00 FF 13 00 00 00
-  539 * 9	 0D 14 \D+ 00 FF 14 00 00 00
-  540 * 9	 0D 15 \D+ 00 FF 15 00 00 00
-  541 * 9	 0D 16 \D+ 00 FF 16 00 00 00
-  542 * 9	 0D 17 \D+ 00 FF 17 00 00 00
-  543 * 9	 0D 18 \D+ 00 FF 18 00 00 00
-  544 * 9	 0D 19 \D+ 00 FF 19 00 00 00
-  545 * 9	 0D 1A \D+ 00 FF 1A 00 00 00
-  546 * 9	 0D 1B \D+ 00 FF 1B 00 00 00
-  547 * 9	 0D 1C \D+ 00 FF 1C 00 00 00
-  548 * 9	 0D 1D \D+ 00 FF 1D 00 00 00
-  549 * 9	 0D 1E \D+ 00 FF 1E 00 00 00
-  550 * 9	 0D 1F \D+ 00 FF 1F 00 00 00
-  551 * 9	 0D 20 \D+ 00 FF 20 00 00 00
-  552 * 9	 0D 21 \D+ 00 FF 21 00 00 00
-  553 * 9	 0D 22 \D+ 00 FF 22 00 00 00
-  554 * 9	 0D 23 \D+ 00 FF 23 00 00 00
-  555 * 9	 0D 24 \D+ 00 FF 24 00 00 00
-  556 * 9	 0D 25 \D+ 00 FF 25 00 00 00
-  557 * 9	 0D 26 \D+ 00 FF 26 00 00 00
-  558 * 9	 0D 27 \D+ 00 FF 27 00 00 00
-  559 * 9	 0D 28 \D+ 00 FF 28 00 00 00
-  560 * 9	 0D 29 \D+ 00 FF 29 00 00 00
-  561 * 9	 0D 2A \D+ 00 FF 2A 00 00 00
-  562 * 9	 0D 2B \D+ 00 FF 2B 00 00 00
-  563 * 9	 0D 2C \D+ 00 FF 2C 00 00 00
-  564 * 9	 0D 2D \D+ 00 FF 2D 00 00 00
-  565 * 9	 0D 2E \D+ 00 FF 2E 00 00 00
-  566 * 9	 0D 2F \D+ 00 FF 2F 00 00 00
-  567 * 9	 0D 30 \D+ 00 FF 30 00 00 00
-  568 * 9	 0D 31 \D+ 00 FF 31 00 00 00
-  569 * 9	 0D 32 \D+ 00 FF 32 00 00 00
-  570 * 9	 0D 33 \D+ 00 FF 33 00 00 00
+ 1039 * 9	 0D 00 \D= \DR FE FF 08 34 00 //this "main" param is used to allocate all of the graphics via the following action 6
+ 1040 * 9	 0D 01 \D+ 00 FF 01 00 00 00 //each sprite then gets its own param # to use in the final action 6's which determine placement
+ 1041 * 9	 0D 02 \D+ 00 FF 02 00 00 00
+ 1042 * 9	 0D 03 \D+ 00 FF 03 00 00 00
+ 1043 * 9	 0D 04 \D+ 00 FF 04 00 00 00
+ 1044 * 9	 0D 05 \D+ 00 FF 05 00 00 00
+ 1045 * 9	 0D 06 \D+ 00 FF 06 00 00 00
+ 1046 * 9	 0D 07 \D+ 00 FF 07 00 00 00
+ 1047 * 9	 0D 08 \D+ 00 FF 08 00 00 00
+ 1048 * 9	 0D 09 \D+ 00 FF 09 00 00 00
+ 1049 * 9	 0D 0A \D+ 00 FF 0A 00 00 00
+ 1050 * 9	 0D 0B \D+ 00 FF 0B 00 00 00
+ 1051 * 9	 0D 0C \D+ 00 FF 0C 00 00 00
+ 1052 * 9	 0D 0D \D+ 00 FF 0D 00 00 00
+ 1053 * 9	 0D 0E \D+ 00 FF 0E 00 00 00
+ 1054 * 9	 0D 0F \D+ 00 FF 0F 00 00 00
+ 1055 * 9	 0D 10 \D+ 00 FF 10 00 00 00
+ 1056 * 9	 0D 11 \D+ 00 FF 11 00 00 00
+ 1057 * 9	 0D 12 \D+ 00 FF 12 00 00 00
+ 1058 * 9	 0D 13 \D+ 00 FF 13 00 00 00
+ 1059 * 9	 0D 14 \D+ 00 FF 14 00 00 00
+ 1060 * 9	 0D 15 \D+ 00 FF 15 00 00 00
+ 1061 * 9	 0D 16 \D+ 00 FF 16 00 00 00
+ 1062 * 9	 0D 17 \D+ 00 FF 17 00 00 00
+ 1063 * 9	 0D 18 \D+ 00 FF 18 00 00 00
+ 1064 * 9	 0D 19 \D+ 00 FF 19 00 00 00
+ 1065 * 9	 0D 1A \D+ 00 FF 1A 00 00 00
+ 1066 * 9	 0D 1B \D+ 00 FF 1B 00 00 00
+ 1067 * 9	 0D 1C \D+ 00 FF 1C 00 00 00
+ 1068 * 9	 0D 1D \D+ 00 FF 1D 00 00 00
+ 1069 * 9	 0D 1E \D+ 00 FF 1E 00 00 00
+ 1070 * 9	 0D 1F \D+ 00 FF 1F 00 00 00
+ 1071 * 9	 0D 20 \D+ 00 FF 20 00 00 00
+ 1072 * 9	 0D 21 \D+ 00 FF 21 00 00 00
+ 1073 * 9	 0D 22 \D+ 00 FF 22 00 00 00
+ 1074 * 9	 0D 23 \D+ 00 FF 23 00 00 00
+ 1075 * 9	 0D 24 \D+ 00 FF 24 00 00 00
+ 1076 * 9	 0D 25 \D+ 00 FF 25 00 00 00
+ 1077 * 9	 0D 26 \D+ 00 FF 26 00 00 00
+ 1078 * 9	 0D 27 \D+ 00 FF 27 00 00 00
+ 1079 * 9	 0D 28 \D+ 00 FF 28 00 00 00
+ 1080 * 9	 0D 29 \D+ 00 FF 29 00 00 00
+ 1081 * 9	 0D 2A \D+ 00 FF 2A 00 00 00
+ 1082 * 9	 0D 2B \D+ 00 FF 2B 00 00 00
+ 1083 * 9	 0D 2C \D+ 00 FF 2C 00 00 00
+ 1084 * 9	 0D 2D \D+ 00 FF 2D 00 00 00
+ 1085 * 9	 0D 2E \D+ 00 FF 2E 00 00 00
+ 1086 * 9	 0D 2F \D+ 00 FF 2F 00 00 00
+ 1087 * 9	 0D 30 \D+ 00 FF 30 00 00 00
+ 1088 * 9	 0D 31 \D+ 00 FF 31 00 00 00
+ 1089 * 9	 0D 32 \D+ 00 FF 32 00 00 00
+ 1090 * 9	 0D 33 \D+ 00 FF 33 00 00 00
 
    //this allocates the following graphics (realsprites) into the sprites which were reserved earlier (in the order they are defined below)
-  571 * 5	 06 00 02 03 FF 
+ 1091 * 5	 06 00 02 03 FF 
 	//sprite number 00 00 (the first sprite below) now gets changed to whatever number the grm picked for the first of the reserved sprites, then each subsequent sprite
 	//is allocated that number + 1 (which corresponds to the number of the param above)
-  572 * 5	 0A 01 34 00 00
+ 1092 * 5	 0A 01 34 00 00
 //rail
-  573 sprites/gfx/steel_truss_rail.png  8bpp  1       1    64   46  -31   -14 normal //back flat x 1A
-  574 sprites/gfx/steel_truss_rail.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 1B
-  575 sprites/gfx/steel_truss_rail.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 1C
-  576 sprites/gfx/steel_truss_rail.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 1D
-  577 sprites/gfx/steel_truss_rail.png  8bpp  273     1    64   46  -31   -14 normal //ramp back x 1E
-  578 sprites/gfx/steel_truss_rail.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 1F
-  579 sprites/gfx/steel_truss_rail.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 20
-  580 sprites/gfx/steel_truss_rail.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 21
-  581 sprites/gfx/steel_truss_rail.png  8bpp  545     1    36   24  -25   -14 normal //pillar x 22
-  582 sprites/gfx/steel_truss_rail.png  8bpp  585     1    36   24   -9   -14 normal //pillar y 23
-  583 sprites/gfx/steel_truss_rail.png  8bpp  1      57    64   78  -31  -42 normal //0-3 back x 24
-  584 sprites/gfx/steel_truss_rail.png  8bpp  69     57    64   78  -55  -54 normal //0-3 front x 25
-  585 sprites/gfx/steel_truss_rail.png  8bpp  137    57    64   78  -31  -42 normal //0-3 back y 26
-  586 sprites/gfx/steel_truss_rail.png  8bpp  205    57    64   78  -7  -54 normal //0-3 front y 27
-  587 sprites/gfx/steel_truss_rail.png  8bpp  273    57    64   78  -31  -42 normal //1-2 back x 28
-  588 sprites/gfx/steel_truss_rail.png  8bpp  341    57    64   78  -55  -54 normal //1-2 front x 29
-  589 sprites/gfx/steel_truss_rail.png  8bpp  409    57    64   78  -31  -42 normal //1-2 back y 2A
-  590 sprites/gfx/steel_truss_rail.png  8bpp  477    57    64   78  -7  -54 normal //1-2 front y 2B
-  591 sprites/gfx/steel_truss_rail.png  8bpp  545    57    64   78  -31  -42 normal //4 back x 2C
-  592 sprites/gfx/steel_truss_rail.png  8bpp  613    57    64   78  -55  -54 normal //4 front x 2D
-  593 sprites/gfx/steel_truss_rail.png  8bpp  681    57    64   78  -31  -42 normal //4 back y 2E
-  594 sprites/gfx/steel_truss_rail.png  8bpp  749    57    64   78  -7  -54 normal //4 front y 2F
-  595 sprites/gfx/steel_truss_rail.png  8bpp  817    57    64   78  -31  -42 normal //5 back x 30
-  596 sprites/gfx/steel_truss_rail.png  8bpp  885    57    64   78  -55  -54 normal //5 front x 31
-  597 sprites/gfx/steel_truss_rail.png  8bpp  953    57    64   78  -31  -42 normal //5 back y 32
-  598 sprites/gfx/steel_truss_rail.png  8bpp  1021    57    64   78  -7  -54 normal //5 front y 33
+ 1093 sprites/gfx/bridgehead_rail.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 00
+ 1094 sprites/gfx/bridgehead_rail.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 01
+ 1095 sprites/gfx/bridgehead_rail.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 02
+ 1096 sprites/gfx/bridgehead_rail.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 03
+ 1097 sprites/gfx/bridgehead_rail.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 04
+ 1098 sprites/gfx/bridgehead_rail.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 05
+ 1099 sprites/gfx/bridgehead_rail.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 06
+ 1100 sprites/gfx/bridgehead_rail.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 07
+ 1101 sprites/gfx/steel_cantilever_rail_white_rusty.png  8bpp  458     1    18   14  -14   -9 normal //pillar x 08
+ 1102 sprites/gfx/steel_cantilever_rail_white_rusty.png  8bpp  481     1    18   14   -2   -9 normal //pillar y 09
+ 1103 sprites/gfx/steel_cantilever_rail_white_rusty.png  8bpp  1      45    46   35  -23  -11 normal //0 back x 0A
+ 1104 sprites/gfx/steel_cantilever_rail_white_rusty.png  8bpp  52     45    47   34  -44  -22 normal //0 front x 0B
+ 1105 sprites/gfx/steel_cantilever_rail_white_rusty.png  8bpp  104    45    46   35  -21  -11 normal //0 back y 0C
+ 1106 sprites/gfx/steel_cantilever_rail_white_rusty.png  8bpp  155    45    47   34   -1  -22 normal //0 front y 0D
+ 1107 sprites/gfx/steel_cantilever_rail_white_rusty.png  8bpp  207    45    47   39  -24  -15 normal //1 back x 0E
+ 1108 sprites/gfx/steel_cantilever_rail_white_rusty.png  8bpp  259    45    38   38  -36  -26 normal //1 front x 0F
+ 1109 sprites/gfx/steel_cantilever_rail_white_rusty.png  8bpp  302    45    47   39  -21  -15 normal //1 back y 10
+ 1110 sprites/gfx/steel_cantilever_rail_white_rusty.png  8bpp  354    45    38   38    0  -26 normal //1 front y 11
+ 1111 sprites/gfx/steel_cantilever_rail_white_rusty.png  8bpp  397    45    46   39  -23  -15 normal //4 back x 12
+ 1112 sprites/gfx/steel_cantilever_rail_white_rusty.png  8bpp  448    45    46   38  -44  -26 normal //4 front x 13
+ 1113 sprites/gfx/steel_cantilever_rail_white_rusty.png  8bpp  499    45    46   39  -21  -15 normal //4 back y 14
+ 1114 sprites/gfx/steel_cantilever_rail_white_rusty.png  8bpp  550    45    46   38    0  -26 normal //4 front y 15
+ 1115 sprites/gfx/steel_cantilever_rail_white_rusty.png  8bpp  601    45    45   48  -22  -24 normal //5 back x 16
+ 1116 sprites/gfx/steel_cantilever_rail_white_rusty.png  8bpp  651    45    46   47  -44  -35 normal //5 front x 17
+ 1117 sprites/gfx/steel_cantilever_rail_white_rusty.png  8bpp  702    45    45   48  -21  -24 normal //5 back y 18
+ 1118 sprites/gfx/steel_cantilever_rail_white_rusty.png  8bpp  752    45    46   47    0  -35 normal //5 front y 19
 //road
-  599 sprites/gfx/steel_lift_road.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 1A
-  600 sprites/gfx/steel_lift_road.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 1B
-  601 sprites/gfx/steel_lift_road.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 1C
-  602 sprites/gfx/steel_lift_road.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 1D
-  603 sprites/gfx/steel_lift_road.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 1E
-  604 sprites/gfx/steel_lift_road.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 1F
-  605 sprites/gfx/steel_lift_road.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 20
-  606 sprites/gfx/steel_lift_road.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 21
-  607 sprites/gfx/steel_lift_road.png  8bpp  545     1    36   24  -25   -14 normal //pillar x 22
-  608 sprites/gfx/steel_lift_road.png  8bpp  585     1    36   24   -9   -14 normal //pillar y 23
-  609 sprites/gfx/steel_lift_road.png  8bpp  1      57    64   78  -31  -42 normal //0-3 back x 24
-  610 sprites/gfx/steel_lift_road.png  8bpp  69     57    64   78  -55  -54 normal //0-3 front x 25
-  611 sprites/gfx/steel_lift_road.png  8bpp  137    57    64   78  -31  -42 normal //0-3 back y 26
-  612 sprites/gfx/steel_lift_road.png  8bpp  205    57    64   78  -7  -54 normal //0-3 front y 27
-  613 sprites/gfx/steel_lift_road.png  8bpp  273    57    64   78  -31  -42 normal //1-2 back x 28
-  614 sprites/gfx/steel_lift_road.png  8bpp  341    57    64   78  -55  -54 normal //1-2 front x 29
-  615 sprites/gfx/steel_lift_road.png  8bpp  409    57    64   78  -31  -42 normal //1-2 back y 2A
-  616 sprites/gfx/steel_lift_road.png  8bpp  477    57    64   78  -7  -54 normal //1-2 front y 2B
-  617 sprites/gfx/steel_lift_road.png  8bpp  545    57    64   100  -31  -64 normal //4 back x 2C
-  618 sprites/gfx/steel_lift_road.png  8bpp  613    57    64   100  -55  -76 normal //4 front x 2D
-  619 sprites/gfx/steel_lift_road.png  8bpp  681    57    64   100  -31  -64 normal //4 back y 2E
-  620 sprites/gfx/steel_lift_road.png  8bpp  749    57    64   100  -7  -76 normal //4 front y 2F
-  621 sprites/gfx/steel_lift_road.png  8bpp  817    57    64   100  -31  -64 normal //5 back x 30
-  622 sprites/gfx/steel_lift_road.png  8bpp  885    57    64   100  -55  -76 normal //5 front x 31
-  623 sprites/gfx/steel_lift_road.png  8bpp  953    57    64   100  -31  -64 normal //5 back y 32
-  624 sprites/gfx/steel_lift_road.png  8bpp  1021    57    64   100  -7  -76 normal //5 front y 33
+ 1119 sprites/gfx/steel_lift_road.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 1A
+ 1120 sprites/gfx/steel_lift_road.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 1B
+ 1121 sprites/gfx/steel_lift_road.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 1C
+ 1122 sprites/gfx/steel_lift_road.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 1D
+ 1123 sprites/gfx/steel_lift_road.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 1E
+ 1124 sprites/gfx/steel_lift_road.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 1F
+ 1125 sprites/gfx/steel_lift_road.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 20
+ 1126 sprites/gfx/steel_lift_road.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 21
+ 1127 sprites/gfx/steel_lift_road.png  8bpp  545     1    36   24  -25   -14 normal //pillar x 22
+ 1128 sprites/gfx/steel_lift_road.png  8bpp  585     1    36   24   -9   -14 normal //pillar y 23
+ 1129 sprites/gfx/steel_lift_road.png  8bpp  1      57    64   78  -31  -42 normal //0-3 back x 24
+ 1130 sprites/gfx/steel_lift_road.png  8bpp  69     57    64   78  -55  -54 normal //0-3 front x 25
+ 1131 sprites/gfx/steel_lift_road.png  8bpp  137    57    64   78  -31  -42 normal //0-3 back y 26
+ 1132 sprites/gfx/steel_lift_road.png  8bpp  205    57    64   78  -7  -54 normal //0-3 front y 27
+ 1133 sprites/gfx/steel_lift_road.png  8bpp  273    57    64   78  -31  -42 normal //1-2 back x 28
+ 1134 sprites/gfx/steel_lift_road.png  8bpp  341    57    64   78  -55  -54 normal //1-2 front x 29
+ 1135 sprites/gfx/steel_lift_road.png  8bpp  409    57    64   78  -31  -42 normal //1-2 back y 2A
+ 1136 sprites/gfx/steel_lift_road.png  8bpp  477    57    64   78  -7  -54 normal //1-2 front y 2B
+ 1137 sprites/gfx/steel_lift_road.png  8bpp  545    57    64   100  -31  -64 normal //4 back x 2C
+ 1138 sprites/gfx/steel_lift_road.png  8bpp  613    57    64   100  -55  -76 normal //4 front x 2D
+ 1139 sprites/gfx/steel_lift_road.png  8bpp  681    57    64   100  -31  -64 normal //4 back y 2E
+ 1140 sprites/gfx/steel_lift_road.png  8bpp  749    57    64   100  -7  -76 normal //4 front y 2F
+ 1141 sprites/gfx/steel_lift_road.png  8bpp  817    57    64   100  -31  -64 normal //5 back x 30
+ 1142 sprites/gfx/steel_lift_road.png  8bpp  885    57    64   100  -55  -76 normal //5 front x 31
+ 1143 sprites/gfx/steel_lift_road.png  8bpp  953    57    64   100  -31  -64 normal //5 back y 32
+ 1144 sprites/gfx/steel_lift_road.png  8bpp  1021    57    64   100  -7  -76 normal //5 front y 33
 
    //and finally these action 6's tell where to place each of the reserved sprites (organized by table layout for easier viewing)
    //Ack, I had to split them up individually because there aren't enough hex ids to do all in one
-  625 * 26	 06
+ 1145 * 26	 06
 			 0A 02 08    0B 02 0C    //rail x (part 0 should probably never have pillars set)
 			 0C 02 18    0D 02 1C    //rail y
 			 24 02 28    25 02 2C    //road x
@@ -1551,7 +2442,7 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 			 FF
 
 // STEEL TRESTLE bridge (02)
-  626 * 136	 00 06 01 01 07 0D 00 01 //action 00 bridges(06), 01 property, 01 ID, ID 02, prop 0D, tableID 00, 01 tables
+ 1146 * 136	 00 06 01 01 07 0D 00 01 //action 00 bridges(06), 01 property, 01 ID, ID 02, prop 0D, tableID 00, 01 tables
 //table 00
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
@@ -1562,7 +2453,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  627 * 26	 06
+ 1147 * 26	 06
 			 0E 02 08    0F 02 0C    //rail x
 			 10 02 18    11 02 1C    //rail y
 			 28 02 28    29 02 2C    //road x
@@ -1574,7 +2465,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 01
-  628 * 136	 00 06 01 01 07 0D 01 01
+ 1148 * 136	 00 06 01 01 07 0D 01 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -1584,9 +2475,9 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  629 * 26	 06
-			 0E 02 08    0F 02 0C    //rail x
-			 10 02 18    11 02 1C    //rail y
+ 1149 * 26	 06
+			 12 02 08    13 02 0C    //rail x
+			 14 02 18    15 02 1C    //rail y
 			 28 02 28    29 02 2C    //road x
 			 2A 02 38    2B 02 3C    //road y
 			     //mono x
@@ -1596,7 +2487,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 02
-  630 * 136	 00 06 01 01 07 0D 02 01
+ 1150 * 136	 00 06 01 01 07 0D 02 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -1606,9 +2497,9 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  631 * 38	 06
-			 0A 02 08    0B 02 0C    08 02 10    //rail x
-			 0C 02 18    0D 02 1C    09 02 20    //rail y
+ 1151 * 38	 06
+			 12 02 08    13 02 0C    08 02 10    //rail x
+			 14 02 18    15 02 1C    09 02 20    //rail y
 			 24 02 28    25 02 2C    22 02 30    //road x
 			 26 02 38    27 02 3C    23 02 40    //road y
 			     //mono x
@@ -1618,7 +2509,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 03
-  632 * 136	 00 06 01 01 07 0D 03 01
+ 1152 * 136	 00 06 01 01 07 0D 03 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -1628,7 +2519,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  633 * 26	 06
+ 1153 * 26	 06
 			 12 02 08    13 02 0C    //rail x
 			 14 02 18    15 02 1C    //rail y
 			 2C 02 28    2D 02 2C    //road x
@@ -1640,7 +2531,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 04
-  634 * 136	 00 06 01 01 07 0D 04 01
+ 1154 * 136	 00 06 01 01 07 0D 04 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -1650,9 +2541,9 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  635 * 38	 06
-			 16 02 08    17 02 0C    08 02 10    //rail x
-			 18 02 18    19 02 1C    09 02 20    //rail y
+ 1155 * 38	 06
+			 12 02 08    13 02 0C    08 02 10    //rail x
+			 14 02 18    15 02 1C    09 02 20    //rail y
 			 30 02 28    31 02 2C    22 02 30    //road x
 			 32 02 38    33 02 3C    23 02 40    //road y
 			     //mono x
@@ -1662,7 +2553,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 05
-  636 * 136	 00 06 01 01 07 0D 05 01
+ 1156 * 136	 00 06 01 01 07 0D 05 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -1672,7 +2563,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  637 * 50	 06
+ 1157 * 50	 06
 			 00 02 08    01 02 0C    02 02 10    03 02 14    //rail flat
 			 04 02 18    05 02 1C    06 02 20    07 02 24    //rail ramp
 			 1A 02 28    1B 02 2C    1C 02 30    1D 02 34    //road flat
@@ -1684,7 +2575,298 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 06
-  638 * 136	 00 06 01 01 07 0D 06 01
+ 1158 * 136	 00 06 01 01 07 0D 06 01
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail flat: northern end X, northern end Y, southern end X, southern end Y //08, 0C, 10, 14
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail ramp: northern end X, northern end Y, southern end X, southern end Y //18, 1C, 20, 24
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //road flat: northern end X, northern end Y, southern end X, southern end Y //28, 2C, 30, 34
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //road ramp: northern end X, northern end Y, southern end X, southern end Y //38, 3C, 40, 44
+E7 90 23 03  E9 90 23 03  E6 90 23 03  E8 90 23 03 //mono flat: northern end X, northern end Y, southern end X, southern end Y 
+EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, northern end Y, southern end X, southern end Y 
+0F 91 23 03  11 91 23 03  0E 91 23 03  10 91 23 03 //mlev flat: northern end X, northern end Y, southern end X, southern end Y 
+13 91 23 03  15 91 23 03  12 91 23 03  14 91 23 03 //mlev ramp: northern end X, northern end Y, southern end X, southern end Y //78, 7C, 80, 84
+
+
+
+//================
+//  Modernised STEEL GIRDER Bridge 08
+//================
+                         //this number increases by 3 with each bridge
+ 1159 * 73	 04 06 FF 03 18 DC "Steel Truss Bridge" 00 "Steel Truss Rail Bridge" 00 "Steel Truss Road Bridge" 00 //define texts first so we can reference them in properties below
+
+ 1160 * 32	 00 06 0A 01 08 //adjust properties of bridge id 08
+			 08 00 //intro date
+			 09 02 //min length
+			 0A FF //max length
+			 0B 3E //cost factor
+			 0C 64 00 //max speed
+			 0E 01 //flags (set to 01 to disable far pillars)
+			 0F 00 00 07 80 //long format intro date
+			 10 18 DC //purchase text
+			 11 19 DC //rail bridge info window
+			 12 1A DC //road bridge info window
+
+	//this reserves some sprites into temp. params
+ 1161 * 9	 0D 00 \D= \DR FE FF 08 34 00 //this "main" param is used to allocate all of the graphics via the following action 6
+ 1162 * 9	 0D 01 \D+ 00 FF 01 00 00 00 //each sprite then gets its own param # to use in the final action 6's which determine placement
+ 1163 * 9	 0D 02 \D+ 00 FF 02 00 00 00
+ 1164 * 9	 0D 03 \D+ 00 FF 03 00 00 00
+ 1165 * 9	 0D 04 \D+ 00 FF 04 00 00 00
+ 1166 * 9	 0D 05 \D+ 00 FF 05 00 00 00
+ 1167 * 9	 0D 06 \D+ 00 FF 06 00 00 00
+ 1168 * 9	 0D 07 \D+ 00 FF 07 00 00 00
+ 1169 * 9	 0D 08 \D+ 00 FF 08 00 00 00
+ 1170 * 9	 0D 09 \D+ 00 FF 09 00 00 00
+ 1171 * 9	 0D 0A \D+ 00 FF 0A 00 00 00
+ 1172 * 9	 0D 0B \D+ 00 FF 0B 00 00 00
+ 1173 * 9	 0D 0C \D+ 00 FF 0C 00 00 00
+ 1174 * 9	 0D 0D \D+ 00 FF 0D 00 00 00
+ 1175 * 9	 0D 0E \D+ 00 FF 0E 00 00 00
+ 1176 * 9	 0D 0F \D+ 00 FF 0F 00 00 00
+ 1177 * 9	 0D 10 \D+ 00 FF 10 00 00 00
+ 1178 * 9	 0D 11 \D+ 00 FF 11 00 00 00
+ 1179 * 9	 0D 12 \D+ 00 FF 12 00 00 00
+ 1180 * 9	 0D 13 \D+ 00 FF 13 00 00 00
+ 1181 * 9	 0D 14 \D+ 00 FF 14 00 00 00
+ 1182 * 9	 0D 15 \D+ 00 FF 15 00 00 00
+ 1183 * 9	 0D 16 \D+ 00 FF 16 00 00 00
+ 1184 * 9	 0D 17 \D+ 00 FF 17 00 00 00
+ 1185 * 9	 0D 18 \D+ 00 FF 18 00 00 00
+ 1186 * 9	 0D 19 \D+ 00 FF 19 00 00 00
+ 1187 * 9	 0D 1A \D+ 00 FF 1A 00 00 00
+ 1188 * 9	 0D 1B \D+ 00 FF 1B 00 00 00
+ 1189 * 9	 0D 1C \D+ 00 FF 1C 00 00 00
+ 1190 * 9	 0D 1D \D+ 00 FF 1D 00 00 00
+ 1191 * 9	 0D 1E \D+ 00 FF 1E 00 00 00
+ 1192 * 9	 0D 1F \D+ 00 FF 1F 00 00 00
+ 1193 * 9	 0D 20 \D+ 00 FF 20 00 00 00
+ 1194 * 9	 0D 21 \D+ 00 FF 21 00 00 00
+ 1195 * 9	 0D 22 \D+ 00 FF 22 00 00 00
+ 1196 * 9	 0D 23 \D+ 00 FF 23 00 00 00
+ 1197 * 9	 0D 24 \D+ 00 FF 24 00 00 00
+ 1198 * 9	 0D 25 \D+ 00 FF 25 00 00 00
+ 1199 * 9	 0D 26 \D+ 00 FF 26 00 00 00
+ 1200 * 9	 0D 27 \D+ 00 FF 27 00 00 00
+ 1201 * 9	 0D 28 \D+ 00 FF 28 00 00 00
+ 1202 * 9	 0D 29 \D+ 00 FF 29 00 00 00
+ 1203 * 9	 0D 2A \D+ 00 FF 2A 00 00 00
+ 1204 * 9	 0D 2B \D+ 00 FF 2B 00 00 00
+ 1205 * 9	 0D 2C \D+ 00 FF 2C 00 00 00
+ 1206 * 9	 0D 2D \D+ 00 FF 2D 00 00 00
+ 1207 * 9	 0D 2E \D+ 00 FF 2E 00 00 00
+ 1208 * 9	 0D 2F \D+ 00 FF 2F 00 00 00
+ 1209 * 9	 0D 30 \D+ 00 FF 30 00 00 00
+ 1210 * 9	 0D 31 \D+ 00 FF 31 00 00 00
+ 1211 * 9	 0D 32 \D+ 00 FF 32 00 00 00
+ 1212 * 9	 0D 33 \D+ 00 FF 33 00 00 00
+
+   //this allocates the following graphics (realsprites) into the sprites which were reserved earlier (in the order they are defined below)
+ 1213 * 5	 06 00 02 03 FF 
+	//sprite number 00 00 (the first sprite below) now gets changed to whatever number the grm picked for the first of the reserved sprites, then each subsequent sprite
+	//is allocated that number + 1 (which corresponds to the number of the param above)
+ 1214 * 5	 0A 01 34 00 00
+//rail
+ 1215 sprites/gfx/steel_truss_rail.png  8bpp  1       1    64   46  -31   -14 normal //back flat x 1A
+ 1216 sprites/gfx/steel_truss_rail.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 1B
+ 1217 sprites/gfx/steel_truss_rail.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 1C
+ 1218 sprites/gfx/steel_truss_rail.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 1D
+ 1219 sprites/gfx/steel_truss_rail.png  8bpp  273     1    64   46  -31   -14 normal //ramp back x 1E
+ 1220 sprites/gfx/steel_truss_rail.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 1F
+ 1221 sprites/gfx/steel_truss_rail.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 20
+ 1222 sprites/gfx/steel_truss_rail.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 21
+ 1223 sprites/gfx/steel_truss_rail.png  8bpp  545     1    36   24  -25   -14 normal //pillar x 22
+ 1224 sprites/gfx/steel_truss_rail.png  8bpp  585     1    36   24   -9   -14 normal //pillar y 23
+ 1225 sprites/gfx/steel_truss_rail.png  8bpp  1      57    64   78  -31  -42 normal //0-3 back x 24
+ 1226 sprites/gfx/steel_truss_rail.png  8bpp  69     57    64   78  -55  -54 normal //0-3 front x 25
+ 1227 sprites/gfx/steel_truss_rail.png  8bpp  137    57    64   78  -31  -42 normal //0-3 back y 26
+ 1228 sprites/gfx/steel_truss_rail.png  8bpp  205    57    64   78  -7  -54 normal //0-3 front y 27
+ 1229 sprites/gfx/steel_truss_rail.png  8bpp  273    57    64   78  -31  -42 normal //1-2 back x 28
+ 1230 sprites/gfx/steel_truss_rail.png  8bpp  341    57    64   78  -55  -54 normal //1-2 front x 29
+ 1231 sprites/gfx/steel_truss_rail.png  8bpp  409    57    64   78  -31  -42 normal //1-2 back y 2A
+ 1232 sprites/gfx/steel_truss_rail.png  8bpp  477    57    64   78  -7  -54 normal //1-2 front y 2B
+ 1233 sprites/gfx/steel_truss_rail.png  8bpp  545    57    64   78  -31  -42 normal //4 back x 2C
+ 1234 sprites/gfx/steel_truss_rail.png  8bpp  613    57    64   78  -55  -54 normal //4 front x 2D
+ 1235 sprites/gfx/steel_truss_rail.png  8bpp  681    57    64   78  -31  -42 normal //4 back y 2E
+ 1236 sprites/gfx/steel_truss_rail.png  8bpp  749    57    64   78  -7  -54 normal //4 front y 2F
+ 1237 sprites/gfx/steel_truss_rail.png  8bpp  817    57    64   78  -31  -42 normal //5 back x 30
+ 1238 sprites/gfx/steel_truss_rail.png  8bpp  885    57    64   78  -55  -54 normal //5 front x 31
+ 1239 sprites/gfx/steel_truss_rail.png  8bpp  953    57    64   78  -31  -42 normal //5 back y 32
+ 1240 sprites/gfx/steel_truss_rail.png  8bpp  1021    57    64   78  -7  -54 normal //5 front y 33
+//road
+ 1241 sprites/gfx/arch_truss_road.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 1A
+ 1242 sprites/gfx/arch_truss_road.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 1B
+ 1243 sprites/gfx/arch_truss_road.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 1C
+ 1244 sprites/gfx/arch_truss_road.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 1D
+ 1245 sprites/gfx/arch_truss_road.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 1E
+ 1246 sprites/gfx/arch_truss_road.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 1F
+ 1247 sprites/gfx/arch_truss_road.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 20
+ 1248 sprites/gfx/arch_truss_road.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 21
+ 1249 sprites/gfx/arch_truss_road.png  8bpp  545     1    36   24  -25   -14 normal //pillar x 22  
+ 1250 sprites/gfx/arch_truss_road.png  8bpp  585     1    36   24  -9   -14 normal //pillar x 23 
+ 1251 sprites/gfx/arch_truss_road.png  8bpp  1      57    64   100  -31  -64 normal //0-3 back x 24
+ 1252 sprites/gfx/arch_truss_road.png  8bpp  69     57    64   100  -55  -76 normal //0-3 front x 25
+ 1253 sprites/gfx/arch_truss_road.png  8bpp  137    57    64   100  -31  -64 normal //0-3 back y 26
+ 1254 sprites/gfx/arch_truss_road.png  8bpp  205    57    64   100  -7  -76 normal //0-3 front y 27
+ 1255 sprites/gfx/arch_truss_road.png  8bpp  273    57    64   100  -31  -64 normal //1-2 back x 28
+ 1256 sprites/gfx/arch_truss_road.png  8bpp  341    57    64   100  -55  -76 normal //1-2 front x 29
+ 1257 sprites/gfx/arch_truss_road.png  8bpp  409    57    64   100  -31  -64 normal //1-2 back y 2A
+ 1258 sprites/gfx/arch_truss_road.png  8bpp  477    57    64   100  -7  -76 normal //1-2 front y 2B
+ 1259 sprites/gfx/arch_truss_road.png  8bpp  545    57    64   100  -31  -64 normal //4 back x 2C
+ 1260 sprites/gfx/arch_truss_road.png  8bpp  613    57    64   100  -55  -76 normal //4 front x 2D
+ 1261 sprites/gfx/arch_truss_road.png  8bpp  681    57    64   100  -31  -64 normal //4 back y 2E
+ 1262 sprites/gfx/arch_truss_road.png  8bpp  749    57    64   100  -7  -76 normal //4 front y 2F
+ 1263 sprites/gfx/arch_truss_road.png  8bpp  817    57    64   100  -31  -64 normal //5 back x 30
+ 1264 sprites/gfx/arch_truss_road.png  8bpp  885    57    64   100  -55  -76 normal //5 front x 31
+ 1265 sprites/gfx/arch_truss_road.png  8bpp  953    57    64   100  -31  -64 normal //5 back y 32
+ 1266 sprites/gfx/arch_truss_road.png  8bpp  1021    57    64   100  -7  -76 normal //5 front y 33
+
+   //and finally these action 6's tell where to place each of the reserved sprites (organized by table layout for easier viewing)
+   //Ack, I had to split them up individually because there aren't enough hex ids to do all in one
+ 1267 * 26	 06
+			 0A 02 08    0B 02 0C    //rail x (part 0 should probably never have pillars set)
+			 0C 02 18    0D 02 1C    //rail y
+			 24 02 28    25 02 2C    //road x
+			 26 02 38    27 02 3C    //road y
+			     //mono x
+			     //mono y
+			     //mlev x
+			     //mlev y
+			 FF
+
+// STEEL TRESTLE bridge (02)
+ 1268 * 136	 00 06 01 01 08 0D 00 01 //action 00 bridges(06), 01 property, 01 ID, ID 02, prop 0D, tableID 00, 01 tables
+//table 00
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
+E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+
+ 1269 * 26	 06
+			 0E 02 08    0F 02 0C    //rail x
+			 10 02 18    11 02 1C    //rail y
+			 28 02 28    29 02 2C    //road x
+			 2A 02 38    2B 02 3C    //road y
+			     //mono x
+			     //mono y
+			     //mlev x
+			     //mlev y
+			 FF
+
+//table 01
+ 1270 * 136	 00 06 01 01 08 0D 01 01
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
+E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+
+ 1271 * 26	 06
+			 0E 02 08    0F 02 0C    //rail x
+			 10 02 18    11 02 1C    //rail y
+			 28 02 28    29 02 2C    //road x
+			 2A 02 38    2B 02 3C    //road y
+			     //mono x
+			     //mono y
+			     //mlev x
+			     //mlev y
+			 FF
+
+//table 02
+ 1272 * 136	 00 06 01 01 08 0D 02 01
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
+E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+
+ 1273 * 38	 06
+			 0A 02 08    0B 02 0C    08 02 10    //rail x
+			 0C 02 18    0D 02 1C    09 02 20    //rail y
+			 24 02 28    25 02 2C    22 02 30    //road x
+			 26 02 38    27 02 3C    23 02 40    //road y
+			     //mono x
+			     //mono y
+			     //mlev x
+			     //mlev y
+			 FF
+
+//table 03
+ 1274 * 136	 00 06 01 01 08 0D 03 01
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
+E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+
+ 1275 * 26	 06
+			 12 02 08    13 02 0C    //rail x
+			 14 02 18    15 02 1C    //rail y
+			 2C 02 28    2D 02 2C    //road x
+			 2E 02 38    2F 02 3C    //road y
+			     //mono x
+			     //mono y
+			     //mlev x
+			     //mlev y
+			 FF
+
+//table 04
+ 1276 * 136	 00 06 01 01 08 0D 04 01
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
+E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+
+ 1277 * 38	 06
+			 16 02 08    17 02 0C    08 02 10    //rail x
+			 18 02 18    19 02 1C    09 02 20    //rail y
+			 30 02 28    31 02 2C    22 02 30    //road x
+			 32 02 38    33 02 3C    23 02 40    //road y
+			     //mono x
+			     //mono y
+			     //mlev x
+			     //mlev y
+			 FF
+
+//table 05
+ 1278 * 136	 00 06 01 01 08 0D 05 01
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
+E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+
+ 1279 * 50	 06
+			 00 02 08    01 02 0C    02 02 10    03 02 14    //rail flat
+			 04 02 18    05 02 1C    06 02 20    07 02 24    //rail ramp
+			 1A 02 28    1B 02 2C    1C 02 30    1D 02 34    //road flat
+			 1E 02 38    1F 02 3C    20 02 40    21 02 44    //road ramp
+			     //mono flat
+			     //mono ramp
+			     //mlev flat
+			     //mlev ramp
+			 FF
+
+//table 06
+ 1280 * 136	 00 06 01 01 08 0D 06 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail flat: northern end X, northern end Y, southern end X, southern end Y //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail ramp: northern end X, northern end Y, southern end X, southern end Y //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //road flat: northern end X, northern end Y, southern end X, southern end Y //28, 2C, 30, 34
@@ -1700,9 +2882,9 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 //    CANTILEVER TRUSS Bridge 09 
 //================
                          //this number increases by 3 with each bridge
-  639 * 77	 04 06 FF 03 2A DC "Steel Truss Bridge" 00 "Steel Truss Railroad Bridge" 00 "Steel Truss Road Bridge" 00 //define texts first so we can reference them in properties below
+ 1281 * 77	 04 06 FF 03 1B DC "Steel Truss Bridge" 00 "Steel Truss Railroad Bridge" 00 "Steel Truss Road Bridge" 00 //define texts first so we can reference them in properties below
 
-  640 * 24	 00 06 08 01 09 //adjust properties of third bridge (id 02)
+ 1282 * 24	 00 06 08 01 09 //adjust properties of third bridge (id 02)
 			 08 00 //intro date
 			 09 02 //min length
 			 0A FF //max length
@@ -1710,174 +2892,144 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 //			 0C 50 00 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
 //			 0F 4E 07 00 00 //long format intro date
-			 10 06 DC //purchase text
-			 11 07 DC //rail bridge info window
-			 12 08 DC //road bridge info window
-
-//max speed settings
-//1st is 'original", 2nd is "increased", 3rd is "infinite"
-
-  641 * 9	 07 00 04 \7! 00 00 00 00 01
-
-  642 * 8	 00 06 01 01 09 //adjust properties of third bridge (id 02)
-			 0C 60 00 //max speed   
-
-  643 * 9	 07 00 04 \7! 01 00 00 00 01
-
-  644 * 8	 00 06 01 01 09 //adjust properties of third bridge (id 02)
-			 0C A0 00 //max speed
-
-  645 * 9	 07 00 04 \7! 02 00 00 00 01
-
-  646 * 8	 00 06 01 01 09 //adjust properties of third bridge (id 02)
-			 0C FF FF //max speed
-
-//intro date settings
-
-  647 * 9	 07 01 04 \7! 01 00 00 00 01
-
-  648 * 10	 00 06 01 01 09 //adjust properties of third bridge (id 02)
-			 0F 00 00 00 00 //long format intro date  
-
-  649 * 9	 07 01 04 \7! 00 00 00 00 01
-
-  650 * 10	 00 06 01 01 09 //adjust properties of third bridge (id 02)
-			 0F 4E 07 00 00 //long format intro date
+			 10 1B DC //purchase text
+			 11 1C DC //rail bridge info window
+			 12 1D DC //road bridge info window
 
 
 	//this reserves some sprites into temp. params
-  651 * 9	 0D 10 \D= \DR FE FF 08 3C 00 //this "main" param is used to allocate all of the graphics via the following action 6
-  652 * 9	 0D 11 \D+ 10 FF 01 00 00 00 //each sprite then gets its own param # to use in the final action 6's which determine placement
-  653 * 9	 0D 12 \D+ 10 FF 02 00 00 00
-  654 * 9	 0D 13 \D+ 10 FF 03 00 00 00
-  655 * 9	 0D 14 \D+ 10 FF 04 00 00 00
-  656 * 9	 0D 15 \D+ 10 FF 05 00 00 00
-  657 * 9	 0D 16 \D+ 10 FF 06 00 00 00
-  658 * 9	 0D 17 \D+ 10 FF 07 00 00 00
-  659 * 9	 0D 18 \D+ 10 FF 08 00 00 00
-  660 * 9	 0D 19 \D+ 10 FF 09 00 00 00
-  661 * 9	 0D 1A \D+ 10 FF 0A 00 00 00
-  662 * 9	 0D 1B \D+ 10 FF 0B 00 00 00
-  663 * 9	 0D 1C \D+ 10 FF 0C 00 00 00
-  664 * 9	 0D 1D \D+ 10 FF 0D 00 00 00
-  665 * 9	 0D 1E \D+ 10 FF 0E 00 00 00
-  666 * 9	 0D 1F \D+ 10 FF 0F 00 00 00
-  667 * 9	 0D 20 \D+ 10 FF 10 00 00 00
-  668 * 9	 0D 21 \D+ 10 FF 11 00 00 00
-  669 * 9	 0D 22 \D+ 10 FF 12 00 00 00
-  670 * 9	 0D 23 \D+ 10 FF 13 00 00 00
-  671 * 9	 0D 24 \D+ 10 FF 14 00 00 00
-  672 * 9	 0D 25 \D+ 10 FF 15 00 00 00
-  673 * 9	 0D 26 \D+ 10 FF 16 00 00 00
-  674 * 9	 0D 27 \D+ 10 FF 17 00 00 00
-  675 * 9	 0D 28 \D+ 10 FF 18 00 00 00
-  676 * 9	 0D 29 \D+ 10 FF 19 00 00 00
-  677 * 9	 0D 2A \D+ 10 FF 1A 00 00 00
-  678 * 9	 0D 2B \D+ 10 FF 1B 00 00 00
-  679 * 9	 0D 2C \D+ 10 FF 1C 00 00 00
-  680 * 9	 0D 2D \D+ 10 FF 1D 00 00 00
-  681 * 9	 0D 2E \D+ 10 FF 1E 00 00 00
-  682 * 9	 0D 2F \D+ 10 FF 1F 00 00 00
-  683 * 9	 0D 30 \D+ 10 FF 20 00 00 00
-  684 * 9	 0D 31 \D+ 10 FF 21 00 00 00
-  685 * 9	 0D 32 \D+ 10 FF 22 00 00 00
-  686 * 9	 0D 33 \D+ 10 FF 23 00 00 00
-  687 * 9	 0D 34 \D+ 10 FF 24 00 00 00
-  688 * 9	 0D 35 \D+ 10 FF 25 00 00 00
-  689 * 9	 0D 36 \D+ 10 FF 26 00 00 00
-  690 * 9	 0D 37 \D+ 10 FF 27 00 00 00
-  691 * 9	 0D 38 \D+ 10 FF 28 00 00 00
-  692 * 9	 0D 39 \D+ 10 FF 29 00 00 00
-  693 * 9	 0D 3A \D+ 10 FF 2A 00 00 00
-  694 * 9	 0D 3B \D+ 10 FF 2B 00 00 00
-  695 * 9	 0D 3C \D+ 10 FF 2C 00 00 00
-  696 * 9	 0D 3D \D+ 10 FF 2D 00 00 00
-  697 * 9	 0D 3E \D+ 10 FF 2E 00 00 00
-  698 * 9	 0D 3F \D+ 10 FF 2F 00 00 00
-  699 * 9	 0D 40 \D+ 10 FF 30 00 00 00
-  700 * 9	 0D 41 \D+ 10 FF 31 00 00 00
-  701 * 9	 0D 42 \D+ 10 FF 32 00 00 00
-  702 * 9	 0D 43 \D+ 10 FF 33 00 00 00
-  703 * 9	 0D 44 \D+ 10 FF 34 00 00 00
-  704 * 9	 0D 45 \D+ 10 FF 35 00 00 00
-  705 * 9	 0D 46 \D+ 10 FF 36 00 00 00
-  706 * 9	 0D 47 \D+ 10 FF 37 00 00 00
-  707 * 9	 0D 48 \D+ 10 FF 38 00 00 00
-  708 * 9	 0D 49 \D+ 10 FF 39 00 00 00
-  709 * 9	 0D 4A \D+ 10 FF 3A 00 00 00
-  710 * 9	 0D 4B \D+ 10 FF 3B 00 00 00
+ 1283 * 9	 0D 10 \D= \DR FE FF 08 3C 00 //this "main" param is used to allocate all of the graphics via the following action 6
+ 1284 * 9	 0D 11 \D+ 10 FF 01 00 00 00 //each sprite then gets its own param # to use in the final action 6's which determine placement
+ 1285 * 9	 0D 12 \D+ 10 FF 02 00 00 00
+ 1286 * 9	 0D 13 \D+ 10 FF 03 00 00 00
+ 1287 * 9	 0D 14 \D+ 10 FF 04 00 00 00
+ 1288 * 9	 0D 15 \D+ 10 FF 05 00 00 00
+ 1289 * 9	 0D 16 \D+ 10 FF 06 00 00 00
+ 1290 * 9	 0D 17 \D+ 10 FF 07 00 00 00
+ 1291 * 9	 0D 18 \D+ 10 FF 08 00 00 00
+ 1292 * 9	 0D 19 \D+ 10 FF 09 00 00 00
+ 1293 * 9	 0D 1A \D+ 10 FF 0A 00 00 00
+ 1294 * 9	 0D 1B \D+ 10 FF 0B 00 00 00
+ 1295 * 9	 0D 1C \D+ 10 FF 0C 00 00 00
+ 1296 * 9	 0D 1D \D+ 10 FF 0D 00 00 00
+ 1297 * 9	 0D 1E \D+ 10 FF 0E 00 00 00
+ 1298 * 9	 0D 1F \D+ 10 FF 0F 00 00 00
+ 1299 * 9	 0D 20 \D+ 10 FF 10 00 00 00
+ 1300 * 9	 0D 21 \D+ 10 FF 11 00 00 00
+ 1301 * 9	 0D 22 \D+ 10 FF 12 00 00 00
+ 1302 * 9	 0D 23 \D+ 10 FF 13 00 00 00
+ 1303 * 9	 0D 24 \D+ 10 FF 14 00 00 00
+ 1304 * 9	 0D 25 \D+ 10 FF 15 00 00 00
+ 1305 * 9	 0D 26 \D+ 10 FF 16 00 00 00
+ 1306 * 9	 0D 27 \D+ 10 FF 17 00 00 00
+ 1307 * 9	 0D 28 \D+ 10 FF 18 00 00 00
+ 1308 * 9	 0D 29 \D+ 10 FF 19 00 00 00
+ 1309 * 9	 0D 2A \D+ 10 FF 1A 00 00 00
+ 1310 * 9	 0D 2B \D+ 10 FF 1B 00 00 00
+ 1311 * 9	 0D 2C \D+ 10 FF 1C 00 00 00
+ 1312 * 9	 0D 2D \D+ 10 FF 1D 00 00 00
+ 1313 * 9	 0D 2E \D+ 10 FF 1E 00 00 00
+ 1314 * 9	 0D 2F \D+ 10 FF 1F 00 00 00
+ 1315 * 9	 0D 30 \D+ 10 FF 20 00 00 00
+ 1316 * 9	 0D 31 \D+ 10 FF 21 00 00 00
+ 1317 * 9	 0D 32 \D+ 10 FF 22 00 00 00
+ 1318 * 9	 0D 33 \D+ 10 FF 23 00 00 00
+ 1319 * 9	 0D 34 \D+ 10 FF 24 00 00 00
+ 1320 * 9	 0D 35 \D+ 10 FF 25 00 00 00
+ 1321 * 9	 0D 36 \D+ 10 FF 26 00 00 00
+ 1322 * 9	 0D 37 \D+ 10 FF 27 00 00 00
+ 1323 * 9	 0D 38 \D+ 10 FF 28 00 00 00
+ 1324 * 9	 0D 39 \D+ 10 FF 29 00 00 00
+ 1325 * 9	 0D 3A \D+ 10 FF 2A 00 00 00
+ 1326 * 9	 0D 3B \D+ 10 FF 2B 00 00 00
+ 1327 * 9	 0D 3C \D+ 10 FF 2C 00 00 00
+ 1328 * 9	 0D 3D \D+ 10 FF 2D 00 00 00
+ 1329 * 9	 0D 3E \D+ 10 FF 2E 00 00 00
+ 1330 * 9	 0D 3F \D+ 10 FF 2F 00 00 00
+ 1331 * 9	 0D 40 \D+ 10 FF 30 00 00 00
+ 1332 * 9	 0D 41 \D+ 10 FF 31 00 00 00
+ 1333 * 9	 0D 42 \D+ 10 FF 32 00 00 00
+ 1334 * 9	 0D 43 \D+ 10 FF 33 00 00 00
+ 1335 * 9	 0D 44 \D+ 10 FF 34 00 00 00
+ 1336 * 9	 0D 45 \D+ 10 FF 35 00 00 00
+ 1337 * 9	 0D 46 \D+ 10 FF 36 00 00 00
+ 1338 * 9	 0D 47 \D+ 10 FF 37 00 00 00
+ 1339 * 9	 0D 48 \D+ 10 FF 38 00 00 00
+ 1340 * 9	 0D 49 \D+ 10 FF 39 00 00 00
+ 1341 * 9	 0D 4A \D+ 10 FF 3A 00 00 00
+ 1342 * 9	 0D 4B \D+ 10 FF 3B 00 00 00
 
    //this allocates the following graphics (realsprites) into the sprites which were reserved earlier (in the order they are defined below)
-  711 * 5	 06 10 02 03 FF 
+ 1343 * 5	 06 10 02 03 FF 
 	//sprite number 00 00 (the first sprite below) now gets changed to whatever number the grm picked for the first of the reserved sprites, then each subsequent sprite
 	//is allocated that number + 1 (which corresponds to the number of the param above)
-  712 * 5	 0A 01 3C 00 00
+ 1344 * 5	 0A 01 3C 00 00
 //rail
-  713 sprites/gfx/bridgehead_rail.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 00
-  714 sprites/gfx/bridgehead_rail.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 01
-  715 sprites/gfx/bridgehead_rail.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 02
-  716 sprites/gfx/bridgehead_rail.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 03
-  717 sprites/gfx/bridgehead_rail.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 04
-  718 sprites/gfx/bridgehead_rail.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 05
-  719 sprites/gfx/bridgehead_rail.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 06
-  720 sprites/gfx/bridgehead_rail.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 07
-  721 sprites/gfx/steel_cantilever_rail.png  8bpp  458     1    18   14  -14   -9 normal //pillar x 08
-  722 sprites/gfx/steel_cantilever_rail.png  8bpp  481     1    18   14   -2   -9 normal //pillar y 09
-  723 sprites/gfx/steel_cantilever_rail.png  8bpp  1      45    46   35  -23  -11 normal //0 back x 0A
-  724 sprites/gfx/steel_cantilever_rail.png  8bpp  52     45    47   34  -44  -22 normal //0 front x 0B
-  725 sprites/gfx/steel_cantilever_rail.png  8bpp  104    45    46   35  -21  -11 normal //0 back y 0C
-  726 sprites/gfx/steel_cantilever_rail.png  8bpp  155    45    47   34   -1  -22 normal //0 front y 0D
-  727 sprites/gfx/steel_cantilever_rail.png  8bpp  207    45    47   39  -24  -15 normal //1 back x 0E
-  728 sprites/gfx/steel_cantilever_rail.png  8bpp  259    45    38   38  -36  -26 normal //1 front x 0F
-  729 sprites/gfx/steel_cantilever_rail.png  8bpp  302    45    47   39  -21  -15 normal //1 back y 10
-  730 sprites/gfx/steel_cantilever_rail.png  8bpp  354    45    38   38    0  -26 normal //1 front y 11
-  731 sprites/gfx/steel_cantilever_rail.png  8bpp  397    45    46   39  -23  -15 normal //4 back x 12
-  732 sprites/gfx/steel_cantilever_rail.png  8bpp  448    45    46   38  -44  -26 normal //4 front x 13
-  733 sprites/gfx/steel_cantilever_rail.png  8bpp  499    45    46   39  -21  -15 normal //4 back y 14
-  734 sprites/gfx/steel_cantilever_rail.png  8bpp  550    45    46   38    0  -26 normal //4 front y 15
-  735 sprites/gfx/steel_cantilever_rail.png  8bpp  601    45    45   48  -22  -24 normal //5 back x 16
-  736 sprites/gfx/steel_cantilever_rail.png  8bpp  651    45    46   47  -44  -35 normal //5 front x 17
-  737 sprites/gfx/steel_cantilever_rail.png  8bpp  702    45    45   48  -21  -24 normal //5 back y 18
-  738 sprites/gfx/steel_cantilever_rail.png  8bpp  752    45    46   47    0  -35 normal //5 front y 19
+ 1345 sprites/gfx/bridgehead_rail.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 00
+ 1346 sprites/gfx/bridgehead_rail.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 01
+ 1347 sprites/gfx/bridgehead_rail.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 02
+ 1348 sprites/gfx/bridgehead_rail.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 03
+ 1349 sprites/gfx/bridgehead_rail.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 04
+ 1350 sprites/gfx/bridgehead_rail.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 05
+ 1351 sprites/gfx/bridgehead_rail.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 06
+ 1352 sprites/gfx/bridgehead_rail.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 07
+ 1353 sprites/gfx/steel_cantilever_rail.png  8bpp  458     1    18   14  -14   -9 normal //pillar x 08
+ 1354 sprites/gfx/steel_cantilever_rail.png  8bpp  481     1    18   14   -2   -9 normal //pillar y 09
+ 1355 sprites/gfx/steel_cantilever_rail.png  8bpp  1      45    46   35  -23  -11 normal //0 back x 0A
+ 1356 sprites/gfx/steel_cantilever_rail.png  8bpp  52     45    47   34  -44  -22 normal //0 front x 0B
+ 1357 sprites/gfx/steel_cantilever_rail.png  8bpp  104    45    46   35  -21  -11 normal //0 back y 0C
+ 1358 sprites/gfx/steel_cantilever_rail.png  8bpp  155    45    47   34   -1  -22 normal //0 front y 0D
+ 1359 sprites/gfx/steel_cantilever_rail.png  8bpp  207    45    47   39  -24  -15 normal //1 back x 0E
+ 1360 sprites/gfx/steel_cantilever_rail.png  8bpp  259    45    38   38  -36  -26 normal //1 front x 0F
+ 1361 sprites/gfx/steel_cantilever_rail.png  8bpp  302    45    47   39  -21  -15 normal //1 back y 10
+ 1362 sprites/gfx/steel_cantilever_rail.png  8bpp  354    45    38   38    0  -26 normal //1 front y 11
+ 1363 sprites/gfx/steel_cantilever_rail.png  8bpp  397    45    46   39  -23  -15 normal //4 back x 12
+ 1364 sprites/gfx/steel_cantilever_rail.png  8bpp  448    45    46   38  -44  -26 normal //4 front x 13
+ 1365 sprites/gfx/steel_cantilever_rail.png  8bpp  499    45    46   39  -21  -15 normal //4 back y 14
+ 1366 sprites/gfx/steel_cantilever_rail.png  8bpp  550    45    46   38    0  -26 normal //4 front y 15
+ 1367 sprites/gfx/steel_cantilever_rail.png  8bpp  601    45    45   48  -22  -24 normal //5 back x 16
+ 1368 sprites/gfx/steel_cantilever_rail.png  8bpp  651    45    46   47  -44  -35 normal //5 front x 17
+ 1369 sprites/gfx/steel_cantilever_rail.png  8bpp  702    45    45   48  -21  -24 normal //5 back y 18
+ 1370 sprites/gfx/steel_cantilever_rail.png  8bpp  752    45    46   47    0  -35 normal //5 front y 19
 //road
-  739 sprites/gfx/steel_truss_road.png  8bpp  1       1    59   52  -29  -22 normal //back flat x 1A
-  740 sprites/gfx/steel_truss_road.png  8bpp  65      1    59   52  -28  -22 normal //back flat y 1B
-  741 sprites/gfx/steel_truss_road.png  8bpp  129     1    59   43  -29  -22 normal //front flat x 1C
-  742 sprites/gfx/steel_truss_road.png  8bpp  193     1    59   43  -28  -22 normal //front flat y 1D
-  743 sprites/gfx/steel_truss_road.png  8bpp  257     1    60   36  -28   -5 normal //ramp back x 1E
-  744 sprites/gfx/steel_truss_road.png  8bpp  322     1    60   36  -30   -5 normal //ramp back y 1F
-  745 sprites/gfx/steel_truss_road.png  8bpp  387     1    59   40  -26  -10 normal //ramp front x 20
-  746 sprites/gfx/steel_truss_road.png  8bpp  451     1    59   40  -31  -10 normal //ramp front y 21
-  747 sprites/gfx/steel_truss_road.png  8bpp  515     1    18   14  -15   -9 normal //pillar x 22
-  748 sprites/gfx/steel_truss_road.png  8bpp  538     1    18   14   -3   -9 normal //pillar y 23
-  749 sprites/gfx/steel_truss_road.png  8bpp  1      58    54   39  -29  -14 normal //0-3 back x 24
-  750 sprites/gfx/steel_truss_road.png  8bpp  60     58    57   40  -51  -25 normal //0-3 front x 25
-  751 sprites/gfx/steel_truss_road.png  8bpp  122    58    54   39  -23  -14 normal //0-3 back y 26
-  752 sprites/gfx/steel_truss_road.png  8bpp  181    58    57   40   -4  -25 normal //0-3 front y 27
-  753 sprites/gfx/steel_truss_road.png  8bpp  243    58    54   43  -29  -18 normal //1-2 back x 28
-  754 sprites/gfx/steel_truss_road.png  8bpp  302    58    53   44  -49  -29 normal //1-2 front x 29
-  755 sprites/gfx/steel_truss_road.png  8bpp  360    58    54   43  -23  -18 normal //1-2 back y 2A
-  756 sprites/gfx/steel_truss_road.png  8bpp  419    58    55   44   -2  -29 normal //1-2 front y 2B
-  757 sprites/gfx/steel_truss_road.png  8bpp  479    58    54   43  -29  -18 normal //4 back x 2C
-  758 sprites/gfx/steel_truss_road.png  8bpp  538    58    55   44  -51  -29 normal //4 front x 2D
-  759 sprites/gfx/steel_truss_road.png  8bpp  598    58    54   43  -23  -18 normal //4 back y 2E
-  760 sprites/gfx/steel_truss_road.png  8bpp  657    58    55   44   -2  -29 normal //4 front y 2F
-  761 sprites/gfx/steel_truss_road.png  8bpp  717    58    54   43  -29  -18 normal //5 back x 30
-  762 sprites/gfx/steel_truss_road.png  8bpp  776    58    53   44  -49  -29 normal //5 front x 31
-  763 sprites/gfx/steel_truss_road.png  8bpp  834    58    54   43  -23  -18 normal //5 back y 32
-  764 sprites/gfx/steel_truss_road.png  8bpp  893    58    55   44   -2  -29 normal //5 front y 33
+ 1371 sprites/gfx/steel_truss_road.png  8bpp  1       1    59   52  -29  -22 normal //back flat x 1A
+ 1372 sprites/gfx/steel_truss_road.png  8bpp  65      1    59   52  -28  -22 normal //back flat y 1B
+ 1373 sprites/gfx/steel_truss_road.png  8bpp  129     1    59   43  -29  -22 normal //front flat x 1C
+ 1374 sprites/gfx/steel_truss_road.png  8bpp  193     1    59   43  -28  -22 normal //front flat y 1D
+ 1375 sprites/gfx/steel_truss_road.png  8bpp  257     1    60   36  -28   -5 normal //ramp back x 1E
+ 1376 sprites/gfx/steel_truss_road.png  8bpp  322     1    60   36  -30   -5 normal //ramp back y 1F
+ 1377 sprites/gfx/steel_truss_road.png  8bpp  387     1    59   40  -26  -10 normal //ramp front x 20
+ 1378 sprites/gfx/steel_truss_road.png  8bpp  451     1    59   40  -31  -10 normal //ramp front y 21
+ 1379 sprites/gfx/steel_truss_road.png  8bpp  515     1    18   14  -15   -9 normal //pillar x 22
+ 1380 sprites/gfx/steel_truss_road.png  8bpp  538     1    18   14   -3   -9 normal //pillar y 23
+ 1381 sprites/gfx/steel_truss_road.png  8bpp  1      58    54   39  -29  -14 normal //0-3 back x 24
+ 1382 sprites/gfx/steel_truss_road.png  8bpp  60     58    57   40  -51  -25 normal //0-3 front x 25
+ 1383 sprites/gfx/steel_truss_road.png  8bpp  122    58    54   39  -23  -14 normal //0-3 back y 26
+ 1384 sprites/gfx/steel_truss_road.png  8bpp  181    58    57   40   -4  -25 normal //0-3 front y 27
+ 1385 sprites/gfx/steel_truss_road.png  8bpp  243    58    54   43  -29  -18 normal //1-2 back x 28
+ 1386 sprites/gfx/steel_truss_road.png  8bpp  302    58    53   44  -49  -29 normal //1-2 front x 29
+ 1387 sprites/gfx/steel_truss_road.png  8bpp  360    58    54   43  -23  -18 normal //1-2 back y 2A
+ 1388 sprites/gfx/steel_truss_road.png  8bpp  419    58    55   44   -2  -29 normal //1-2 front y 2B
+ 1389 sprites/gfx/steel_truss_road.png  8bpp  479    58    54   43  -29  -18 normal //4 back x 2C
+ 1390 sprites/gfx/steel_truss_road.png  8bpp  538    58    55   44  -51  -29 normal //4 front x 2D
+ 1391 sprites/gfx/steel_truss_road.png  8bpp  598    58    54   43  -23  -18 normal //4 back y 2E
+ 1392 sprites/gfx/steel_truss_road.png  8bpp  657    58    55   44   -2  -29 normal //4 front y 2F
+ 1393 sprites/gfx/steel_truss_road.png  8bpp  717    58    54   43  -29  -18 normal //5 back x 30
+ 1394 sprites/gfx/steel_truss_road.png  8bpp  776    58    53   44  -49  -29 normal //5 front x 31
+ 1395 sprites/gfx/steel_truss_road.png  8bpp  834    58    54   43  -23  -18 normal //5 back y 32
+ 1396 sprites/gfx/steel_truss_road.png  8bpp  893    58    55   44   -2  -29 normal //5 front y 33
 //rail again (fix later)
-  765 sprites/gfx/steel_cantilever_rail.png  8bpp  803    45    46   48  -22  -24 normal //3 back x 34
-  766 sprites/gfx/steel_cantilever_rail.png  8bpp  854    45    46   47  -44  -35 normal //3 front x 35
-  767 sprites/gfx/steel_cantilever_rail.png  8bpp  905    45    46   48  -22  -24 normal //3 back y 36
-  768 sprites/gfx/steel_cantilever_rail.png  8bpp  956    45    46   47    0  -35 normal //3 front y 37
-  769 sprites/gfx/steel_cantilever_rail.png  8bpp  1007   45    46   39  -22  -15 normal //2 back x 38
-  770 sprites/gfx/steel_cantilever_rail.png  8bpp  1058   45    44   38  -42  -26 normal //2 front x 39
-  771 sprites/gfx/steel_cantilever_rail.png  8bpp  1107   45    46   39  -22  -15 normal //2 back y 3A
-  772 sprites/gfx/steel_cantilever_rail.png  8bpp  1158   45    44   38    0  -26 normal //2 front y 3B
+ 1397 sprites/gfx/steel_cantilever_rail.png  8bpp  803    45    46   48  -22  -24 normal //3 back x 34
+ 1398 sprites/gfx/steel_cantilever_rail.png  8bpp  854    45    46   47  -44  -35 normal //3 front x 35
+ 1399 sprites/gfx/steel_cantilever_rail.png  8bpp  905    45    46   48  -22  -24 normal //3 back y 36
+ 1400 sprites/gfx/steel_cantilever_rail.png  8bpp  956    45    46   47    0  -35 normal //3 front y 37
+ 1401 sprites/gfx/steel_cantilever_rail.png  8bpp  1007   45    46   39  -22  -15 normal //2 back x 38
+ 1402 sprites/gfx/steel_cantilever_rail.png  8bpp  1058   45    44   38  -42  -26 normal //2 front x 39
+ 1403 sprites/gfx/steel_cantilever_rail.png  8bpp  1107   45    46   39  -22  -15 normal //2 back y 3A
+ 1404 sprites/gfx/steel_cantilever_rail.png  8bpp  1158   45    44   38    0  -26 normal //2 front y 3B
 
    //and finally these action 6's tell where to place each of the reserved sprites (organized by table layout for easier viewing)
-  773 * 26	 06
+ 1405 * 26	 06
 			 1A 02 08    1B 02 0C    //rail x (part 0 should probably never have pillars set)
 			 1C 02 18    1D 02 1C    //rail y
 			 34 02 28    35 02 2C    //road x
@@ -1889,7 +3041,7 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 			 FF
 
 // Steel Truss Bridge (02)
-  774 * 136	 00 06 01 01 09 0D 00 01 //action 00 bridges(06), 01 property, 01 ID, ID 02, prop 0D, tableID 00, 01 tables
+ 1406 * 136	 00 06 01 01 09 0D 00 01 //action 00 bridges(06), 01 property, 01 ID, ID 02, prop 0D, tableID 00, 01 tables
 //table 00
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
@@ -1900,7 +3052,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  775 * 26	 06
+ 1407 * 26	 06
 			 1E 02 08    1F 02 0C    //rail x
 			 20 02 18    21 02 1C    //rail y
 			 38 02 28    39 02 2C    //road x
@@ -1912,7 +3064,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 01
-  776 * 136	 00 06 01 01 09 0D 01 01
+ 1408 * 136	 00 06 01 01 09 0D 01 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -1922,7 +3074,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  777 * 26	 06
+ 1409 * 26	 06
 			 48 02 08    49 02 0C    //rail x
 			 4A 02 18    4B 02 1C    //rail y
 			 38 02 28    39 02 2C    //road x
@@ -1934,7 +3086,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 02
-  778 * 136	 00 06 01 01 09 0D 02 01
+ 1410 * 136	 00 06 01 01 09 0D 02 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -1944,7 +3096,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  779 * 38	 06
+ 1411 * 38	 06
 			 44 02 08    45 02 0C    18 02 10    //rail x
 			 46 02 18    47 02 1C    19 02 20    //rail y
 			 34 02 28    35 02 2C    32 02 30    //road x
@@ -1956,7 +3108,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 03
-  780 * 136	 00 06 01 01 09 0D 03 01
+ 1412 * 136	 00 06 01 01 09 0D 03 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -1966,7 +3118,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  781 * 26	 06
+ 1413 * 26	 06
 			 22 02 08    23 02 0C    //rail x
 			 24 02 18    25 02 1C    //rail y
 			 3C 02 28    3D 02 2C    //road x
@@ -1978,7 +3130,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 04
-  782 * 136	 00 06 01 01 09 0D 04 01
+ 1414 * 136	 00 06 01 01 09 0D 04 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -1988,7 +3140,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  783 * 38	 06
+ 1415 * 38	 06
 			 26 02 08    27 02 0C    18 02 10    //rail x
 			 28 02 18    29 02 1C    19 02 20    //rail y
 			 40 02 28    41 02 2C    32 02 30    //road x
@@ -2000,7 +3152,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 05
-  784 * 136	 00 06 01 01 09 0D 05 01
+ 1416 * 136	 00 06 01 01 09 0D 05 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -2010,7 +3162,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  785 * 50	 06
+ 1417 * 50	 06
 			 10 02 08    11 02 0C    12 02 10    13 02 14    //rail flat
 			 14 02 18    15 02 1C    16 02 20    17 02 24    //rail ramp
 			 2A 02 28    2B 02 2C    2C 02 30    2D 02 34    //road flat
@@ -2022,7 +3174,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 06
-  786 * 136	 00 06 01 01 09 0D 06 01
+ 1418 * 136	 00 06 01 01 09 0D 06 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail flat: northern end X, northern end Y, southern end X, southern end Y //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail ramp: northern end X, northern end Y, southern end X, southern end Y //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //road flat: northern end X, northern end Y, southern end X, southern end Y //28, 2C, 30, 34
@@ -2040,9 +3192,9 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 //    Concrete Viaduct OA
 //================
                          //this number increases by 3 with each bridge
-  787 * 67	 04 06 FF 03 15 DC "Concrete Viaduct" 00 "Concrete Rail Viaduct" 00 "Concrete Road Viaduct" 00 //define texts first so we can reference them in properties below
+ 1419 * 67	 04 06 FF 03 1E DC "Concrete Viaduct" 00 "Concrete Rail Viaduct" 00 "Concrete Road Viaduct" 00 //define texts first so we can reference them in properties below
 
-  788 * 32	 00 06 0A 01 0A //adjust properties of eighth bridge (id 07)
+ 1420 * 32	 00 06 0A 01 0A //adjust properties of eighth bridge (id 07)
 			 08 00 //intro date
 			 09 00 //min length
 			 0A FF //max length
@@ -2050,115 +3202,115 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 			 0C A0 0F //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
 			 0F A8 07 00 00 //long format intro date
-			 10 15 DC //purchase text. these texts #s increase in line with above
-			 11 16 DC //rail bridge info window
-			 12 17 DC //road bridge info window
+			 10 1E DC //purchase text. these texts #s increase in line with above
+			 11 1F DC //rail bridge info window
+			 12 20 DC //road bridge info window
 
     //this reserves some sprites into temp. params
-  789 * 9	 0D 00 \D= \DR FE FF 08 2E 00 //this "main" param is used to allocate all of the graphics via the following action 6
-  790 * 9	 0D 01 \D+ 00 FF 01 00 00 00 //each sprite then gets its own param # to use in the final action 6's which determine placement
-  791 * 9	 0D 02 \D+ 00 FF 02 00 00 00
-  792 * 9	 0D 03 \D+ 00 FF 03 00 00 00
-  793 * 9	 0D 04 \D+ 00 FF 04 00 00 00
-  794 * 9	 0D 05 \D+ 00 FF 05 00 00 00
-  795 * 9	 0D 06 \D+ 00 FF 06 00 00 00
-  796 * 9	 0D 07 \D+ 00 FF 07 00 00 00
-  797 * 9	 0D 08 \D+ 00 FF 08 00 00 00
-  798 * 9	 0D 09 \D+ 00 FF 09 00 00 00
-  799 * 9	 0D 0A \D+ 00 FF 0A 00 00 00
-  800 * 9	 0D 0B \D+ 00 FF 0B 00 00 00
-  801 * 9	 0D 0C \D+ 00 FF 0C 00 00 00
-  802 * 9	 0D 0D \D+ 00 FF 0D 00 00 00
-  803 * 9	 0D 0E \D+ 00 FF 0E 00 00 00
-  804 * 9	 0D 0F \D+ 00 FF 0F 00 00 00
-  805 * 9	 0D 10 \D+ 00 FF 10 00 00 00
-  806 * 9	 0D 11 \D+ 00 FF 11 00 00 00
-  807 * 9	 0D 12 \D+ 00 FF 12 00 00 00
-  808 * 9	 0D 13 \D+ 00 FF 13 00 00 00
-  809 * 9	 0D 14 \D+ 00 FF 14 00 00 00
-  810 * 9	 0D 15 \D+ 00 FF 15 00 00 00
-  811 * 9	 0D 16 \D+ 00 FF 16 00 00 00
-  812 * 9	 0D 17 \D+ 00 FF 17 00 00 00
-  813 * 9	 0D 18 \D+ 00 FF 18 00 00 00
-  814 * 9	 0D 19 \D+ 00 FF 19 00 00 00
-  815 * 9	 0D 1A \D+ 00 FF 1A 00 00 00
-  816 * 9	 0D 1B \D+ 00 FF 1B 00 00 00
-  817 * 9	 0D 1C \D+ 00 FF 1C 00 00 00
-  818 * 9	 0D 1D \D+ 00 FF 1D 00 00 00
-  819 * 9	 0D 1E \D+ 00 FF 1E 00 00 00
-  820 * 9	 0D 1F \D+ 00 FF 1F 00 00 00
-  821 * 9	 0D 20 \D+ 00 FF 20 00 00 00
-  822 * 9	 0D 21 \D+ 00 FF 21 00 00 00
-  823 * 9	 0D 22 \D+ 00 FF 22 00 00 00
-  824 * 9	 0D 23 \D+ 00 FF 23 00 00 00
-  825 * 9	 0D 24 \D+ 00 FF 24 00 00 00
-  826 * 9	 0D 25 \D+ 00 FF 25 00 00 00
-  827 * 9	 0D 26 \D+ 00 FF 26 00 00 00
-  828 * 9	 0D 27 \D+ 00 FF 27 00 00 00
-  829 * 9	 0D 28 \D+ 00 FF 28 00 00 00
-  830 * 9	 0D 29 \D+ 00 FF 29 00 00 00
-  831 * 9	 0D 2A \D+ 00 FF 2A 00 00 00
-  832 * 9	 0D 2B \D+ 00 FF 2B 00 00 00
-  833 * 9	 0D 2C \D+ 00 FF 2C 00 00 00
-  834 * 9	 0D 2D \D+ 00 FF 2D 00 00 00
+ 1421 * 9	 0D 00 \D= \DR FE FF 08 2E 00 //this "main" param is used to allocate all of the graphics via the following action 6
+ 1422 * 9	 0D 01 \D+ 00 FF 01 00 00 00 //each sprite then gets its own param # to use in the final action 6's which determine placement
+ 1423 * 9	 0D 02 \D+ 00 FF 02 00 00 00
+ 1424 * 9	 0D 03 \D+ 00 FF 03 00 00 00
+ 1425 * 9	 0D 04 \D+ 00 FF 04 00 00 00
+ 1426 * 9	 0D 05 \D+ 00 FF 05 00 00 00
+ 1427 * 9	 0D 06 \D+ 00 FF 06 00 00 00
+ 1428 * 9	 0D 07 \D+ 00 FF 07 00 00 00
+ 1429 * 9	 0D 08 \D+ 00 FF 08 00 00 00
+ 1430 * 9	 0D 09 \D+ 00 FF 09 00 00 00
+ 1431 * 9	 0D 0A \D+ 00 FF 0A 00 00 00
+ 1432 * 9	 0D 0B \D+ 00 FF 0B 00 00 00
+ 1433 * 9	 0D 0C \D+ 00 FF 0C 00 00 00
+ 1434 * 9	 0D 0D \D+ 00 FF 0D 00 00 00
+ 1435 * 9	 0D 0E \D+ 00 FF 0E 00 00 00
+ 1436 * 9	 0D 0F \D+ 00 FF 0F 00 00 00
+ 1437 * 9	 0D 10 \D+ 00 FF 10 00 00 00
+ 1438 * 9	 0D 11 \D+ 00 FF 11 00 00 00
+ 1439 * 9	 0D 12 \D+ 00 FF 12 00 00 00
+ 1440 * 9	 0D 13 \D+ 00 FF 13 00 00 00
+ 1441 * 9	 0D 14 \D+ 00 FF 14 00 00 00
+ 1442 * 9	 0D 15 \D+ 00 FF 15 00 00 00
+ 1443 * 9	 0D 16 \D+ 00 FF 16 00 00 00
+ 1444 * 9	 0D 17 \D+ 00 FF 17 00 00 00
+ 1445 * 9	 0D 18 \D+ 00 FF 18 00 00 00
+ 1446 * 9	 0D 19 \D+ 00 FF 19 00 00 00
+ 1447 * 9	 0D 1A \D+ 00 FF 1A 00 00 00
+ 1448 * 9	 0D 1B \D+ 00 FF 1B 00 00 00
+ 1449 * 9	 0D 1C \D+ 00 FF 1C 00 00 00
+ 1450 * 9	 0D 1D \D+ 00 FF 1D 00 00 00
+ 1451 * 9	 0D 1E \D+ 00 FF 1E 00 00 00
+ 1452 * 9	 0D 1F \D+ 00 FF 1F 00 00 00
+ 1453 * 9	 0D 20 \D+ 00 FF 20 00 00 00
+ 1454 * 9	 0D 21 \D+ 00 FF 21 00 00 00
+ 1455 * 9	 0D 22 \D+ 00 FF 22 00 00 00
+ 1456 * 9	 0D 23 \D+ 00 FF 23 00 00 00
+ 1457 * 9	 0D 24 \D+ 00 FF 24 00 00 00
+ 1458 * 9	 0D 25 \D+ 00 FF 25 00 00 00
+ 1459 * 9	 0D 26 \D+ 00 FF 26 00 00 00
+ 1460 * 9	 0D 27 \D+ 00 FF 27 00 00 00
+ 1461 * 9	 0D 28 \D+ 00 FF 28 00 00 00
+ 1462 * 9	 0D 29 \D+ 00 FF 29 00 00 00
+ 1463 * 9	 0D 2A \D+ 00 FF 2A 00 00 00
+ 1464 * 9	 0D 2B \D+ 00 FF 2B 00 00 00
+ 1465 * 9	 0D 2C \D+ 00 FF 2C 00 00 00
+ 1466 * 9	 0D 2D \D+ 00 FF 2D 00 00 00
 
 	//this allocates the following graphics (realsprites) into the sprites which were reserved earlier (in the order they are defined below)
-  835 * 5	 06 00 02 03 FF 
+ 1467 * 5	 06 00 02 03 FF 
 	//sprite number 00 00 (the first sprite below) now gets changed to whatever number the grm picked for the first of the reserved sprites, then each subsequent sprite
 	//is allocated that number + 1 (which corresponds to the number of the param above)
-  836 * 5	 0A 01 2E 00 00
+ 1468 * 5	 0A 01 2E 00 00
 //rail
-  837 sprites/gfx/urban_rail.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 00
-  838 sprites/gfx/urban_rail.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 01
-  839 sprites/gfx/urban_rail.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 02
-  840 sprites/gfx/urban_rail.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 03
-  841 sprites/gfx/urban_rail.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 04
-  842 sprites/gfx/urban_rail.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 05
-  843 sprites/gfx/urban_rail.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 06
-  844 sprites/gfx/urban_rail.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 07
-  845 sprites/gfx/urban_rail.png  8bpp  545     1    36   24  -25   -14 normal //pillar x 08
-  846 sprites/gfx/urban_rail.png  8bpp  585     1    36   24   -9   -14 normal //pillar y 09
-  847 sprites/gfx/urban_rail.png  8bpp  1      57    64   78  -31  -42 normal //0-3 back x 0A
-  848 sprites/gfx/urban_rail.png  8bpp  69     57    64   78  -55  -54 normal //0-3 front x 0B
-  849 sprites/gfx/urban_rail.png  8bpp  137    57    64   78  -31  -42 normal //0-3 back y 0C
-  850 sprites/gfx/urban_rail.png  8bpp  205    57    64   78  -7  -54 normal //0-3 front y 0D
-  851 sprites/gfx/urban_rail.png  8bpp  273    57    64   78  -31  -42 normal //1-2 back x 0E
-  852 sprites/gfx/urban_rail.png  8bpp  341    57    64   78  -55  -54 normal //1-2 front x 0F
-  853 sprites/gfx/urban_rail.png  8bpp  409    57    64   78  -31  -42 normal //1-2 back y 10
-  854 sprites/gfx/urban_rail.png  8bpp  477    57    64   78  -7  -54 normal //1-2 front y 11
-  855 sprites/gfx/urban_rail.png  8bpp  545    57    64   78  -31  -42 normal //4 back x 12
-  856 sprites/gfx/urban_rail.png  8bpp  613    57    64   78  -55  -54 normal //4 front x 13
-  857 sprites/gfx/urban_rail.png  8bpp  681    57    64   78  -31  -42 normal //4 back y 14
-  858 sprites/gfx/urban_rail.png  8bpp  749    57    64   78  -7  -54 normal //4 front y 15
-  859 sprites/gfx/urban_rail.png  8bpp  817    57    64   78  -31  -42 normal //5 back x 16
-  860 sprites/gfx/urban_rail.png  8bpp  885    57    64   78  -55  -54 normal //5 front x 17
-  861 sprites/gfx/urban_rail.png  8bpp  953    57    64   78  -31  -42 normal //5 back y 18
-  862 sprites/gfx/urban_rail.png  8bpp  1021    57    64   78  -7  -54 normal //5 front y 19 
+ 1469 sprites/gfx/urban_rail.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 00
+ 1470 sprites/gfx/urban_rail.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 01
+ 1471 sprites/gfx/urban_rail.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 02
+ 1472 sprites/gfx/urban_rail.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 03
+ 1473 sprites/gfx/urban_rail.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 04
+ 1474 sprites/gfx/urban_rail.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 05
+ 1475 sprites/gfx/urban_rail.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 06
+ 1476 sprites/gfx/urban_rail.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 07
+ 1477 sprites/gfx/urban_rail.png  8bpp  545     1    36   24  -25   -14 normal //pillar x 08
+ 1478 sprites/gfx/urban_rail.png  8bpp  585     1    36   24   -9   -14 normal //pillar y 09
+ 1479 sprites/gfx/urban_rail.png  8bpp  1      57    64   78  -31  -42 normal //0-3 back x 0A
+ 1480 sprites/gfx/urban_rail.png  8bpp  69     57    64   78  -55  -54 normal //0-3 front x 0B
+ 1481 sprites/gfx/urban_rail.png  8bpp  137    57    64   78  -31  -42 normal //0-3 back y 0C
+ 1482 sprites/gfx/urban_rail.png  8bpp  205    57    64   78  -7  -54 normal //0-3 front y 0D
+ 1483 sprites/gfx/urban_rail.png  8bpp  273    57    64   78  -31  -42 normal //1-2 back x 0E
+ 1484 sprites/gfx/urban_rail.png  8bpp  341    57    64   78  -55  -54 normal //1-2 front x 0F
+ 1485 sprites/gfx/urban_rail.png  8bpp  409    57    64   78  -31  -42 normal //1-2 back y 10
+ 1486 sprites/gfx/urban_rail.png  8bpp  477    57    64   78  -7  -54 normal //1-2 front y 11
+ 1487 sprites/gfx/urban_rail.png  8bpp  545    57    64   78  -31  -42 normal //4 back x 12
+ 1488 sprites/gfx/urban_rail.png  8bpp  613    57    64   78  -55  -54 normal //4 front x 13
+ 1489 sprites/gfx/urban_rail.png  8bpp  681    57    64   78  -31  -42 normal //4 back y 14
+ 1490 sprites/gfx/urban_rail.png  8bpp  749    57    64   78  -7  -54 normal //4 front y 15
+ 1491 sprites/gfx/urban_rail.png  8bpp  817    57    64   78  -31  -42 normal //5 back x 16
+ 1492 sprites/gfx/urban_rail.png  8bpp  885    57    64   78  -55  -54 normal //5 front x 17
+ 1493 sprites/gfx/urban_rail.png  8bpp  953    57    64   78  -31  -42 normal //5 back y 18
+ 1494 sprites/gfx/urban_rail.png  8bpp  1021    57    64   78  -7  -54 normal //5 front y 19 
 //road
-  863 sprites/gfx/concrete_viaduct_road.png  8bpp  1       1    66   41  -33  -10 normal //back flat x 1A
-  864 sprites/gfx/concrete_viaduct_road.png  8bpp  72      1    66   41  -31  -10 normal //back flat y 1B
-  865 sprites/gfx/concrete_viaduct_road.png  8bpp  143     1    65   35  -32  -12 normal //front flat x 1C
-  866 sprites/gfx/concrete_viaduct_road.png  8bpp  213     1    65   35  -31  -12 normal //front flat y 1D
-  867 sprites/gfx/concrete_viaduct_road.png  8bpp  283     1    64   33  -31   -2 normal //ramp back x 1E
-  868 sprites/gfx/concrete_viaduct_road.png  8bpp  352     1    64   33  -31   -2 normal //ramp back y 1F
-  869 sprites/gfx/concrete_viaduct_road.png  8bpp  421     1    64   42  -31  -11 normal //ramp front x 20
-  870 sprites/gfx/concrete_viaduct_road.png  8bpp  490     1    64   42  -31  -11 normal //ramp front y 21
-  871 sprites/gfx/concrete_viaduct_road.png  8bpp  559     1    10   11   -1   -3 normal //pillar x 22
-  872 sprites/gfx/concrete_viaduct_road.png  8bpp  574     1    10   11   -7   -3 normal //pillar y 23
-  873 sprites/gfx/concrete_viaduct_road.png  8bpp  1      57    63   33  -32   -6 normal //all back x 24
-  874 sprites/gfx/concrete_viaduct_road.png  8bpp  68     57    34   21  -25   -2 normal //0-1-4 front x 25
-  875 sprites/gfx/concrete_viaduct_road.png  8bpp  107    57    63   33  -29   -6 normal //all back y 26
-  876 sprites/gfx/concrete_viaduct_road.png  8bpp  175    57    34   21   -7   -2 normal //0-1-4 front y 27
-  877 sprites/gfx/concrete_viaduct_road.png  8bpp  213    57    33   22  -24   -2 normal //2 front x 28
-  878 sprites/gfx/concrete_viaduct_road.png  8bpp  251    57    33   22   -7   -2 normal //2 front y 29
-  879 sprites/gfx/concrete_viaduct_road.png  8bpp  289    57    33   20  -24   -2 normal //3 front x 2A
-  880 sprites/gfx/concrete_viaduct_road.png  8bpp  327    57    33   20   -7   -2 normal //3 front y 2B
-  881 sprites/gfx/concrete_viaduct_road.png  8bpp  365    57    33   22  -24   -2 normal //5 front x 2C
-  882 sprites/gfx/concrete_viaduct_road.png  8bpp  403    57    33   22   -7   -2 normal //5 front y 2D
+ 1495 sprites/gfx/concrete_viaduct_road.png  8bpp  1       1    66   41  -33  -10 normal //back flat x 1A
+ 1496 sprites/gfx/concrete_viaduct_road.png  8bpp  72      1    66   41  -31  -10 normal //back flat y 1B
+ 1497 sprites/gfx/concrete_viaduct_road.png  8bpp  143     1    65   35  -32  -12 normal //front flat x 1C
+ 1498 sprites/gfx/concrete_viaduct_road.png  8bpp  213     1    65   35  -31  -12 normal //front flat y 1D
+ 1499 sprites/gfx/concrete_viaduct_road.png  8bpp  283     1    64   33  -31   -2 normal //ramp back x 1E
+ 1500 sprites/gfx/concrete_viaduct_road.png  8bpp  352     1    64   33  -31   -2 normal //ramp back y 1F
+ 1501 sprites/gfx/concrete_viaduct_road.png  8bpp  421     1    64   42  -31  -11 normal //ramp front x 20
+ 1502 sprites/gfx/concrete_viaduct_road.png  8bpp  490     1    64   42  -31  -11 normal //ramp front y 21
+ 1503 sprites/gfx/concrete_viaduct_road.png  8bpp  559     1    10   11   -1   -3 normal //pillar x 22
+ 1504 sprites/gfx/concrete_viaduct_road.png  8bpp  574     1    10   11   -7   -3 normal //pillar y 23
+ 1505 sprites/gfx/concrete_viaduct_road.png  8bpp  1      57    63   33  -32   -6 normal //all back x 24
+ 1506 sprites/gfx/concrete_viaduct_road.png  8bpp  68     57    34   21  -25   -2 normal //0-1-4 front x 25
+ 1507 sprites/gfx/concrete_viaduct_road.png  8bpp  107    57    63   33  -29   -6 normal //all back y 26
+ 1508 sprites/gfx/concrete_viaduct_road.png  8bpp  175    57    34   21   -7   -2 normal //0-1-4 front y 27
+ 1509 sprites/gfx/concrete_viaduct_road.png  8bpp  213    57    33   22  -24   -2 normal //2 front x 28
+ 1510 sprites/gfx/concrete_viaduct_road.png  8bpp  251    57    33   22   -7   -2 normal //2 front y 29
+ 1511 sprites/gfx/concrete_viaduct_road.png  8bpp  289    57    33   20  -24   -2 normal //3 front x 2A
+ 1512 sprites/gfx/concrete_viaduct_road.png  8bpp  327    57    33   20   -7   -2 normal //3 front y 2B
+ 1513 sprites/gfx/concrete_viaduct_road.png  8bpp  365    57    33   22  -24   -2 normal //5 front x 2C
+ 1514 sprites/gfx/concrete_viaduct_road.png  8bpp  403    57    33   22   -7   -2 normal //5 front y 2D
 
    //and finally these action 6's tell where to place each of the reserved sprites (organized by table layout for easier viewing)
    //Ack, I had to split them up individually because there aren't enough hex ids to do all in one
-  883 * 26	 06
+ 1515 * 26	 06
 			 0A 02 08    0B 02 0C	 //rail x (part 0 should probably never have pillars set)
 			 0C 02 18    0D 02 1C	 //rail y
 			 24 02 28    25 02 2C	 //road x
@@ -2170,7 +3322,7 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 			 FF
 
 //Concrete Viaduct (07)
-  884 * 136	 00 06 01 01 0A 0D 00 01 //action 00 bridges(06), 01 property, 01 ID, ID 07, prop 0D, tableID 00, 01 tables
+ 1516 * 136	 00 06 01 01 0A 0D 00 01 //action 00 bridges(06), 01 property, 01 ID, ID 07, prop 0D, tableID 00, 01 tables
 //table 00 - offset starts at 08, add 16 for each row
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
@@ -2181,7 +3333,7 @@ FD 90 1C 03  DA 89 1C 03  00 00 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 24 91 1C 03  D9 89 1C 03  00 00 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 25 91 1C 03  DA 89 1C 03  00 00 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  885 * 26	 06
+ 1517 * 26	 06
 			 0A 02 08    0B 02 0C	 //rail x
 			 0C 02 18    0D 02 1C	 //rail y
 			 24 02 28    25 02 2C	 //road x
@@ -2193,7 +3345,7 @@ FD 90 1C 03  DA 89 1C 03  00 00 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 01
-  886 * 136	 00 06 01 01 0A 0D 01 01
+ 1518 * 136	 00 06 01 01 0A 0D 01 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -2203,7 +3355,7 @@ FF 90 1C 03  DC 89 1C 03  DF 89 1C 03  00 00 00 00 //Mono Y: Back&Floor, Front, 
 22 91 1C 03  D7 89 1C 03  DD 89 1C 03  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 27 91 1C 03  DC 89 1C 03  DF 89 1C 03  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  887 * 26	 06
+ 1519 * 26	 06
 			 0E 02 08    0F 02 0C	 //rail x
 			 10 02 18    11 02 1C	 //rail y
 			 24 02 28    28 02 2C	 //road x
@@ -2215,7 +3367,7 @@ FF 90 1C 03  DC 89 1C 03  DF 89 1C 03  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 02
-  888 * 136	 00 06 01 01 0A 0D 02 01
+ 1520 * 136	 00 06 01 01 0A 0D 02 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -2225,7 +3377,7 @@ FE 90 1C 03  DB 89 1C 03  DF 89 1C 03  00 00 00 00 //Mono Y: Back&Floor, Front, 
 23 91 1C 03  D8 89 1C 03  DD 89 1C 03  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 26 91 1C 03  DB 89 1C 03  DF 89 1C 03  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  889 * 38	 06
+ 1521 * 38	 06
 			 12 02 08    13 02 0C	 08 02 10	 //rail x
 			 14 02 18    15 02 1C	 09 02 20	 //rail y
 			 24 02 28    2A 02 2C	 22 02 30	 //road x
@@ -2237,7 +3389,7 @@ FE 90 1C 03  DB 89 1C 03  DF 89 1C 03  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 03
-  890 * 136	 00 06 01 01 0A 0D 03 01
+ 1522 * 136	 00 06 01 01 0A 0D 03 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -2247,7 +3399,7 @@ FE 90 1C 03  DB 89 1C 03  DF 89 1C 03  00 00 00 00 //Mono Y: Back&Floor, Front, 
 23 91 1C 03  D8 89 1C 03  DD 89 1C 03  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 26 91 1C 03  DB 89 1C 03  DF 89 1C 03  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  891 * 26	 06
+ 1523 * 26	 06
 			 0A 02 08    0B 02 0C	 //rail x
 			 0C 02 18    0D 02 1C	 //rail y
 			 24 02 28    25 02 2C	 //road x
@@ -2259,7 +3411,7 @@ FE 90 1C 03  DB 89 1C 03  DF 89 1C 03  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 04
-  892 * 136	 00 06 01 01 0A 0D 04 01
+ 1524 * 136	 00 06 01 01 0A 0D 04 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -2269,7 +3421,7 @@ FE 90 1C 03  DB 89 1C 03  DF 89 1C 03  00 00 00 00 //Mono Y: Back&Floor, Front, 
 23 91 1C 03  D8 89 1C 03  DD 89 1C 03  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 26 91 1C 03  DB 89 1C 03  DF 89 1C 03  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  893 * 38	 06
+ 1525 * 38	 06
 			 16 02 08    17 02 0C	 08 02 10	 //rail x
 			 18 02 18    19 02 1C	 09 02 20	 //rail y
 			 24 02 28    2C 02 2C	 22 02 30	 //road x
@@ -2281,7 +3433,7 @@ FE 90 1C 03  DB 89 1C 03  DF 89 1C 03  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 05
-  894 * 136	 00 06 01 01 0A 0D 05 01
+ 1526 * 136	 00 06 01 01 0A 0D 05 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -2291,7 +3443,7 @@ FE 90 1C 03  DB 89 1C 03  DF 89 1C 03  00 00 00 00 //Mono Y: Back&Floor, Front, 
 23 91 1C 03  D8 89 1C 03  DD 89 1C 03  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 26 91 1C 03  DB 89 1C 03  DF 89 1C 03  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  895 * 50	 06
+ 1527 * 50	 06
 			 00 02 08    01 02 0C    02 02 10    03 02 14    //rail flat
 			 04 02 18    05 02 1C    06 02 20    07 02 24    //rail ramp
 			 1A 02 28    1B 02 2C    1C 02 30    1D 02 34    //road flat
@@ -2303,7 +3455,7 @@ FE 90 1C 03  DB 89 1C 03  DF 89 1C 03  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 06
-  896 * 136	 00 06 01 01 0A 0D 06 01
+ 1528 * 136	 00 06 01 01 0A 0D 06 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail flat: northern end X, northern end Y, southern end X, southern end Y //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail ramp: northern end X, northern end Y, southern end X, southern end Y //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //road flat: northern end X, northern end Y, southern end X, southern end Y //28, 2C, 30, 34
@@ -2321,9 +3473,9 @@ EB 90 1C 03  ED 90 1C 03  EA 90 1C 03  EC 90 1C 03 //mono ramp: northern end X, 
 //   SKYWAY BRIDGE 0C
 //================
                          //this number increases by 3 with each bridge
-  897 * 55	 04 06 FF 03 18 DC "Urban Skyway" 00 "Urban Skyway Rail" 00 "Urban Skyway Road" 00 //define texts first so we can reference them in properties below
+ 1529 * 55	 04 06 FF 03 21 DC "Urban Skyway" 00 "Urban Skyway Rail" 00 "Urban Skyway Road" 00 //define texts first so we can reference them in properties below
 
-  898 * 32	 00 06 0A 01 0C //adjust properties of fourth bridge (id 03)
+ 1530 * 32	 00 06 0A 01 0C //adjust properties of fourth bridge (id 03)
 			 08 00 //intro date
 			 09 00 //min length
 			 0A FF //max length
@@ -2331,127 +3483,127 @@ EB 90 1C 03  ED 90 1C 03  EA 90 1C 03  EC 90 1C 03 //mono ramp: northern end X, 
 			 0C A0 00 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
 			 0F 00 00 00 00 //long format intro date
-			 10 18 DC //purchase text. these texts #s increase in line with above
-			 11 19 DC //rail bridge info window
-			 12 1A DC //road bridge info window
+			 10 21 DC //purchase text. these texts #s increase in line with above
+			 11 22 DC //rail bridge info window
+			 12 23 DC //road bridge info window
 
 	//this reserves some sprites into temp. params
-  899 * 9	 0D 00 \D= \DR FE FF 08 34 00 //this "main" param is used to allocate all of the graphics via the following action 6
-  900 * 9	 0D 01 \D+ 00 FF 01 00 00 00 //each sprite then gets its own param # to use in the final action 6's which determine placement
-  901 * 9	 0D 02 \D+ 00 FF 02 00 00 00
-  902 * 9	 0D 03 \D+ 00 FF 03 00 00 00
-  903 * 9	 0D 04 \D+ 00 FF 04 00 00 00
-  904 * 9	 0D 05 \D+ 00 FF 05 00 00 00
-  905 * 9	 0D 06 \D+ 00 FF 06 00 00 00
-  906 * 9	 0D 07 \D+ 00 FF 07 00 00 00
-  907 * 9	 0D 08 \D+ 00 FF 08 00 00 00
-  908 * 9	 0D 09 \D+ 00 FF 09 00 00 00
-  909 * 9	 0D 0A \D+ 00 FF 0A 00 00 00
-  910 * 9	 0D 0B \D+ 00 FF 0B 00 00 00
-  911 * 9	 0D 0C \D+ 00 FF 0C 00 00 00
-  912 * 9	 0D 0D \D+ 00 FF 0D 00 00 00
-  913 * 9	 0D 0E \D+ 00 FF 0E 00 00 00
-  914 * 9	 0D 0F \D+ 00 FF 0F 00 00 00
-  915 * 9	 0D 10 \D+ 00 FF 10 00 00 00
-  916 * 9	 0D 11 \D+ 00 FF 11 00 00 00
-  917 * 9	 0D 12 \D+ 00 FF 12 00 00 00
-  918 * 9	 0D 13 \D+ 00 FF 13 00 00 00
-  919 * 9	 0D 14 \D+ 00 FF 14 00 00 00
-  920 * 9	 0D 15 \D+ 00 FF 15 00 00 00
-  921 * 9	 0D 16 \D+ 00 FF 16 00 00 00
-  922 * 9	 0D 17 \D+ 00 FF 17 00 00 00
-  923 * 9	 0D 18 \D+ 00 FF 18 00 00 00
-  924 * 9	 0D 19 \D+ 00 FF 19 00 00 00
-  925 * 9	 0D 1A \D+ 00 FF 1A 00 00 00
-  926 * 9	 0D 1B \D+ 00 FF 1B 00 00 00
-  927 * 9	 0D 1C \D+ 00 FF 1C 00 00 00
-  928 * 9	 0D 1D \D+ 00 FF 1D 00 00 00
-  929 * 9	 0D 1E \D+ 00 FF 1E 00 00 00
-  930 * 9	 0D 1F \D+ 00 FF 1F 00 00 00
-  931 * 9	 0D 20 \D+ 00 FF 20 00 00 00
-  932 * 9	 0D 21 \D+ 00 FF 21 00 00 00
-  933 * 9	 0D 22 \D+ 00 FF 22 00 00 00
-  934 * 9	 0D 23 \D+ 00 FF 23 00 00 00
-  935 * 9	 0D 24 \D+ 00 FF 24 00 00 00
-  936 * 9	 0D 25 \D+ 00 FF 25 00 00 00
-  937 * 9	 0D 26 \D+ 00 FF 26 00 00 00
-  938 * 9	 0D 27 \D+ 00 FF 27 00 00 00
-  939 * 9	 0D 28 \D+ 00 FF 28 00 00 00
-  940 * 9	 0D 29 \D+ 00 FF 29 00 00 00
-  941 * 9	 0D 2A \D+ 00 FF 2A 00 00 00
-  942 * 9	 0D 2B \D+ 00 FF 2B 00 00 00
-  943 * 9	 0D 2C \D+ 00 FF 2C 00 00 00
-  944 * 9	 0D 2D \D+ 00 FF 2D 00 00 00
-  945 * 9	 0D 2E \D+ 00 FF 2E 00 00 00
-  946 * 9	 0D 2F \D+ 00 FF 2F 00 00 00
-  947 * 9	 0D 30 \D+ 00 FF 30 00 00 00
-  948 * 9	 0D 31 \D+ 00 FF 31 00 00 00
-  949 * 9	 0D 32 \D+ 00 FF 32 00 00 00
-  950 * 9	 0D 33 \D+ 00 FF 33 00 00 00
+ 1531 * 9	 0D 00 \D= \DR FE FF 08 34 00 //this "main" param is used to allocate all of the graphics via the following action 6
+ 1532 * 9	 0D 01 \D+ 00 FF 01 00 00 00 //each sprite then gets its own param # to use in the final action 6's which determine placement
+ 1533 * 9	 0D 02 \D+ 00 FF 02 00 00 00
+ 1534 * 9	 0D 03 \D+ 00 FF 03 00 00 00
+ 1535 * 9	 0D 04 \D+ 00 FF 04 00 00 00
+ 1536 * 9	 0D 05 \D+ 00 FF 05 00 00 00
+ 1537 * 9	 0D 06 \D+ 00 FF 06 00 00 00
+ 1538 * 9	 0D 07 \D+ 00 FF 07 00 00 00
+ 1539 * 9	 0D 08 \D+ 00 FF 08 00 00 00
+ 1540 * 9	 0D 09 \D+ 00 FF 09 00 00 00
+ 1541 * 9	 0D 0A \D+ 00 FF 0A 00 00 00
+ 1542 * 9	 0D 0B \D+ 00 FF 0B 00 00 00
+ 1543 * 9	 0D 0C \D+ 00 FF 0C 00 00 00
+ 1544 * 9	 0D 0D \D+ 00 FF 0D 00 00 00
+ 1545 * 9	 0D 0E \D+ 00 FF 0E 00 00 00
+ 1546 * 9	 0D 0F \D+ 00 FF 0F 00 00 00
+ 1547 * 9	 0D 10 \D+ 00 FF 10 00 00 00
+ 1548 * 9	 0D 11 \D+ 00 FF 11 00 00 00
+ 1549 * 9	 0D 12 \D+ 00 FF 12 00 00 00
+ 1550 * 9	 0D 13 \D+ 00 FF 13 00 00 00
+ 1551 * 9	 0D 14 \D+ 00 FF 14 00 00 00
+ 1552 * 9	 0D 15 \D+ 00 FF 15 00 00 00
+ 1553 * 9	 0D 16 \D+ 00 FF 16 00 00 00
+ 1554 * 9	 0D 17 \D+ 00 FF 17 00 00 00
+ 1555 * 9	 0D 18 \D+ 00 FF 18 00 00 00
+ 1556 * 9	 0D 19 \D+ 00 FF 19 00 00 00
+ 1557 * 9	 0D 1A \D+ 00 FF 1A 00 00 00
+ 1558 * 9	 0D 1B \D+ 00 FF 1B 00 00 00
+ 1559 * 9	 0D 1C \D+ 00 FF 1C 00 00 00
+ 1560 * 9	 0D 1D \D+ 00 FF 1D 00 00 00
+ 1561 * 9	 0D 1E \D+ 00 FF 1E 00 00 00
+ 1562 * 9	 0D 1F \D+ 00 FF 1F 00 00 00
+ 1563 * 9	 0D 20 \D+ 00 FF 20 00 00 00
+ 1564 * 9	 0D 21 \D+ 00 FF 21 00 00 00
+ 1565 * 9	 0D 22 \D+ 00 FF 22 00 00 00
+ 1566 * 9	 0D 23 \D+ 00 FF 23 00 00 00
+ 1567 * 9	 0D 24 \D+ 00 FF 24 00 00 00
+ 1568 * 9	 0D 25 \D+ 00 FF 25 00 00 00
+ 1569 * 9	 0D 26 \D+ 00 FF 26 00 00 00
+ 1570 * 9	 0D 27 \D+ 00 FF 27 00 00 00
+ 1571 * 9	 0D 28 \D+ 00 FF 28 00 00 00
+ 1572 * 9	 0D 29 \D+ 00 FF 29 00 00 00
+ 1573 * 9	 0D 2A \D+ 00 FF 2A 00 00 00
+ 1574 * 9	 0D 2B \D+ 00 FF 2B 00 00 00
+ 1575 * 9	 0D 2C \D+ 00 FF 2C 00 00 00
+ 1576 * 9	 0D 2D \D+ 00 FF 2D 00 00 00
+ 1577 * 9	 0D 2E \D+ 00 FF 2E 00 00 00
+ 1578 * 9	 0D 2F \D+ 00 FF 2F 00 00 00
+ 1579 * 9	 0D 30 \D+ 00 FF 30 00 00 00
+ 1580 * 9	 0D 31 \D+ 00 FF 31 00 00 00
+ 1581 * 9	 0D 32 \D+ 00 FF 32 00 00 00
+ 1582 * 9	 0D 33 \D+ 00 FF 33 00 00 00
 
    //this allocates the following graphics (realsprites) into the sprites which were reserved earlier (in the order they are defined below)
-  951 * 5	 06 00 02 03 FF 
+ 1583 * 5	 06 00 02 03 FF 
 	//sprite number 00 00 (the first sprite below) now gets changed to whatever number the grm picked for the first of the reserved sprites, then each subsequent sprite
 	//is allocated that number + 1 (which corresponds to the number of the param above)
-  952 * 5	 0A 01 34 00 00
+ 1584 * 5	 0A 01 34 00 00
 //rail
-  953 sprites/gfx/sky_rails.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 1A
-  954 sprites/gfx/sky_rails.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 1B
-  955 sprites/gfx/sky_rails.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 1C
-  956 sprites/gfx/sky_rails.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 1D
-  957 sprites/gfx/sky_rails.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 1E
-  958 sprites/gfx/sky_rails.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 1F
-  959 sprites/gfx/sky_rails.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 20
-  960 sprites/gfx/sky_rails.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 21
-  961 sprites/gfx/sky_rails.png  8bpp  545     1    36   24  -25   -14 normal //pillar x 22
-  962 sprites/gfx/sky_rails.png  8bpp  585     1    36   24   -9   -14 normal //pillar y 23
-  963 sprites/gfx/sky_rails.png  8bpp  1      57    64   78  -31  -42 normal //0-3 back x 24
-  964 sprites/gfx/sky_rails.png  8bpp  69     57    64   78  -55  -54 normal //0-3 front x 25
-  965 sprites/gfx/sky_rails.png  8bpp  137    57    64   78  -31  -42 normal //0-3 back y 26
-  966 sprites/gfx/sky_rails.png  8bpp  205    57    64   78  -7  -54 normal //0-3 front y 27
-  967 sprites/gfx/sky_rails.png  8bpp  273    57    64   78  -31  -42 normal //1-2 back x 28
-  968 sprites/gfx/sky_rails.png  8bpp  341    57    64   78  -55  -54 normal //1-2 front x 29
-  969 sprites/gfx/sky_rails.png  8bpp  409    57    64   78  -31  -42 normal //1-2 back y 2A
-  970 sprites/gfx/sky_rails.png  8bpp  477    57    64   78  -7  -54 normal //1-2 front y 2B
-  971 sprites/gfx/sky_rails.png  8bpp  545    57    64   78  -31  -42 normal //4 back x 2C
-  972 sprites/gfx/sky_rails.png  8bpp  613    57    64   78  -55  -54 normal //4 front x 2D
-  973 sprites/gfx/sky_rails.png  8bpp  681    57    64   78  -31  -42 normal //4 back y 2E
-  974 sprites/gfx/sky_rails.png  8bpp  749    57    64   78  -7  -54 normal //4 front y 2F
-  975 sprites/gfx/sky_rails.png  8bpp  817    57    64   78  -31  -42 normal //5 back x 30
-  976 sprites/gfx/sky_rails.png  8bpp  885    57    64   78  -55  -54 normal //5 front x 31
-  977 sprites/gfx/sky_rails.png  8bpp  953    57    64   78  -31  -42 normal //5 back y 32
-  978 sprites/gfx/sky_rails.png  8bpp  1021    57    64   78  -7  -54 normal //5 front y 33
+ 1585 sprites/gfx/sky_rails.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 1A
+ 1586 sprites/gfx/sky_rails.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 1B
+ 1587 sprites/gfx/sky_rails.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 1C
+ 1588 sprites/gfx/sky_rails.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 1D
+ 1589 sprites/gfx/sky_rails.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 1E
+ 1590 sprites/gfx/sky_rails.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 1F
+ 1591 sprites/gfx/sky_rails.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 20
+ 1592 sprites/gfx/sky_rails.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 21
+ 1593 sprites/gfx/sky_rails.png  8bpp  545     1    36   24  -25   -14 normal //pillar x 22
+ 1594 sprites/gfx/sky_rails.png  8bpp  585     1    36   24   -9   -14 normal //pillar y 23
+ 1595 sprites/gfx/sky_rails.png  8bpp  1      57    64   78  -31  -42 normal //0-3 back x 24
+ 1596 sprites/gfx/sky_rails.png  8bpp  69     57    64   78  -55  -54 normal //0-3 front x 25
+ 1597 sprites/gfx/sky_rails.png  8bpp  137    57    64   78  -31  -42 normal //0-3 back y 26
+ 1598 sprites/gfx/sky_rails.png  8bpp  205    57    64   78  -7  -54 normal //0-3 front y 27
+ 1599 sprites/gfx/sky_rails.png  8bpp  273    57    64   78  -31  -42 normal //1-2 back x 28
+ 1600 sprites/gfx/sky_rails.png  8bpp  341    57    64   78  -55  -54 normal //1-2 front x 29
+ 1601 sprites/gfx/sky_rails.png  8bpp  409    57    64   78  -31  -42 normal //1-2 back y 2A
+ 1602 sprites/gfx/sky_rails.png  8bpp  477    57    64   78  -7  -54 normal //1-2 front y 2B
+ 1603 sprites/gfx/sky_rails.png  8bpp  545    57    64   78  -31  -42 normal //4 back x 2C
+ 1604 sprites/gfx/sky_rails.png  8bpp  613    57    64   78  -55  -54 normal //4 front x 2D
+ 1605 sprites/gfx/sky_rails.png  8bpp  681    57    64   78  -31  -42 normal //4 back y 2E
+ 1606 sprites/gfx/sky_rails.png  8bpp  749    57    64   78  -7  -54 normal //4 front y 2F
+ 1607 sprites/gfx/sky_rails.png  8bpp  817    57    64   78  -31  -42 normal //5 back x 30
+ 1608 sprites/gfx/sky_rails.png  8bpp  885    57    64   78  -55  -54 normal //5 front x 31
+ 1609 sprites/gfx/sky_rails.png  8bpp  953    57    64   78  -31  -42 normal //5 back y 32
+ 1610 sprites/gfx/sky_rails.png  8bpp  1021    57    64   78  -7  -54 normal //5 front y 33
 //road
-  979 sprites/gfx/sky_roads.png  8bpp  1       1    64   52  -31   -21 normal //back flat x 1A
-  980 sprites/gfx/sky_roads.png  8bpp  69      1    64   52  -31   -21 normal //back flat y 1B
-  981 sprites/gfx/sky_roads.png  8bpp  137     1    64   52  -31   -29 normal //front flat x 1C
-  982 sprites/gfx/sky_roads.png  8bpp  205     1    64   52  -31   -29 normal //front flat y 1D
-  983 sprites/gfx/sky_roads.png  8bpp  273     1    64   52  -31   -21 normal //ramp back x 1E
-  984 sprites/gfx/sky_roads.png  8bpp  341     1    64   52  -31   -21 normal //ramp back y 1F
-  985 sprites/gfx/sky_roads.png  8bpp  409     1    64   52  -31  -21 normal //ramp front x 20
-  986 sprites/gfx/sky_roads.png  8bpp  477     1    64   52  -31  -21 normal //ramp front y 21
-  987 sprites/gfx/sky_roads.png  8bpp  545     1    36   24  -25   -15 normal //pillar x 22
-  988 sprites/gfx/sky_roads.png  8bpp  585     1    36   24   -9   -15 normal //pillar y 23
-  989 sprites/gfx/sky_roads.png  8bpp  1      57    64   78  -31  -42 normal //0-3 back x 24
-  990 sprites/gfx/sky_roads.png  8bpp  69     57    64   78  -55  -54 normal //0-3 front x 25
-  991 sprites/gfx/sky_roads.png  8bpp  137    57    64   78  -31  -42 normal //0-3 back y 26
-  992 sprites/gfx/sky_roads.png  8bpp  205    57    64   78  -7  -54 normal //0-3 front y 27
-  993 sprites/gfx/sky_roads.png  8bpp  273    57    64   78  -31  -42 normal //1-2 back x 28
-  994 sprites/gfx/sky_roads.png  8bpp  341    57    64   78  -55  -54 normal //1-2 front x 29
-  995 sprites/gfx/sky_roads.png  8bpp  409    57    64   78  -31  -42 normal //1-2 back y 2A
-  996 sprites/gfx/sky_roads.png  8bpp  477    57    64   78  -7  -54 normal //1-2 front y 2B
-  997 sprites/gfx/sky_roads.png  8bpp  545    57    64   88  -31  -52 normal //4 back x 2C
-  998 sprites/gfx/sky_roads.png  8bpp  613    57    64   88  -55  -64 normal //4 front x 2D
-  999 sprites/gfx/sky_roads.png  8bpp  681    57    64   88  -31  -52 normal //4 back y 2E
- 1000 sprites/gfx/sky_roads.png  8bpp  749    57    64   88  -7  -64 normal //4 front y 2F
- 1001 sprites/gfx/sky_roads.png  8bpp  817    57    64   88  -31  -52 normal //5 back x 30
- 1002 sprites/gfx/sky_roads.png  8bpp  885    57    64   88  -55  -64 normal //5 front x 31
- 1003 sprites/gfx/sky_roads.png  8bpp  953    57    64   88  -31  -52 normal //5 back y 32
- 1004 sprites/gfx/sky_roads.png  8bpp  1021    57    64   88  -7  -64 normal //5 front y 33
+ 1611 sprites/gfx/sky_roads.png  8bpp  1       1    64   52  -31   -21 normal //back flat x 1A
+ 1612 sprites/gfx/sky_roads.png  8bpp  69      1    64   52  -31   -21 normal //back flat y 1B
+ 1613 sprites/gfx/sky_roads.png  8bpp  137     1    64   52  -31   -29 normal //front flat x 1C
+ 1614 sprites/gfx/sky_roads.png  8bpp  205     1    64   52  -31   -29 normal //front flat y 1D
+ 1615 sprites/gfx/sky_roads.png  8bpp  273     1    64   52  -31   -21 normal //ramp back x 1E
+ 1616 sprites/gfx/sky_roads.png  8bpp  341     1    64   52  -31   -21 normal //ramp back y 1F
+ 1617 sprites/gfx/sky_roads.png  8bpp  409     1    64   52  -31  -21 normal //ramp front x 20
+ 1618 sprites/gfx/sky_roads.png  8bpp  477     1    64   52  -31  -21 normal //ramp front y 21
+ 1619 sprites/gfx/sky_roads.png  8bpp  545     1    36   24  -25   -15 normal //pillar x 22
+ 1620 sprites/gfx/sky_roads.png  8bpp  585     1    36   24   -9   -15 normal //pillar y 23
+ 1621 sprites/gfx/sky_roads.png  8bpp  1      57    64   78  -31  -42 normal //0-3 back x 24
+ 1622 sprites/gfx/sky_roads.png  8bpp  69     57    64   78  -55  -54 normal //0-3 front x 25
+ 1623 sprites/gfx/sky_roads.png  8bpp  137    57    64   78  -31  -42 normal //0-3 back y 26
+ 1624 sprites/gfx/sky_roads.png  8bpp  205    57    64   78  -7  -54 normal //0-3 front y 27
+ 1625 sprites/gfx/sky_roads.png  8bpp  273    57    64   78  -31  -42 normal //1-2 back x 28
+ 1626 sprites/gfx/sky_roads.png  8bpp  341    57    64   78  -55  -54 normal //1-2 front x 29
+ 1627 sprites/gfx/sky_roads.png  8bpp  409    57    64   78  -31  -42 normal //1-2 back y 2A
+ 1628 sprites/gfx/sky_roads.png  8bpp  477    57    64   78  -7  -54 normal //1-2 front y 2B
+ 1629 sprites/gfx/sky_roads.png  8bpp  545    57    64   88  -31  -52 normal //4 back x 2C
+ 1630 sprites/gfx/sky_roads.png  8bpp  613    57    64   88  -55  -64 normal //4 front x 2D
+ 1631 sprites/gfx/sky_roads.png  8bpp  681    57    64   88  -31  -52 normal //4 back y 2E
+ 1632 sprites/gfx/sky_roads.png  8bpp  749    57    64   88  -7  -64 normal //4 front y 2F
+ 1633 sprites/gfx/sky_roads.png  8bpp  817    57    64   88  -31  -52 normal //5 back x 30
+ 1634 sprites/gfx/sky_roads.png  8bpp  885    57    64   88  -55  -64 normal //5 front x 31
+ 1635 sprites/gfx/sky_roads.png  8bpp  953    57    64   88  -31  -52 normal //5 back y 32
+ 1636 sprites/gfx/sky_roads.png  8bpp  1021    57    64   88  -7  -64 normal //5 front y 33
 
    //and finally these action 6's tell where to place each of the reserved sprites (organized by table layout for easier viewing)
    //Ack, I had to split them up individually because there aren't enough hex ids to do all in one
- 1005 * 26	 06
+ 1637 * 26	 06
 			 0A 02 08    0B 02 0C    //rail x (part 0 should probably never have pillars set)
 			 0C 02 18    0D 02 1C    //rail y
 			 24 02 28    25 02 2C    //road x
@@ -2463,7 +3615,7 @@ EB 90 1C 03  ED 90 1C 03  EA 90 1C 03  EC 90 1C 03 //mono ramp: northern end X, 
 			 FF
 
 // SKY WAY Bridge 09
- 1006 * 136	 00 06 01 01 0C 0D 00 01 //action 00 bridges(06), 01 property, 01 ID, ID 02, prop 0D, tableID 00, 01 tables
+ 1638 * 136	 00 06 01 01 0C 0D 00 01 //action 00 bridges(06), 01 property, 01 ID, ID 02, prop 0D, tableID 00, 01 tables
 //table 00
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
@@ -2474,7 +3626,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
- 1007 * 32	 06
+ 1639 * 32	 06
 			 0E 02 08    0F 02 0C    08 02 10    //rail x
 			 10 02 18    11 02 1C    09 02 20    //rail y
 			 28 02 28    29 02 2C    //road x
@@ -2486,7 +3638,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 01
- 1008 * 136	 00 06 01 01 0C 0D 01 01
+ 1640 * 136	 00 06 01 01 0C 0D 01 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -2496,7 +3648,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
- 1009 * 32	 06
+ 1641 * 32	 06
 			 0E 02 08    0F 02 0C    08 02 10    //rail x
 			 10 02 18    11 02 1C    09 02 20    //rail y
 			 28 02 28    29 02 2C    //road x
@@ -2508,7 +3660,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 02
- 1010 * 136	 00 06 01 01 0C 0D 02 01
+ 1642 * 136	 00 06 01 01 0C 0D 02 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -2518,7 +3670,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
- 1011 * 38	 06
+ 1643 * 38	 06
 			 0A 02 08    0B 02 0C    08 02 10    //rail x
 			 0C 02 18    0D 02 1C    09 02 20    //rail y
 			 24 02 28    25 02 2C    22 02 30    //road x
@@ -2530,7 +3682,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 03
- 1012 * 136	 00 06 01 01 0C 0D 03 01
+ 1644 * 136	 00 06 01 01 0C 0D 03 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -2540,7 +3692,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
- 1013 * 32	 06
+ 1645 * 32	 06
 			 12 02 08    13 02 0C    08 02 10     //rail x
 			 14 02 18    15 02 1C    09 02 20    //rail y
 			 2C 02 28    2D 02 2C    //road x
@@ -2552,7 +3704,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 04
- 1014 * 136	 00 06 01 01 0C 0D 04 01
+ 1646 * 136	 00 06 01 01 0C 0D 04 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -2562,7 +3714,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
- 1015 * 38	 06
+ 1647 * 38	 06
 			 16 02 08    17 02 0C    08 02 10    //rail x
 			 18 02 18    19 02 1C    09 02 20    //rail y
 			 30 02 28    31 02 2C    22 02 30    //road x
@@ -2574,7 +3726,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 05
- 1016 * 136	 00 06 01 01 0C 0D 05 01
+ 1648 * 136	 00 06 01 01 0C 0D 05 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail X: Back&Floor, Front, Pillars, 0 //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
@@ -2584,7 +3736,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
- 1017 * 50	 06
+ 1649 * 50	 06
 			 00 02 08    01 02 0C    02 02 10    03 02 14    //rail flat
 			 04 02 18    05 02 1C    06 02 20    07 02 24    //rail ramp
 			 1A 02 28    1B 02 2C    1C 02 30    1D 02 34    //road flat
@@ -2596,7 +3748,7 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 			 FF
 
 //table 06
- 1018 * 136	 00 06 01 01 0C 0D 06 01
+ 1650 * 136	 00 06 01 01 0C 0D 06 01
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail flat: northern end X, northern end Y, southern end X, southern end Y //08, 0C, 10, 14
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail ramp: northern end X, northern end Y, southern end X, southern end Y //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //road flat: northern end X, northern end Y, southern end X, southern end Y //28, 2C, 30, 34
@@ -2618,11 +3770,11 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 
 //speed increases
 
- 1019 * 8	 00 06 01 01 05 0C DC 00
- 1020 * 8	 00 06 01 01 06 0C B0 04
+ 1651 * 8	 00 06 01 01 05 0C DC 00
+ 1652 * 8	 00 06 01 01 06 0C B0 04
 
 //girder,steel length
- 1021 * 7	 00 06 01 01 02 0A 10
+ 1653 * 7	 00 06 01 01 02 0A 10
 
 
 
