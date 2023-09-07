@@ -919,32 +919,32 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
   353 sprites/gfx/cable_stayed_rail.png  8bpp  654    45    48   93  -22  -69 normal //5 back y 18
   354 sprites/gfx/cable_stayed_rail.png  8bpp  707    45    43   105   0  -86 normal //5 front y 19
 //road
-  355 sprites/gfx/cable_stayed_road.png  8bpp  1       1    66   41  -33  -10 normal //back flat x 1A
-  356 sprites/gfx/cable_stayed_road.png  8bpp  72      1    66   41  -31  -10 normal //back flat y 1B
-  357 sprites/gfx/cable_stayed_road.png  8bpp  143     1    65   35  -32  -12 normal //front flat x 1C
-  358 sprites/gfx/cable_stayed_road.png  8bpp  213     1    65   35  -31  -12 normal //front flat y 1D
-  359 sprites/gfx/cable_stayed_road.png  8bpp  283     1    64   33  -31   -2 normal //ramp back x 1E
-  360 sprites/gfx/cable_stayed_road.png  8bpp  352     1    64   33  -31   -2 normal //ramp back y 1F
-  361 sprites/gfx/cable_stayed_road.png  8bpp  421     1    64   42  -31  -11 normal //ramp front x 20
-  362 sprites/gfx/cable_stayed_road.png  8bpp  490     1    64   42  -31  -11 normal //ramp front y 21
-  363 sprites/gfx/cable_stayed_road.png  8bpp  559     1    38   24  -27  -13 normal //pillar x 22
-  364 sprites/gfx/cable_stayed_road.png  8bpp  602     1    38   24   -9  -13 normal //pillar y 23
-  365 sprites/gfx/cable_stayed_road.png  8bpp  1      53    61   33  -32   -6 normal //0-1-4 back x 24
-  366 sprites/gfx/cable_stayed_road.png  8bpp  67     53    33   20  -24   -2 normal //0-1-4 front x 25
-  367 sprites/gfx/cable_stayed_road.png  8bpp  105    53    61   33  -27   -6 normal //0-1-4 back y 27
-  368 sprites/gfx/cable_stayed_road.png  8bpp  171    53    33   20   -5   -1 normal //0-1-4 front y 27
-  369 sprites/gfx/cable_stayed_road.png  8bpp  209    53    62   86  -31  -59 normal //2 back x 28
-  370 sprites/gfx/cable_stayed_road.png  8bpp  276    53    32   74  -21  -54 normal //2 front x 29
-  371 sprites/gfx/cable_stayed_road.png  8bpp  313    53    62   86  -29  -59 normal //2 back y 2A
-  372 sprites/gfx/cable_stayed_road.png  8bpp  380    53    32   74   -9  -54 normal //2 front y 2B
-  373 sprites/gfx/cable_stayed_road.png  8bpp  417    53    63  102  -32  -75 normal //3 back x 2C
-  374 sprites/gfx/cable_stayed_road.png  8bpp  485    53    37   91  -26  -72 normal //3 front x 2D
-  375 sprites/gfx/cable_stayed_road.png  8bpp  527    53    63  102  -29  -75 normal //3 back y 2E
-  376 sprites/gfx/cable_stayed_road.png  8bpp  595    53    37   91   -9  -72 normal //3 front y 2F
-  377 sprites/gfx/cable_stayed_road.png  8bpp  637    53    62  102  -31  -75 normal //5 back x 30
-  378 sprites/gfx/cable_stayed_road.png  8bpp  704    53    32   92  -21  -72 normal //5 front x 31
-  379 sprites/gfx/cable_stayed_road.png  8bpp  741    53    62  102  -29  -75 normal //5 back y 32
-  380 sprites/gfx/cable_stayed_road.png  8bpp  808    53    32   92   -9  -72 normal //5 front y 33
+  355 sprites/gfx/cable_stayed_road.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 1A
+  356 sprites/gfx/cable_stayed_road.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 1B
+  357 sprites/gfx/cable_stayed_road.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 1C
+  358 sprites/gfx/cable_stayed_road.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 1D
+  359 sprites/gfx/cable_stayed_road.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 1E
+  360 sprites/gfx/cable_stayed_road.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 1F
+  361 sprites/gfx/cable_stayed_road.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 20
+  362 sprites/gfx/cable_stayed_road.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 21
+  363 sprites/gfx/cable_stayed_road.png  8bpp  545     1    38   24  -26   -14 normal //pillar x 22
+  364 sprites/gfx/cable_stayed_road.png  8bpp  585     1    38   24   -10   -14 normal //pillar y 23
+  365 sprites/gfx/cable_stayed_road.png  8bpp  545    57    64   100  -31  -64 normal //4 back x 24
+  366 sprites/gfx/cable_stayed_road.png  8bpp  613    57    64   100  -55  -76 normal //4 front x 25
+  367 sprites/gfx/cable_stayed_road.png  8bpp  681    57    64   100  -31  -64 normal //4 back y 26
+  368 sprites/gfx/cable_stayed_road.png  8bpp  749    57    64   100  -7  -76 normal //4 front y 27
+  369 sprites/gfx/cable_stayed_road.png  8bpp  817    57    64   100  -31  -64 normal //5 back x 28
+  370 sprites/gfx/cable_stayed_road.png  8bpp  885    57    64   100  -55  -76 normal //5 front x 29
+  371 sprites/gfx/cable_stayed_road.png  8bpp  953    57    64   100  -31  -64 normal //5 back y 2A
+  372 sprites/gfx/cable_stayed_road.png  8bpp  1021    57    64   100  -7  -76 normal //5 front y 2B
+  373 sprites/gfx/cable_stayed_road.png  8bpp  1      200    64   100  -31  -64 normal //0-3 back x 2C
+  374 sprites/gfx/cable_stayed_road.png  8bpp  69     200    64   100  -55  -76 normal //0-3 front x 2D
+  375 sprites/gfx/cable_stayed_road.png  8bpp  137    200    64   100  -31  -64 normal //0-3 back y 2E
+  376 sprites/gfx/cable_stayed_road.png  8bpp  205    200    64   100  -7  -76 normal //0-3 front y 2F
+  377 sprites/gfx/cable_stayed_road.png  8bpp  273    200    64   100  -31  -64 normal //1-2 back x 30
+  378 sprites/gfx/cable_stayed_road.png  8bpp  341    200    64   100  -55  -76 normal //1-2 front x 31
+  379 sprites/gfx/cable_stayed_road.png  8bpp  409    200    64   100  -31  -64 normal //1-2 back y 32
+  380 sprites/gfx/cable_stayed_road.png  8bpp  477    200    64   100  -7  -76 normal //1-2 front y 33
 
    //and finally these action 6's tell where to place each of the reserved sprites (organized by table layout for easier viewing)
    //Ack, I had to split them up individually because there aren't enough hex ids to do all in one
@@ -998,8 +998,8 @@ EF 90 20 03  98 89 20 03  AE 89 20 03  00 00 00 00 //Mono Y: Back&Floor, Front, 
   385 * 26	 06
 			 0E 02 08    0F 02 0C    //rail x
 			 10 02 18    11 02 1C    //rail y
-			 28 02 28    29 02 2C    //road x
-			 2A 02 38    2B 02 3C    //road y
+			 30 02 28    31 02 2C    //road x
+			 32 02 38    33 02 3C    //road y
 			     //mono x
 			     //mono y
 			     //mlev x
@@ -1064,8 +1064,8 @@ F6 90 20 03  B9 89 20 03  BB 89 20 03  00 00 00 00 //Mono Y: Back&Floor, Front, 
   391 * 38	 06
 			 16 02 08    17 02 0C    08 02 10    //rail x
 			 18 02 18    19 02 1C    09 02 20    //rail y
-			 30 02 28    31 02 2C    22 02 30    //road x
-			 32 02 38    33 02 3C    23 02 40    //road y
+			 28 02 28    29 02 2C    22 02 30    //road x
+			 2A 02 38    2B 02 3C    23 02 40    //road y
 			     //mono x
 			     //mono y
 			     //mlev x
@@ -2186,75 +2186,75 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
  1060 * 5	 0A 01 44 00 00
 
 //rail
- 1061 sprites/gfx/archtest.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 10
- 1062 sprites/gfx/archtest.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 11
- 1063 sprites/gfx/archtest.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 12
- 1064 sprites/gfx/archtest.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 13
- 1065 sprites/gfx/archtest.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 14
- 1066 sprites/gfx/archtest.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 15
- 1067 sprites/gfx/archtest.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 16
- 1068 sprites/gfx/archtest.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 17
- 1069 sprites/gfx/archtest.png  8bpp  545     1    36   24  -25   -14 normal //pillar x 18
- 1070 sprites/gfx/archtest.png  8bpp  585     1    36   24   -9   -14 normal //pillar y 19
- 1071 sprites/gfx/archtest.png  8bpp  1      57    64   100  -31  -64 normal //0-3 back x 1A
- 1072 sprites/gfx/archtest.png  8bpp  69     57    64   100  -55  -76 normal //0-3 front x 1B
- 1073 sprites/gfx/archtest.png  8bpp  137    57    64   100  -31  -64 normal //0-3 back y 1C
- 1074 sprites/gfx/archtest.png  8bpp  205    57    64   100  -7  -76 normal //0-3 front y 1D
- 1075 sprites/gfx/archtest.png  8bpp  273    57    64   100  -31  -64 normal //1-2 back x 1E
- 1076 sprites/gfx/archtest.png  8bpp  341    57    64   100  -55  -76 normal //1-2 front x 1F
- 1077 sprites/gfx/archtest.png  8bpp  409    57    64   100  -31  -64 normal //1-2 back y 20
- 1078 sprites/gfx/archtest.png  8bpp  477    57    64   100  -7  -76 normal //1-2 front y 21
- 1079 sprites/gfx/archtest.png  8bpp  545    57    64   100  -31  -64 normal //4 back x 22
- 1080 sprites/gfx/archtest.png  8bpp  613    57    64   100  -55  -76 normal //4 front x 23
- 1081 sprites/gfx/archtest.png  8bpp  681    57    64   100  -31  -64 normal //4 back y 24
- 1082 sprites/gfx/archtest.png  8bpp  749    57    64   100  -7  -76 normal //4 front y 25
- 1083 sprites/gfx/archtest.png  8bpp  817    57    64   100  -31  -64 normal //5 back x 26
- 1084 sprites/gfx/archtest.png  8bpp  885    57    64   100  -55  -76 normal //5 front x 27
- 1085 sprites/gfx/archtest.png  8bpp  953    57    64   100  -31  -64 normal //5 back y 28
- 1086 sprites/gfx/archtest.png  8bpp  1021    57    64   100  -7  -76 normal //5 front y 29
- 1087 sprites/gfx/archtest.png  8bpp  1      200    64   100  -31  -64 normal //0-3 back x 2A
- 1088 sprites/gfx/archtest.png  8bpp  69     200    64   100  -55  -76 normal //0-3 front x 2B
- 1089 sprites/gfx/archtest.png  8bpp  137    200    64   100  -31  -64 normal //0-3 back y 2C
- 1090 sprites/gfx/archtest.png  8bpp  205    200    64   100  -7  -76 normal //0-3 front y 2D
- 1091 sprites/gfx/archtest.png  8bpp  273    200    64   100  -31  -64 normal //1-2 back x 2E
- 1092 sprites/gfx/archtest.png  8bpp  341    200    64   100  -55  -76 normal //1-2 front x 2F
- 1093 sprites/gfx/archtest.png  8bpp  409    200    64   100  -31  -64 normal //1-2 back y 30
- 1094 sprites/gfx/archtest.png  8bpp  477    200    64   100  -7  -76 normal //1-2 front y 31  
+ 1061 sprites/gfx/tied_arch_rail.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 10
+ 1062 sprites/gfx/tied_arch_rail.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 11
+ 1063 sprites/gfx/tied_arch_rail.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 12
+ 1064 sprites/gfx/tied_arch_rail.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 13
+ 1065 sprites/gfx/tied_arch_rail.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 14
+ 1066 sprites/gfx/tied_arch_rail.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 15
+ 1067 sprites/gfx/tied_arch_rail.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 16
+ 1068 sprites/gfx/tied_arch_rail.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 17
+ 1069 sprites/gfx/tied_arch_rail.png  8bpp  545     1    36   24  -25   -14 normal //pillar x 18
+ 1070 sprites/gfx/tied_arch_rail.png  8bpp  585     1    36   24   -9   -14 normal //pillar y 19
+ 1071 sprites/gfx/tied_arch_rail.png  8bpp  1      57    64   100  -31  -64 normal //0-3 back x 1A
+ 1072 sprites/gfx/tied_arch_rail.png  8bpp  69     57    64   100  -55  -76 normal //0-3 front x 1B
+ 1073 sprites/gfx/tied_arch_rail.png  8bpp  137    57    64   100  -31  -64 normal //0-3 back y 1C
+ 1074 sprites/gfx/tied_arch_rail.png  8bpp  205    57    64   100  -7  -76 normal //0-3 front y 1D
+ 1075 sprites/gfx/tied_arch_rail.png  8bpp  273    57    64   100  -31  -64 normal //1-2 back x 1E
+ 1076 sprites/gfx/tied_arch_rail.png  8bpp  341    57    64   100  -55  -76 normal //1-2 front x 1F
+ 1077 sprites/gfx/tied_arch_rail.png  8bpp  409    57    64   100  -31  -64 normal //1-2 back y 20
+ 1078 sprites/gfx/tied_arch_rail.png  8bpp  477    57    64   100  -7  -76 normal //1-2 front y 21
+ 1079 sprites/gfx/tied_arch_rail.png  8bpp  545    57    64   100  -31  -64 normal //4 back x 22
+ 1080 sprites/gfx/tied_arch_rail.png  8bpp  613    57    64   100  -55  -76 normal //4 front x 23
+ 1081 sprites/gfx/tied_arch_rail.png  8bpp  681    57    64   100  -31  -64 normal //4 back y 24
+ 1082 sprites/gfx/tied_arch_rail.png  8bpp  749    57    64   100  -7  -76 normal //4 front y 25
+ 1083 sprites/gfx/tied_arch_rail.png  8bpp  817    57    64   100  -31  -64 normal //5 back x 26
+ 1084 sprites/gfx/tied_arch_rail.png  8bpp  885    57    64   100  -55  -76 normal //5 front x 27
+ 1085 sprites/gfx/tied_arch_rail.png  8bpp  953    57    64   100  -31  -64 normal //5 back y 28
+ 1086 sprites/gfx/tied_arch_rail.png  8bpp  1021    57    64   100  -7  -76 normal //5 front y 29
+ 1087 sprites/gfx/tied_arch_rail.png  8bpp  1      200    64   100  -31  -64 normal //0-3 back x 2A
+ 1088 sprites/gfx/tied_arch_rail.png  8bpp  69     200    64   100  -55  -76 normal //0-3 front x 2B
+ 1089 sprites/gfx/tied_arch_rail.png  8bpp  137    200    64   100  -31  -64 normal //0-3 back y 2C
+ 1090 sprites/gfx/tied_arch_rail.png  8bpp  205    200    64   100  -7  -76 normal //0-3 front y 2D
+ 1091 sprites/gfx/tied_arch_rail.png  8bpp  273    200    64   100  -31  -64 normal //1-2 back x 2E
+ 1092 sprites/gfx/tied_arch_rail.png  8bpp  341    200    64   100  -55  -76 normal //1-2 front x 2F
+ 1093 sprites/gfx/tied_arch_rail.png  8bpp  409    200    64   100  -31  -64 normal //1-2 back y 30
+ 1094 sprites/gfx/tied_arch_rail.png  8bpp  477    200    64   100  -7  -76 normal //1-2 front y 31  
 //road
- 1095 sprites/gfx/archtest.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 32
- 1096 sprites/gfx/archtest.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 33
- 1097 sprites/gfx/archtest.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 34
- 1098 sprites/gfx/archtest.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 35
- 1099 sprites/gfx/archtest.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 36
- 1100 sprites/gfx/archtest.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 37
- 1101 sprites/gfx/archtest.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 38
- 1102 sprites/gfx/archtest.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 39
- 1103 sprites/gfx/archtest.png  8bpp  545     1    38   24  -26   -14 normal //pillar x 3A
- 1104 sprites/gfx/archtest.png  8bpp  585     1    38   24   -10   -14 normal //pillar y 3B
- 1105 sprites/gfx/archtest.png  8bpp  1      57    64   100  -31  -64 normal //0-3 back x 3C
- 1106 sprites/gfx/archtest.png  8bpp  69     57    64   100  -55  -76 normal //0-3 front x 3D
- 1107 sprites/gfx/archtest.png  8bpp  137    57    64   100  -31  -64 normal //0-3 back y 3E
- 1108 sprites/gfx/archtest.png  8bpp  205    57    64   100  -7  -76 normal //0-3 front y 3F
- 1109 sprites/gfx/archtest.png  8bpp  273    57    64   100  -31  -64 normal //1-2 back x 40
- 1110 sprites/gfx/archtest.png  8bpp  341    57    64   100  -55  -76 normal //1-2 front x 41
- 1111 sprites/gfx/archtest.png  8bpp  409    57    64   100  -31  -64 normal //1-2 back y 42
- 1112 sprites/gfx/archtest.png  8bpp  477    57    64   100  -7  -76 normal //1-2 front y 43
- 1113 sprites/gfx/archtest.png  8bpp  545    57    64   100  -31  -64 normal //4 back x 44
- 1114 sprites/gfx/archtest.png  8bpp  613    57    64   100  -55  -76 normal //4 front x 45
- 1115 sprites/gfx/archtest.png  8bpp  681    57    64   100  -31  -64 normal //4 back y 46
- 1116 sprites/gfx/archtest.png  8bpp  749    57    64   100  -7  -76 normal //4 front y 47
- 1117 sprites/gfx/archtest.png  8bpp  817    57    64   100  -31  -64 normal //5 back x 48
- 1118 sprites/gfx/archtest.png  8bpp  885    57    64   100  -55  -76 normal //5 front x 49
- 1119 sprites/gfx/archtest.png  8bpp  953    57    64   100  -31  -64 normal //5 back y 4A
- 1120 sprites/gfx/archtest.png  8bpp  1021    57    64   100  -7  -76 normal //5 front y 4B
- 1121 sprites/gfx/archtest.png  8bpp  1      200    64   100  -31  -64 normal //0-3 back x 4C
- 1122 sprites/gfx/archtest.png  8bpp  69     200    64   100  -55  -76 normal //0-3 front x 4D
- 1123 sprites/gfx/archtest.png  8bpp  137    200    64   100  -31  -64 normal //0-3 back y 4E
- 1124 sprites/gfx/archtest.png  8bpp  205    200    64   100  -7  -76 normal //0-3 front y 4F
- 1125 sprites/gfx/archtest.png  8bpp  273    200    64   100  -31  -64 normal //1-2 back x 50
- 1126 sprites/gfx/archtest.png  8bpp  341    200    64   100  -55  -76 normal //1-2 front x 51
- 1127 sprites/gfx/archtest.png  8bpp  409    200    64   100  -31  -64 normal //1-2 back y 52
- 1128 sprites/gfx/archtest.png  8bpp  477    200    64   100  -7  -76 normal //1-2 front y 53
+ 1095 sprites/gfx/tied_arch_road.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 32
+ 1096 sprites/gfx/tied_arch_road.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 33
+ 1097 sprites/gfx/tied_arch_road.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 34
+ 1098 sprites/gfx/tied_arch_road.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 35
+ 1099 sprites/gfx/tied_arch_road.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 36
+ 1100 sprites/gfx/tied_arch_road.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 37
+ 1101 sprites/gfx/tied_arch_road.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 38
+ 1102 sprites/gfx/tied_arch_road.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 39
+ 1103 sprites/gfx/tied_arch_road.png  8bpp  545     1    38   24  -26   -14 normal //pillar x 3A
+ 1104 sprites/gfx/tied_arch_road.png  8bpp  585     1    38   24   -10   -14 normal //pillar y 3B
+ 1105 sprites/gfx/tied_arch_road.png  8bpp  1      57    64   100  -31  -64 normal //0-3 back x 3C
+ 1106 sprites/gfx/tied_arch_road.png  8bpp  69     57    64   100  -55  -76 normal //0-3 front x 3D
+ 1107 sprites/gfx/tied_arch_road.png  8bpp  137    57    64   100  -31  -64 normal //0-3 back y 3E
+ 1108 sprites/gfx/tied_arch_road.png  8bpp  205    57    64   100  -7  -76 normal //0-3 front y 3F
+ 1109 sprites/gfx/tied_arch_road.png  8bpp  273    57    64   100  -31  -64 normal //1-2 back x 40
+ 1110 sprites/gfx/tied_arch_road.png  8bpp  341    57    64   100  -55  -76 normal //1-2 front x 41
+ 1111 sprites/gfx/tied_arch_road.png  8bpp  409    57    64   100  -31  -64 normal //1-2 back y 42
+ 1112 sprites/gfx/tied_arch_road.png  8bpp  477    57    64   100  -7  -76 normal //1-2 front y 43
+ 1113 sprites/gfx/tied_arch_road.png  8bpp  545    57    64   100  -31  -64 normal //4 back x 44
+ 1114 sprites/gfx/tied_arch_road.png  8bpp  613    57    64   100  -55  -76 normal //4 front x 45
+ 1115 sprites/gfx/tied_arch_road.png  8bpp  681    57    64   100  -31  -64 normal //4 back y 46
+ 1116 sprites/gfx/tied_arch_road.png  8bpp  749    57    64   100  -7  -76 normal //4 front y 47
+ 1117 sprites/gfx/tied_arch_road.png  8bpp  817    57    64   100  -31  -64 normal //5 back x 48
+ 1118 sprites/gfx/tied_arch_road.png  8bpp  885    57    64   100  -55  -76 normal //5 front x 49
+ 1119 sprites/gfx/tied_arch_road.png  8bpp  953    57    64   100  -31  -64 normal //5 back y 4A
+ 1120 sprites/gfx/tied_arch_road.png  8bpp  1021    57    64   100  -7  -76 normal //5 front y 4B
+ 1121 sprites/gfx/tied_arch_road.png  8bpp  1      200    64   100  -31  -64 normal //0-3 back x 4C
+ 1122 sprites/gfx/tied_arch_road.png  8bpp  69     200    64   100  -55  -76 normal //0-3 front x 4D
+ 1123 sprites/gfx/tied_arch_road.png  8bpp  137    200    64   100  -31  -64 normal //0-3 back y 4E
+ 1124 sprites/gfx/tied_arch_road.png  8bpp  205    200    64   100  -7  -76 normal //0-3 front y 4F
+ 1125 sprites/gfx/tied_arch_road.png  8bpp  273    200    64   100  -31  -64 normal //1-2 back x 50
+ 1126 sprites/gfx/tied_arch_road.png  8bpp  341    200    64   100  -55  -76 normal //1-2 front x 51
+ 1127 sprites/gfx/tied_arch_road.png  8bpp  409    200    64   100  -31  -64 normal //1-2 back y 52
+ 1128 sprites/gfx/tied_arch_road.png  8bpp  477    200    64   100  -7  -76 normal //1-2 front y 53
 
 
    //and finally these action 6's tell where to place each of the reserved sprites (organized by table layout for easier viewing)
