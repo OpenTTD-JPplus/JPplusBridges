@@ -355,7 +355,7 @@
   131 sprites/gfx/sydney_road.png  8bpp  545     1    38   24  -26   -14 normal //pillar x 16
   132 sprites/gfx/sydney_road.png  8bpp  585     1    38   24  -9   -14 normal //pillar y 17
   133 sprites/gfx/sydney_road.png  8bpp  1      57    64   78  -31  -42 normal //0-3 back x 18
-  134 sprites/gfx/sydney_road.png  8bpp  69     57    64   78  -54  -54 normal //0-3 front x 19
+  134 sprites/gfx/sydney_road.png  8bpp  69     57    64   78  -55  -54 normal //0-3 front x 19
   135 sprites/gfx/sydney_road.png  8bpp  137    57    64   78  -31  -42 normal //0-3 back y 1A
   136 sprites/gfx/sydney_road.png  8bpp  205    57    64   78  -8  -54 normal //0-3 front y 1B
 
@@ -2662,8 +2662,8 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
  1275 * 26	 06
 			 22 02 08    23 02 0C    //rail x
 			 24 02 18    25 02 1C    //rail y
-			 40 02 28    41 02 2C    //road x
-			 42 02 38    43 02 3C    //road y
+			 3C 02 28    3D 02 2C    //road x
+			 3E 02 38    3F 02 3C    //road y
 			     //mono x
 			     //mono y
 			     //mlev x
@@ -2684,8 +2684,8 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
  1277 * 38	 06
 			 22 02 08    23 02 0C    18 02 10    //rail x
 			 24 02 18    25 02 1C    19 02 20    //rail y
-			 3C 02 28    3D 02 2C    32 02 30    //road x
-			 3E 02 38    3F 02 3C    33 02 40    //road y
+			 40 02 28    41 02 2C    32 02 30    //road x
+			 42 02 38    43 02 3C    33 02 40    //road y
 			     //mono x
 			     //mono y
 			     //mlev x
@@ -3541,32 +3541,32 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 	//is allocated that number + 1 (which corresponds to the number of the param above)
  1718 * 5	 0A 01 34 00 00
 //rail
- 1719 sprites/gfx/urban_rail.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 00
- 1720 sprites/gfx/urban_rail.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 01
- 1721 sprites/gfx/urban_rail.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 02
- 1722 sprites/gfx/urban_rail.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 03
- 1723 sprites/gfx/urban_rail.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 04
- 1724 sprites/gfx/urban_rail.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 05
- 1725 sprites/gfx/urban_rail.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 06
- 1726 sprites/gfx/urban_rail.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 07
- 1727 sprites/gfx/urban_rail.png  8bpp  545     1    36   24  -25   -14 normal //pillar x 08
- 1728 sprites/gfx/urban_rail.png  8bpp  585     1    36   24   -9   -14 normal //pillar y 09
- 1729 sprites/gfx/urban_rail.png  8bpp  1      57    64   78  -31  -42 normal //0-3 back x 0A
- 1730 sprites/gfx/urban_rail.png  8bpp  69     57    64   78  -55  -54 normal //0-3 front x 0B
- 1731 sprites/gfx/urban_rail.png  8bpp  137    57    64   78  -31  -42 normal //0-3 back y 0C
- 1732 sprites/gfx/urban_rail.png  8bpp  205    57    64   78  -7  -54 normal //0-3 front y 0D
- 1733 sprites/gfx/urban_rail.png  8bpp  273    57    64   78  -31  -42 normal //1-2 back x 0E
- 1734 sprites/gfx/urban_rail.png  8bpp  341    57    64   78  -55  -54 normal //1-2 front x 0F
- 1735 sprites/gfx/urban_rail.png  8bpp  409    57    64   78  -31  -42 normal //1-2 back y 10
- 1736 sprites/gfx/urban_rail.png  8bpp  477    57    64   78  -7  -54 normal //1-2 front y 11
- 1737 sprites/gfx/urban_rail.png  8bpp  545    57    64   78  -31  -42 normal //4 back x 12
- 1738 sprites/gfx/urban_rail.png  8bpp  613    57    64   78  -55  -54 normal //4 front x 13
- 1739 sprites/gfx/urban_rail.png  8bpp  681    57    64   78  -31  -42 normal //4 back y 14
- 1740 sprites/gfx/urban_rail.png  8bpp  749    57    64   78  -7  -54 normal //4 front y 15
- 1741 sprites/gfx/urban_rail.png  8bpp  817    57    64   78  -31  -42 normal //5 back x 16
- 1742 sprites/gfx/urban_rail.png  8bpp  885    57    64   78  -55  -54 normal //5 front x 17
- 1743 sprites/gfx/urban_rail.png  8bpp  953    57    64   78  -31  -42 normal //5 back y 18
- 1744 sprites/gfx/urban_rail.png  8bpp  1021    57    64   78  -7  -54 normal //5 front y 19 
+ 1719 sprites/gfx/conc_viaduct_rail.png  8bpp  1       1    64   52  -31   -21 normal //back flat x 00
+ 1720 sprites/gfx/conc_viaduct_rail.png  8bpp  69      1    64   52  -31   -21 normal //back flat y 01
+ 1721 sprites/gfx/conc_viaduct_rail.png  8bpp  137     1    64   52  -31   -29 normal //front flat x 02
+ 1722 sprites/gfx/conc_viaduct_rail.png  8bpp  205     1    64   52  -31   -29 normal //front flat y 03
+ 1723 sprites/gfx/conc_viaduct_rail.png  8bpp  273     1    64   52  -31   -21 normal //ramp back x 04
+ 1724 sprites/gfx/conc_viaduct_rail.png  8bpp  341     1    64   52  -31   -21 normal //ramp back y 05
+ 1725 sprites/gfx/conc_viaduct_rail.png  8bpp  409     1    64   52  -31  -21 normal //ramp front x 06
+ 1726 sprites/gfx/conc_viaduct_rail.png  8bpp  477     1    64   52  -31  -21 normal //ramp front y 07
+ 1727 sprites/gfx/conc_viaduct_rail.png  8bpp  545     1    36   24  -25   -15 normal //pillar x 08
+ 1728 sprites/gfx/conc_viaduct_rail.png  8bpp  585     1    36   24   -9   -15 normal //pillar y 09
+ 1729 sprites/gfx/conc_viaduct_rail.png  8bpp  1      57    64   78  -31  -42 normal //0-3 back x 0A
+ 1730 sprites/gfx/conc_viaduct_rail.png  8bpp  69     57    64   78  -55  -54 normal //0-3 front x 0B
+ 1731 sprites/gfx/conc_viaduct_rail.png  8bpp  137    57    64   78  -31  -42 normal //0-3 back y 0C
+ 1732 sprites/gfx/conc_viaduct_rail.png  8bpp  205    57    64   78  -7  -54 normal //0-3 front y 0D
+ 1733 sprites/gfx/conc_viaduct_rail.png  8bpp  273    57    64   78  -31  -42 normal //1-2 back x 0E
+ 1734 sprites/gfx/conc_viaduct_rail.png  8bpp  341    57    64   78  -55  -54 normal //1-2 front x 0F
+ 1735 sprites/gfx/conc_viaduct_rail.png  8bpp  409    57    64   78  -31  -42 normal //1-2 back y 10
+ 1736 sprites/gfx/conc_viaduct_rail.png  8bpp  477    57    64   78  -7  -54 normal //1-2 front y 11
+ 1737 sprites/gfx/conc_viaduct_rail.png  8bpp  545    57    64   78  -31  -42 normal //4 back x 12
+ 1738 sprites/gfx/conc_viaduct_rail.png  8bpp  613    57    64   78  -55  -54 normal //4 front x 13
+ 1739 sprites/gfx/conc_viaduct_rail.png  8bpp  681    57    64   78  -31  -42 normal //4 back y 14
+ 1740 sprites/gfx/conc_viaduct_rail.png  8bpp  749    57    64   78  -7  -54 normal //4 front y 15
+ 1741 sprites/gfx/conc_viaduct_rail.png  8bpp  817    57    64   78  -31  -42 normal //5 back x 16
+ 1742 sprites/gfx/conc_viaduct_rail.png  8bpp  885    57    64   78  -55  -54 normal //5 front x 17
+ 1743 sprites/gfx/conc_viaduct_rail.png  8bpp  953    57    64   78  -31  -42 normal //5 back y 18
+ 1744 sprites/gfx/conc_viaduct_rail.png  8bpp  1021    57    64   78  -7  -54 normal //5 front y 19 
 //road
  1745 sprites/gfx/concrete_viaduct_road.png  8bpp  1       1    64   52  -31   -21 normal //back flat x 1A
  1746 sprites/gfx/concrete_viaduct_road.png  8bpp  69      1    64   52  -31   -21 normal //back flat y 1B
@@ -3621,8 +3621,8 @@ FD 90 1C 03  DA 89 1C 03  00 00 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 25 91 1C 03  DA 89 1C 03  00 00 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
  1773 * 26	 06
-			 0A 02 08    0B 02 0C	 	 //rail x
-			 0C 02 18    0D 02 1C	 	 //rail y
+			 0E 02 08    0F 02 0C	 	 //rail x
+			 10 02 18    11 02 1C	 	 //rail y
 			 28 02 28    29 02 2C	 	 //road x
 			 2A 02 38    2B 02 3C	 	 //road y
 			     //mono x
@@ -3665,8 +3665,8 @@ FE 90 1C 03  DB 89 1C 03  DF 89 1C 03  00 00 00 00 //Mono Y: Back&Floor, Front, 
 26 91 1C 03  DB 89 1C 03  DF 89 1C 03  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
  1777 * 38	 06
-			 12 02 08    13 02 0C	 08 02 10	 //rail x
-			 14 02 18    15 02 1C	 09 02 20	 //rail y
+			 0A 02 08    0B 02 0C	 08 02 10	 //rail x
+			 0C 02 18    0D 02 1C	 09 02 20	 //rail y
 			 24 02 28    25 02 2C	 22 02 30	 //road x
 			 26 02 38    27 02 3C	 23 02 40	 //road y
 			     //mono x
@@ -3687,8 +3687,8 @@ FE 90 1C 03  DB 89 1C 03  DF 89 1C 03  00 00 00 00 //Mono Y: Back&Floor, Front, 
 26 91 1C 03  DB 89 1C 03  DF 89 1C 03  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
  1779 * 26	 06
-			 0A 02 08    0B 02 0C	 	 //rail x
-			 0C 02 18    0D 02 1C	 	 //rail y
+			 12 02 08    13 02 0C	 	 //rail x
+			 14 02 18    15 02 1C	 	 //rail y
 			 2C 02 28    2D 02 2C	 	 //road x
 			 2E 02 38    2F 02 3C	 	 //road y
 			     //mono x
@@ -4118,32 +4118,32 @@ EB 90 1C 03  ED 90 1C 03  EA 90 1C 03  EC 90 1C 03 //mono ramp: northern end X, 
 	//is allocated that number + 1 (which corresponds to the number of the param above)
  1950 * 5	 0A 01 34 00 00
 //rail
- 1951 sprites/gfx/sky_rails.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 1A
- 1952 sprites/gfx/sky_rails.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 1B
- 1953 sprites/gfx/sky_rails.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 1C
- 1954 sprites/gfx/sky_rails.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 1D
- 1955 sprites/gfx/sky_rails.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 1E
- 1956 sprites/gfx/sky_rails.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 1F
- 1957 sprites/gfx/sky_rails.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 20
- 1958 sprites/gfx/sky_rails.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 21
- 1959 sprites/gfx/sky_rails.png  8bpp  545     1    36   24  -25   -14 normal //pillar x 22
- 1960 sprites/gfx/sky_rails.png  8bpp  585     1    36   24   -9   -14 normal //pillar y 23
- 1961 sprites/gfx/sky_rails.png  8bpp  1      57    64   78  -31  -42 normal //0-3 back x 24
- 1962 sprites/gfx/sky_rails.png  8bpp  69     57    64   78  -55  -54 normal //0-3 front x 25
- 1963 sprites/gfx/sky_rails.png  8bpp  137    57    64   78  -31  -42 normal //0-3 back y 26
- 1964 sprites/gfx/sky_rails.png  8bpp  205    57    64   78  -7  -54 normal //0-3 front y 27
- 1965 sprites/gfx/sky_rails.png  8bpp  273    57    64   78  -31  -42 normal //1-2 back x 28
- 1966 sprites/gfx/sky_rails.png  8bpp  341    57    64   78  -55  -54 normal //1-2 front x 29
- 1967 sprites/gfx/sky_rails.png  8bpp  409    57    64   78  -31  -42 normal //1-2 back y 2A
- 1968 sprites/gfx/sky_rails.png  8bpp  477    57    64   78  -7  -54 normal //1-2 front y 2B
- 1969 sprites/gfx/sky_rails.png  8bpp  545    57    64   78  -31  -42 normal //4 back x 2C
- 1970 sprites/gfx/sky_rails.png  8bpp  613    57    64   78  -55  -54 normal //4 front x 2D
- 1971 sprites/gfx/sky_rails.png  8bpp  681    57    64   78  -31  -42 normal //4 back y 2E
- 1972 sprites/gfx/sky_rails.png  8bpp  749    57    64   78  -7  -54 normal //4 front y 2F
- 1973 sprites/gfx/sky_rails.png  8bpp  817    57    64   78  -31  -42 normal //5 back x 30
- 1974 sprites/gfx/sky_rails.png  8bpp  885    57    64   78  -55  -54 normal //5 front x 31
- 1975 sprites/gfx/sky_rails.png  8bpp  953    57    64   78  -31  -42 normal //5 back y 32
- 1976 sprites/gfx/sky_rails.png  8bpp  1021    57    64   78  -7  -54 normal //5 front y 33
+ 1951 sprites/gfx/sky_rails.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 00
+ 1952 sprites/gfx/sky_rails.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 01
+ 1953 sprites/gfx/sky_rails.png  8bpp  137     1    64   46  -31   -23 normal //front flat x 02
+ 1954 sprites/gfx/sky_rails.png  8bpp  205     1    64   46  -31   -23 normal //front flat y 03
+ 1955 sprites/gfx/sky_rails.png  8bpp  273     1    64   46  -31   -15 normal //ramp back x 04
+ 1956 sprites/gfx/sky_rails.png  8bpp  341     1    64   46  -31   -15 normal //ramp back y 05
+ 1957 sprites/gfx/sky_rails.png  8bpp  409     1    64   46  -31  -15 normal //ramp front x 06
+ 1958 sprites/gfx/sky_rails.png  8bpp  477     1    64   46  -31  -15 normal //ramp front y 07
+ 1959 sprites/gfx/sky_rails.png  8bpp  545     1    36   24  -25   -14 normal //pillar x 08
+ 1960 sprites/gfx/sky_rails.png  8bpp  585     1    36   24   -9   -14 normal //pillar y 09
+ 1961 sprites/gfx/sky_rails.png  8bpp  1      57    64   78  -31  -42 normal //0-3 back x 0A
+ 1962 sprites/gfx/sky_rails.png  8bpp  69     57    64   78  -55  -54 normal //0-3 front x 0B
+ 1963 sprites/gfx/sky_rails.png  8bpp  137    57    64   78  -31  -42 normal //0-3 back y 0C
+ 1964 sprites/gfx/sky_rails.png  8bpp  205    57    64   78  -7  -54 normal //0-3 front y 0D
+ 1965 sprites/gfx/sky_rails.png  8bpp  273    57    64   78  -31  -42 normal //1-2 back x 0E
+ 1966 sprites/gfx/sky_rails.png  8bpp  341    57    64   78  -55  -54 normal //1-2 front x 0F
+ 1967 sprites/gfx/sky_rails.png  8bpp  409    57    64   78  -31  -42 normal //1-2 back y 10
+ 1968 sprites/gfx/sky_rails.png  8bpp  477    57    64   78  -7  -54 normal //1-2 front y 11
+ 1969 sprites/gfx/sky_rails.png  8bpp  545    57    64   78  -31  -42 normal //4 back x 12
+ 1970 sprites/gfx/sky_rails.png  8bpp  613    57    64   78  -55  -54 normal //4 front x 13
+ 1971 sprites/gfx/sky_rails.png  8bpp  681    57    64   78  -31  -42 normal //4 back y 14
+ 1972 sprites/gfx/sky_rails.png  8bpp  749    57    64   78  -7  -54 normal //4 front y 15
+ 1973 sprites/gfx/sky_rails.png  8bpp  817    57    64   78  -31  -42 normal //5 back x 16
+ 1974 sprites/gfx/sky_rails.png  8bpp  885    57    64   78  -55  -54 normal //5 front x 17
+ 1975 sprites/gfx/sky_rails.png  8bpp  953    57    64   78  -31  -42 normal //5 back y 18
+ 1976 sprites/gfx/sky_rails.png  8bpp  1021    57    64   78  -7  -54 normal //5 front y 19
 //road
  1977 sprites/gfx/sky_roads.png  8bpp  1       1    64   46  -31   -15 normal //back flat x 1A
  1978 sprites/gfx/sky_roads.png  8bpp  69      1    64   46  -31   -15 normal //back flat y 1B
@@ -4220,8 +4220,8 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
  2007 * 38	 06
-			 0E 02 08    0F 02 0C    08 02 10    //rail x
-			 10 02 18    11 02 1C    09 02 20    //rail y
+			 12 02 08    13 02 0C    08 02 10    //rail x
+			 14 02 18    15 02 1C    09 02 20    //rail y
 			 2C 02 28    2D 02 2C    22 02 30   //road x
 			 2E 02 38    2F 02 3C    23 02 40  //road y
 			     //mono x
@@ -4242,8 +4242,8 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
  2009 * 38	 06
-			 0A 02 08    0B 02 0C    08 02 10    //rail x
-			 0C 02 18    0D 02 1C    09 02 20    //rail y
+			 12 02 08    13 02 0C    08 02 10    //rail x
+			 14 02 18    15 02 1C    09 02 20    //rail y
 			 2C 02 28    2D 02 2C    22 02 30    //road x
 			 2E 02 38    2F 02 3C    23 02 40    //road y
 			     //mono x
@@ -4286,8 +4286,8 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
  2013 * 38	 06
-			 16 02 08    17 02 0C    08 02 10    //rail x
-			 18 02 18    19 02 1C    09 02 20    //rail y
+			 12 02 08    13 02 0C    08 02 10    //rail x
+			 14 02 18    15 02 1C    09 02 20    //rail y
 			 2C 02 28    2D 02 2C    22 02 30    //road x
 			 2E 02 38    2F 02 3C    23 02 40    //road y
 			     //mono x
