@@ -7,7 +7,7 @@
     0 * 4	 50 00 00 00
     1 * 248	 14 "C" 
 		"INFO"
-			"T" "NAME" 00 "JP+ Bridges Extension 0.7" 00
+			"T" "NAME" 00 "JP+ Bridges Extension 0.1" 00
 			"T" "DESC" 00 0D "Coded by Emperor Jake. GFX by Emperor Jake, Andrew350 and GarryG. Based on code by Wallyweb, Quast65 and Andrew350" 00
 			"T" "URL_" 00 "https://www.tt-forums.net/viewtopic.php?p=1230518" 00
 			"B" "PALS" \w1 "D"
@@ -16,7 +16,7 @@
 		00
 	00
     2 * 232	 08 07 4A 4B 47 45
-	"JP+ Bridges Extension 0.7" 00 0D "JP+ Bridges Extension, for JGR Patchpack specific features. Load after JP+ Bridges! Coded by Emperor Jake. GFX by Emperor Jake, Andrew350 and GarryG. Based on code by Wallyweb, Quast65 and Andrew350" 00
+	"JP+ Bridges Extension 0.1" 00 0D "JP+ Bridges Extension, for JGR Patchpack specific features. Load after JP+ Bridges! Coded by Emperor Jake. GFX by Emperor Jake, Andrew350 and GarryG. Based on code by Wallyweb, Quast65 and Andrew350" 00
 
 
 
