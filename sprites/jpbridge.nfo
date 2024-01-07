@@ -7,16 +7,16 @@
     0 * 4	 E0 07 00 00
     1 * 238	 14 "C" 
 		"INFO"
-			"T" "NAME" 00 "JP+ Bridges 0.7" 00
+			"T" "NAME" 00 "JP+ Bridges 0.8" 00
 			"T" "DESC" 00 0D "Coded by Emperor Jake. GFX by Emperor Jake, Andrew350 and GarryG. Based on code by Wallyweb, Quast65 and Andrew350" 00
 			"T" "URL_" 00 "https://www.tt-forums.net/viewtopic.php?p=1230518" 00
 			"B" "PALS" \w1 "D"
-			"B" "VRSN" \w4 \d00
+			"B" "VRSN" \w4 \d08
 			"B" "MINV" \w4 \d00
 		00
 	00
     2 * 239	 08 07 4A 4B 47 35
-	"JP+ Bridges 0.7" 00 0D "JP+ Bridges, a bridge set designed to match JapanSet Tracks. A continuation of BOBB by Emperor Jake. Coded by Emperor Jake. GFX by Emperor Jake, Andrew350 and GarryG. Based on code by Wallyweb, Quast65 and Andrew350" 00
+	"JP+ Bridges 0.8" 00 0D "JP+ Bridges, a bridge set designed to match JapanSet Tracks. A continuation of BOBB by Emperor Jake. Coded by Emperor Jake. GFX by Emperor Jake, Andrew350 and GarryG. Based on code by Wallyweb, Quast65 and Andrew350" 00
 
 //=======================	
 //Begin defining bridges
@@ -53,7 +53,7 @@
 //    Bridge 00 Wooden
 //================
                          //this number increases by 3 with each bridge
-   11 * 59	 04 06 FF 03 00 DC "Wooden Bridge" 00 "Wooden Rail Trestle" 00 "Wooden Road Bridge" 00 //define texts first so we can reference them in properties below
+   11 * 60	 04 06 FF 03 00 DC "Wooden Trestle" 00 "Wooden Rail Trestle" 00 "Wooden Road Bridge" 00 //define texts first so we can reference them in properties below
 
    12 * 32	 00 06 0A 01 00 //adjust properties of first bridge (id 00)
 			 08 00 //intro date
@@ -547,7 +547,7 @@ EB 90 1E 03  ED 90 1E 03  EA 90 1E 03  EC 90 1E 03 //mono ramp: northern end X, 
 			 0B 70 //cost factor
 			 0C 82 00 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
-			 0F 00 00 00 00 //long format intro date
+			 0F 08 07 00 00 //long format intro date
 			 10 06 DC //purchase text. these texts #s increase in line with above
 			 11 07 DC //rail bridge info window
 			 12 08 DC //road bridge info window
@@ -835,13 +835,13 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
   273 * 76	 04 06 FF 03 09 DC "Cable-Stayed Bridge" 00 "Cable-Stayed Rail Bridge" 00 "Cable-Stayed Road Bridge" 00 //define texts first so we can reference them in properties below
 
   274 * 32	 00 06 0A 01 03 //adjust properties of fourth bridge (id 03)
-			 08 46 //intro date
+			 08 00 //intro date
 			 09 00 //min length
 			 0A FF //max length
 			 0B E0 //cost factor
 			 0C 00 00 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
-			 0F C6 07 00 00 //long format intro date
+			 0F B2 07 00 00 //long format intro date
 			 10 09 DC //purchase text
 			 11 0A DC //rail bridge info window
 			 12 0B DC //road bridge info window
@@ -1258,7 +1258,7 @@ EB 90 20 03  ED 90 20 03  EA 90 20 03  EC 90 20 03 //mono ramp: northern end X, 
 			 0B 90 //cost factor
 			 0C DC 00 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
-			 0F 00 00 00 00 //long format intro date
+			 0F 9E 07 00 00 //long format intro date
 			 10 0C DC //purchase text. these texts #s increase in line with above
 			 11 0D DC //rail bridge info window
 			 12 0E DC //road bridge info window
@@ -1707,7 +1707,7 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 			 0B B0 //cost factor
 			 0C 04 01 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
-			 0F 00 00 07 80 //long format intro date
+			 0F 4E 07 00 00 //long format intro date
 			 10 0F DC //purchase text
 			 11 10 DC //rail bridge info window
 			 12 11 DC //road bridge info window
@@ -2122,7 +2122,7 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 			 0B 85 //cost factor
 			 0C 00 00 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
-			 0F 00 00 00 00 //long format intro date
+			 0F A8 07 00 00 //long format intro date
 			 10 12 DC //purchase text. these texts #s increase in line with above
 			 11 13 DC //rail bridge info window
 			 12 14 DC //road bridge info window
@@ -2450,7 +2450,7 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 			 0B D0 //cost factor
 			 0C 18 01 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
-			 0F 00 00 07 80 //long format intro date
+			 0F 8A 07 00 00 //long format intro date
 			 10 15 DC //purchase text
 			 11 16 DC //rail bridge info window
 			 12 17 DC //road bridge info window
@@ -2758,7 +2758,7 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 			 0B 80 //cost factor
 			 0C A0 00 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
-			 0F 00 00 07 80 //long format intro date
+			 0F 62 07 00 00 //long format intro date
 			 10 18 DC //purchase text
 			 11 19 DC //rail bridge info window
 			 12 1A DC //road bridge info window
@@ -3165,14 +3165,14 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
                          //this number increases by 3 with each bridge
  1509 * 88	 04 06 FF 03 1B DC "Cantilever Truss Bridge" 00 "Cantilever Truss Rail Bridge" 00 "Cantilever Truss Road Bridge" 00 //define texts first so we can reference them in properties below
 
- 1510 * 24	 00 06 08 01 09 //adjust properties of  (id 09)
+ 1510 * 32	 00 06 0A 01 09 //adjust properties of  (id 09)
 			 08 00 //intro date
 			 09 02 //min length
 			 0A FF //max length
 			 0B A0 //cost factor
-//			 0C FA 00 //max speed
+			 0C FA 00 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
-//			 0F 4E 07 00 00 //long format intro date
+			 0F 76 07 00 00 //long format intro date
 			 10 1B DC //purchase text
 			 11 1C DC //rail bridge info window
 			 12 1D DC //road bridge info window
@@ -3499,7 +3499,7 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 			 0B FF //cost factor
 			 0C 00 00 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
-			 0F A8 07 00 00 //long format intro date
+			 0F 9E 07 00 00 //long format intro date
 			 10 1E DC //purchase text. these texts #s increase in line with above
 			 11 1F DC //rail bridge info window
 			 12 20 DC //road bridge info window
@@ -3792,7 +3792,7 @@ EB 90 1C 03  ED 90 1C 03  EA 90 1C 03  EC 90 1C 03 //mono ramp: northern end X, 
 			 0B FA //cost factor
 			 0C 00 00 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
-			 0F A8 07 00 00 //long format intro date
+			 0F 80 07 00 00 //long format intro date
 			 10 21 DC //purchase text. these texts #s increase in line with above
 			 11 22 DC //rail bridge info window
 			 12 23 DC //road bridge info window
@@ -4073,7 +4073,7 @@ EB 90 1C 03  ED 90 1C 03  EA 90 1C 03  EC 90 1C 03 //mono ramp: northern end X, 
 			 0B F0 //cost factor
 			 0C 00 00 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
-			 0F 00 00 00 00 //long format intro date
+			 0F 80 07 00 00 //long format intro date
 			 10 24 DC //purchase text. these texts #s increase in line with above
 			 11 25 DC //rail bridge info window
 			 12 26 DC //road bridge info window
