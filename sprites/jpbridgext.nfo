@@ -5,13 +5,13 @@
 // Escapes: D= = DR D+ = DF D- = DC Du* = DM D* = DnF Du<< = DnC D<< = DO D& D| Du/ D/ Du% D%
 // Format: spritenum imagefile depth xpos ypos xsize ysize xrel yrel zoom flags
     0 * 4	 D3 01 00 00
-    1 * 281	 14 "C" 
+    1 * 289	 14 "C" 
 		"INFO"
-			"T" "NAME" 00 "JP+ Bridges Extension 0.8 [JGRPP]" 00
-			"T" "DESC" 00 0D "REQUIRES JGR PATCH PACK! Coded by Emperor Jake. GFX by Emperor Jake, Andrew350 and GarryG. Based on code by Wallyweb, Quast65 and Andrew350" 00
+			"T" "NAME" 00 "JP+ Bridges Extension 0.9 [JGRPP]" 00
+			"T" "DESC" 00 0D "REQUIRES JGR PATCH PACK! Coded by Emperor Jake. GFX by Emperor Jake, GarryG, Sanchimaru and Erato. Based on code by Wallyweb, Quast65 and Andrew350" 00
 			"T" "URL_" 00 "https://www.tt-forums.net/viewtopic.php?p=1230518" 00
 			"B" "PALS" \w1 "D"
-			"B" "VRSN" \w4 \d08
+			"B" "VRSN" \w4 \d09
 			"B" "MINV" \w4 \d00
 		00
 	00
@@ -60,7 +60,7 @@
 			 0B F0 //cost factor
 			 0C 00 00 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
-			 0F A8 07 00 00 //long format intro date
+			 0F 9E 07 00 00 //long format intro date
 			 10 27 DC //purchase text. these texts #s increase in line with above
 			 11 28 DC //rail bridge info window
 			 12 29 DC //road bridge info window
@@ -359,7 +359,7 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 			 0B F0 //cost factor
 			 0C 00 00 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
-			 0F A8 07 00 00 //long format intro date
+			 0F 9E 07 00 00 //long format intro date
 			 10 2A DC //purchase text. these texts #s increase in line with above
 			 11 2B DC //rail bridge info window
 			 12 2C DC //road bridge info window

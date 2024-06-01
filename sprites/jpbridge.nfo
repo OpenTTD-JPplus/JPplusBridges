@@ -11,12 +11,12 @@
 			"T" "DESC" 00 0D "Coded by Emperor Jake. GFX by Emperor Jake, Andrew350 and GarryG. Based on code by Wallyweb, Quast65 and Andrew350" 00
 			"T" "URL_" 00 "https://www.tt-forums.net/viewtopic.php?p=1230518" 00
 			"B" "PALS" \w1 "D"
-			"B" "VRSN" \w4 \d08
+			"B" "VRSN" \w4 \d09
 			"B" "MINV" \w4 \d00
 		00
 	00
     2 * 239	 08 07 4A 4B 47 35
-	"JP+ Bridges 0.8" 00 0D "JP+ Bridges, a bridge set designed to match JapanSet Tracks. A continuation of BOBB by Emperor Jake. Coded by Emperor Jake. GFX by Emperor Jake, Andrew350 and GarryG. Based on code by Wallyweb, Quast65 and Andrew350" 00
+	"JP+ Bridges 0.9" 00 0D "JP+ Bridges, a bridge set designed to match JapanSet Tracks. A continuation of BOBB by Emperor Jake. Coded by Emperor Jake. GFX by Emperor Jake, Andrew350 and GarryG. Based on code by Wallyweb, Quast65 and Andrew350" 00
 
 //=======================	
 //Begin defining bridges
@@ -2450,7 +2450,7 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 			 0B D0 //cost factor
 			 0C 18 01 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
-			 0F 8A 07 00 00 //long format intro date
+			 0F 80 07 00 00 //long format intro date
 			 10 15 DC //purchase text
 			 11 16 DC //rail bridge info window
 			 12 17 DC //road bridge info window
@@ -2758,7 +2758,7 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 			 0B 80 //cost factor
 			 0C A0 00 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
-			 0F 62 07 00 00 //long format intro date
+			 0F 76 07 00 00 //long format intro date
 			 10 18 DC //purchase text
 			 11 19 DC //rail bridge info window
 			 12 1A DC //road bridge info window
@@ -3172,7 +3172,7 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 			 0B A0 //cost factor
 			 0C FA 00 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
-			 0F 76 07 00 00 //long format intro date
+			 0F 62 07 00 00 //long format intro date
 			 10 1B DC //purchase text
 			 11 1C DC //rail bridge info window
 			 12 1D DC //road bridge info window
