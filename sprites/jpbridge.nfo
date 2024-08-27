@@ -7,7 +7,7 @@
     0 * 4	 E0 07 00 00
     1 * 238	 14 "C" 
 		"INFO"
-			"T" "NAME" 00 "JP+ Bridges 0.8" 00
+			"T" "NAME" 00 "JP+ Bridges 0.9" 00
 			"T" "DESC" 00 0D "Coded by Emperor Jake. GFX by Emperor Jake, Andrew350 and GarryG. Based on code by Wallyweb, Quast65 and Andrew350" 00
 			"T" "URL_" 00 "https://www.tt-forums.net/viewtopic.php?p=1230518" 00
 			"B" "PALS" \w1 "D"
