@@ -1264,77 +1264,77 @@ EB 90 20 03  ED 90 20 03  EA 90 20 03  EC 90 20 03 //mono ramp: northern end X, 
 			 12 0E DC //road bridge info window
 
 	//this reserves some sprites into temp. params
-  503 * 9	 0D 20 \D= \DR FE FF 08 3C 00 //this "main" param is used to allocate all of the graphics via the following action 6
-  504 * 9	 0D 21 \D+ 10 FF 01 00 00 00 //each sprite then gets its own param # to use in the final action 6's which determine placement
-  505 * 9	 0D 22 \D+ 10 FF 02 00 00 00
-  506 * 9	 0D 23 \D+ 10 FF 03 00 00 00
-  507 * 9	 0D 24 \D+ 10 FF 04 00 00 00
-  508 * 9	 0D 25 \D+ 10 FF 05 00 00 00
-  509 * 9	 0D 26 \D+ 10 FF 06 00 00 00
-  510 * 9	 0D 27 \D+ 10 FF 07 00 00 00
-  511 * 9	 0D 28 \D+ 10 FF 08 00 00 00
-  512 * 9	 0D 29 \D+ 10 FF 09 00 00 00
-  513 * 9	 0D 2A \D+ 10 FF 0A 00 00 00
-  514 * 9	 0D 2B \D+ 10 FF 0B 00 00 00
-  515 * 9	 0D 2C \D+ 10 FF 0C 00 00 00
-  516 * 9	 0D 2D \D+ 10 FF 0D 00 00 00
-  517 * 9	 0D 2E \D+ 10 FF 0E 00 00 00
-  518 * 9	 0D 2F \D+ 10 FF 0F 00 00 00
-  519 * 9	 0D 30 \D+ 10 FF 10 00 00 00
-  520 * 9	 0D 31 \D+ 10 FF 11 00 00 00
-  521 * 9	 0D 32 \D+ 10 FF 12 00 00 00
-  522 * 9	 0D 33 \D+ 10 FF 13 00 00 00
-  523 * 9	 0D 34 \D+ 10 FF 14 00 00 00
-  524 * 9	 0D 35 \D+ 10 FF 15 00 00 00
-  525 * 9	 0D 36 \D+ 10 FF 16 00 00 00
-  526 * 9	 0D 37 \D+ 10 FF 17 00 00 00
-  527 * 9	 0D 38 \D+ 10 FF 18 00 00 00
-  528 * 9	 0D 39 \D+ 10 FF 19 00 00 00
-  529 * 9	 0D 3A \D+ 10 FF 1A 00 00 00
-  530 * 9	 0D 3B \D+ 10 FF 1B 00 00 00
-  531 * 9	 0D 3C \D+ 10 FF 1C 00 00 00
-  532 * 9	 0D 3D \D+ 10 FF 1D 00 00 00
-  533 * 9	 0D 3E \D+ 10 FF 1E 00 00 00
-  534 * 9	 0D 3F \D+ 10 FF 1F 00 00 00
-  535 * 9	 0D 40 \D+ 10 FF 20 00 00 00
-  536 * 9	 0D 41 \D+ 10 FF 21 00 00 00
-  537 * 9	 0D 42 \D+ 10 FF 22 00 00 00
-  538 * 9	 0D 43 \D+ 10 FF 23 00 00 00
-  539 * 9	 0D 44 \D+ 10 FF 24 00 00 00
-  540 * 9	 0D 45 \D+ 10 FF 25 00 00 00
-  541 * 9	 0D 46 \D+ 10 FF 26 00 00 00
-  542 * 9	 0D 47 \D+ 10 FF 27 00 00 00
-  543 * 9	 0D 48 \D+ 10 FF 28 00 00 00
-  544 * 9	 0D 49 \D+ 10 FF 29 00 00 00
-  545 * 9	 0D 4A \D+ 10 FF 2A 00 00 00
-  546 * 9	 0D 4B \D+ 10 FF 2B 00 00 00
-  547 * 9	 0D 4C \D+ 10 FF 2C 00 00 00
-  548 * 9	 0D 4D \D+ 10 FF 2D 00 00 00
-  549 * 9	 0D 4E \D+ 10 FF 2E 00 00 00
-  550 * 9	 0D 4F \D+ 10 FF 2F 00 00 00
-  551 * 9	 0D 50 \D+ 10 FF 30 00 00 00
-  552 * 9	 0D 51 \D+ 10 FF 31 00 00 00
-  553 * 9	 0D 52 \D+ 10 FF 32 00 00 00
-  554 * 9	 0D 53 \D+ 10 FF 33 00 00 00
-  555 * 9	 0D 54 \D+ 10 FF 34 00 00 00
-  556 * 9	 0D 55 \D+ 10 FF 35 00 00 00
-  557 * 9	 0D 56 \D+ 10 FF 36 00 00 00
-  558 * 9	 0D 57 \D+ 10 FF 37 00 00 00
-  559 * 9	 0D 58 \D+ 10 FF 38 00 00 00
-  560 * 9	 0D 59 \D+ 10 FF 39 00 00 00
-  561 * 9	 0D 5A \D+ 10 FF 3A 00 00 00
-  562 * 9	 0D 5B \D+ 10 FF 3B 00 00 00
-  563 * 9	 0D 5C \D+ 10 FF 3C 00 00 00
-  564 * 9	 0D 5D \D+ 10 FF 3D 00 00 00
-  565 * 9	 0D 5E \D+ 10 FF 3E 00 00 00
-  566 * 9	 0D 5F \D+ 10 FF 3F 00 00 00
-  567 * 9	 0D 60 \D+ 10 FF 40 00 00 00
-  568 * 9	 0D 61 \D+ 10 FF 41 00 00 00
-  569 * 9	 0D 62 \D+ 10 FF 42 00 00 00
-  570 * 9	 0D 63 \D+ 10 FF 43 00 00 00
+  503 * 9	 0D 20 \D= \DR FE FF 08 44 00 //this "main" param is used to allocate all of the graphics via the following action 6
+  504 * 9	 0D 21 \D+ 20 FF 01 00 00 00 //each sprite then gets its own param # to use in the final action 6's which determine placement
+  505 * 9	 0D 22 \D+ 20 FF 02 00 00 00
+  506 * 9	 0D 23 \D+ 20 FF 03 00 00 00
+  507 * 9	 0D 24 \D+ 20 FF 04 00 00 00
+  508 * 9	 0D 25 \D+ 20 FF 05 00 00 00
+  509 * 9	 0D 26 \D+ 20 FF 06 00 00 00
+  510 * 9	 0D 27 \D+ 20 FF 07 00 00 00
+  511 * 9	 0D 28 \D+ 20 FF 08 00 00 00
+  512 * 9	 0D 29 \D+ 20 FF 09 00 00 00
+  513 * 9	 0D 2A \D+ 20 FF 0A 00 00 00
+  514 * 9	 0D 2B \D+ 20 FF 0B 00 00 00
+  515 * 9	 0D 2C \D+ 20 FF 0C 00 00 00
+  516 * 9	 0D 2D \D+ 20 FF 0D 00 00 00
+  517 * 9	 0D 2E \D+ 20 FF 0E 00 00 00
+  518 * 9	 0D 2F \D+ 20 FF 0F 00 00 00
+  519 * 9	 0D 30 \D+ 20 FF 10 00 00 00
+  520 * 9	 0D 31 \D+ 20 FF 11 00 00 00
+  521 * 9	 0D 32 \D+ 20 FF 12 00 00 00
+  522 * 9	 0D 33 \D+ 20 FF 13 00 00 00
+  523 * 9	 0D 34 \D+ 20 FF 14 00 00 00
+  524 * 9	 0D 35 \D+ 20 FF 15 00 00 00
+  525 * 9	 0D 36 \D+ 20 FF 16 00 00 00
+  526 * 9	 0D 37 \D+ 20 FF 17 00 00 00
+  527 * 9	 0D 38 \D+ 20 FF 18 00 00 00
+  528 * 9	 0D 39 \D+ 20 FF 19 00 00 00
+  529 * 9	 0D 3A \D+ 20 FF 1A 00 00 00
+  530 * 9	 0D 3B \D+ 20 FF 1B 00 00 00
+  531 * 9	 0D 3C \D+ 20 FF 1C 00 00 00
+  532 * 9	 0D 3D \D+ 20 FF 1D 00 00 00
+  533 * 9	 0D 3E \D+ 20 FF 1E 00 00 00
+  534 * 9	 0D 3F \D+ 20 FF 1F 00 00 00
+  535 * 9	 0D 40 \D+ 20 FF 20 00 00 00
+  536 * 9	 0D 41 \D+ 20 FF 21 00 00 00
+  537 * 9	 0D 42 \D+ 20 FF 22 00 00 00
+  538 * 9	 0D 43 \D+ 20 FF 23 00 00 00
+  539 * 9	 0D 44 \D+ 20 FF 24 00 00 00
+  540 * 9	 0D 45 \D+ 20 FF 25 00 00 00
+  541 * 9	 0D 46 \D+ 20 FF 26 00 00 00
+  542 * 9	 0D 47 \D+ 20 FF 27 00 00 00
+  543 * 9	 0D 48 \D+ 20 FF 28 00 00 00
+  544 * 9	 0D 49 \D+ 20 FF 29 00 00 00
+  545 * 9	 0D 4A \D+ 20 FF 2A 00 00 00
+  546 * 9	 0D 4B \D+ 20 FF 2B 00 00 00
+  547 * 9	 0D 4C \D+ 20 FF 2C 00 00 00
+  548 * 9	 0D 4D \D+ 20 FF 2D 00 00 00
+  549 * 9	 0D 4E \D+ 20 FF 2E 00 00 00
+  550 * 9	 0D 4F \D+ 20 FF 2F 00 00 00
+  551 * 9	 0D 50 \D+ 20 FF 30 00 00 00
+  552 * 9	 0D 51 \D+ 20 FF 31 00 00 00
+  553 * 9	 0D 52 \D+ 20 FF 32 00 00 00
+  554 * 9	 0D 53 \D+ 20 FF 33 00 00 00
+  555 * 9	 0D 54 \D+ 20 FF 34 00 00 00
+  556 * 9	 0D 55 \D+ 20 FF 35 00 00 00
+  557 * 9	 0D 56 \D+ 20 FF 36 00 00 00
+  558 * 9	 0D 57 \D+ 20 FF 37 00 00 00
+  559 * 9	 0D 58 \D+ 20 FF 38 00 00 00
+  560 * 9	 0D 59 \D+ 20 FF 39 00 00 00
+  561 * 9	 0D 5A \D+ 20 FF 3A 00 00 00
+  562 * 9	 0D 5B \D+ 20 FF 3B 00 00 00
+  563 * 9	 0D 5C \D+ 20 FF 3C 00 00 00
+  564 * 9	 0D 5D \D+ 20 FF 3D 00 00 00
+  565 * 9	 0D 5E \D+ 20 FF 3E 00 00 00
+  566 * 9	 0D 5F \D+ 20 FF 3F 00 00 00
+  567 * 9	 0D 60 \D+ 20 FF 40 00 00 00
+  568 * 9	 0D 61 \D+ 20 FF 41 00 00 00
+  569 * 9	 0D 62 \D+ 20 FF 42 00 00 00
+  570 * 9	 0D 63 \D+ 20 FF 43 00 00 00
 
    //this allocates the following graphics (realsprites) into the sprites which were reserved earlier (in the order they are defined below)
-  571 * 5	 06 10 02 03 FF 
+  571 * 5	 06 20 02 03 FF
 	//sprite number 00 00 (the first sprite below) now gets changed to whatever number the grm picked for the first of the reserved sprites, then each subsequent sprite
 	//is allocated that number + 1 (which corresponds to the number of the param above)
   572 * 5	 0A 01 44 00 00
@@ -2128,77 +2128,77 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 			 12 14 DC //road bridge info window
 
 	//this reserves some sprites into temp. params
-  991 * 9	 0D 20 \D= \DR FE FF 08 3C 00 //this "main" param is used to allocate all of the graphics via the following action 6
-  992 * 9	 0D 21 \D+ 10 FF 01 00 00 00 //each sprite then gets its own param # to use in the final action 6's which determine placement
-  993 * 9	 0D 22 \D+ 10 FF 02 00 00 00
-  994 * 9	 0D 23 \D+ 10 FF 03 00 00 00
-  995 * 9	 0D 24 \D+ 10 FF 04 00 00 00
-  996 * 9	 0D 25 \D+ 10 FF 05 00 00 00
-  997 * 9	 0D 26 \D+ 10 FF 06 00 00 00
-  998 * 9	 0D 27 \D+ 10 FF 07 00 00 00
-  999 * 9	 0D 28 \D+ 10 FF 08 00 00 00
- 1000 * 9	 0D 29 \D+ 10 FF 09 00 00 00
- 1001 * 9	 0D 2A \D+ 10 FF 0A 00 00 00
- 1002 * 9	 0D 2B \D+ 10 FF 0B 00 00 00
- 1003 * 9	 0D 2C \D+ 10 FF 0C 00 00 00
- 1004 * 9	 0D 2D \D+ 10 FF 0D 00 00 00
- 1005 * 9	 0D 2E \D+ 10 FF 0E 00 00 00
- 1006 * 9	 0D 2F \D+ 10 FF 0F 00 00 00
- 1007 * 9	 0D 30 \D+ 10 FF 10 00 00 00
- 1008 * 9	 0D 31 \D+ 10 FF 11 00 00 00
- 1009 * 9	 0D 32 \D+ 10 FF 12 00 00 00
- 1010 * 9	 0D 33 \D+ 10 FF 13 00 00 00
- 1011 * 9	 0D 34 \D+ 10 FF 14 00 00 00
- 1012 * 9	 0D 35 \D+ 10 FF 15 00 00 00
- 1013 * 9	 0D 36 \D+ 10 FF 16 00 00 00
- 1014 * 9	 0D 37 \D+ 10 FF 17 00 00 00
- 1015 * 9	 0D 38 \D+ 10 FF 18 00 00 00
- 1016 * 9	 0D 39 \D+ 10 FF 19 00 00 00
- 1017 * 9	 0D 3A \D+ 10 FF 1A 00 00 00
- 1018 * 9	 0D 3B \D+ 10 FF 1B 00 00 00
- 1019 * 9	 0D 3C \D+ 10 FF 1C 00 00 00
- 1020 * 9	 0D 3D \D+ 10 FF 1D 00 00 00
- 1021 * 9	 0D 3E \D+ 10 FF 1E 00 00 00
- 1022 * 9	 0D 3F \D+ 10 FF 1F 00 00 00
- 1023 * 9	 0D 40 \D+ 10 FF 20 00 00 00
- 1024 * 9	 0D 41 \D+ 10 FF 21 00 00 00
- 1025 * 9	 0D 42 \D+ 10 FF 22 00 00 00
- 1026 * 9	 0D 43 \D+ 10 FF 23 00 00 00
- 1027 * 9	 0D 44 \D+ 10 FF 24 00 00 00
- 1028 * 9	 0D 45 \D+ 10 FF 25 00 00 00
- 1029 * 9	 0D 46 \D+ 10 FF 26 00 00 00
- 1030 * 9	 0D 47 \D+ 10 FF 27 00 00 00
- 1031 * 9	 0D 48 \D+ 10 FF 28 00 00 00
- 1032 * 9	 0D 49 \D+ 10 FF 29 00 00 00
- 1033 * 9	 0D 4A \D+ 10 FF 2A 00 00 00
- 1034 * 9	 0D 4B \D+ 10 FF 2B 00 00 00
- 1035 * 9	 0D 4C \D+ 10 FF 2C 00 00 00
- 1036 * 9	 0D 4D \D+ 10 FF 2D 00 00 00
- 1037 * 9	 0D 4E \D+ 10 FF 2E 00 00 00
- 1038 * 9	 0D 4F \D+ 10 FF 2F 00 00 00
- 1039 * 9	 0D 50 \D+ 10 FF 30 00 00 00
- 1040 * 9	 0D 51 \D+ 10 FF 31 00 00 00
- 1041 * 9	 0D 52 \D+ 10 FF 32 00 00 00
- 1042 * 9	 0D 53 \D+ 10 FF 33 00 00 00
- 1043 * 9	 0D 54 \D+ 10 FF 34 00 00 00
- 1044 * 9	 0D 55 \D+ 10 FF 35 00 00 00
- 1045 * 9	 0D 56 \D+ 10 FF 36 00 00 00
- 1046 * 9	 0D 57 \D+ 10 FF 37 00 00 00
- 1047 * 9	 0D 58 \D+ 10 FF 38 00 00 00
- 1048 * 9	 0D 59 \D+ 10 FF 39 00 00 00
- 1049 * 9	 0D 5A \D+ 10 FF 3A 00 00 00
- 1050 * 9	 0D 5B \D+ 10 FF 3B 00 00 00
- 1051 * 9	 0D 5C \D+ 10 FF 3C 00 00 00
- 1052 * 9	 0D 5D \D+ 10 FF 3D 00 00 00
- 1053 * 9	 0D 5E \D+ 10 FF 3E 00 00 00
- 1054 * 9	 0D 5F \D+ 10 FF 3F 00 00 00
- 1055 * 9	 0D 60 \D+ 10 FF 40 00 00 00
- 1056 * 9	 0D 61 \D+ 10 FF 41 00 00 00
- 1057 * 9	 0D 62 \D+ 10 FF 42 00 00 00
- 1058 * 9	 0D 63 \D+ 10 FF 43 00 00 00
+  991 * 9	 0D 20 \D= \DR FE FF 08 44 00 //this "main" param is used to allocate all of the graphics via the following action 6
+  992 * 9	 0D 21 \D+ 20 FF 01 00 00 00 //each sprite then gets its own param # to use in the final action 6's which determine placement
+  993 * 9	 0D 22 \D+ 20 FF 02 00 00 00
+  994 * 9	 0D 23 \D+ 20 FF 03 00 00 00
+  995 * 9	 0D 24 \D+ 20 FF 04 00 00 00
+  996 * 9	 0D 25 \D+ 20 FF 05 00 00 00
+  997 * 9	 0D 26 \D+ 20 FF 06 00 00 00
+  998 * 9	 0D 27 \D+ 20 FF 07 00 00 00
+  999 * 9	 0D 28 \D+ 20 FF 08 00 00 00
+ 1000 * 9	 0D 29 \D+ 20 FF 09 00 00 00
+ 1001 * 9	 0D 2A \D+ 20 FF 0A 00 00 00
+ 1002 * 9	 0D 2B \D+ 20 FF 0B 00 00 00
+ 1003 * 9	 0D 2C \D+ 20 FF 0C 00 00 00
+ 1004 * 9	 0D 2D \D+ 20 FF 0D 00 00 00
+ 1005 * 9	 0D 2E \D+ 20 FF 0E 00 00 00
+ 1006 * 9	 0D 2F \D+ 20 FF 0F 00 00 00
+ 1007 * 9	 0D 30 \D+ 20 FF 10 00 00 00
+ 1008 * 9	 0D 31 \D+ 20 FF 11 00 00 00
+ 1009 * 9	 0D 32 \D+ 20 FF 12 00 00 00
+ 1010 * 9	 0D 33 \D+ 20 FF 13 00 00 00
+ 1011 * 9	 0D 34 \D+ 20 FF 14 00 00 00
+ 1012 * 9	 0D 35 \D+ 20 FF 15 00 00 00
+ 1013 * 9	 0D 36 \D+ 20 FF 16 00 00 00
+ 1014 * 9	 0D 37 \D+ 20 FF 17 00 00 00
+ 1015 * 9	 0D 38 \D+ 20 FF 18 00 00 00
+ 1016 * 9	 0D 39 \D+ 20 FF 19 00 00 00
+ 1017 * 9	 0D 3A \D+ 20 FF 1A 00 00 00
+ 1018 * 9	 0D 3B \D+ 20 FF 1B 00 00 00
+ 1019 * 9	 0D 3C \D+ 20 FF 1C 00 00 00
+ 1020 * 9	 0D 3D \D+ 20 FF 1D 00 00 00
+ 1021 * 9	 0D 3E \D+ 20 FF 1E 00 00 00
+ 1022 * 9	 0D 3F \D+ 20 FF 1F 00 00 00
+ 1023 * 9	 0D 40 \D+ 20 FF 20 00 00 00
+ 1024 * 9	 0D 41 \D+ 20 FF 21 00 00 00
+ 1025 * 9	 0D 42 \D+ 20 FF 22 00 00 00
+ 1026 * 9	 0D 43 \D+ 20 FF 23 00 00 00
+ 1027 * 9	 0D 44 \D+ 20 FF 24 00 00 00
+ 1028 * 9	 0D 45 \D+ 20 FF 25 00 00 00
+ 1029 * 9	 0D 46 \D+ 20 FF 26 00 00 00
+ 1030 * 9	 0D 47 \D+ 20 FF 27 00 00 00
+ 1031 * 9	 0D 48 \D+ 20 FF 28 00 00 00
+ 1032 * 9	 0D 49 \D+ 20 FF 29 00 00 00
+ 1033 * 9	 0D 4A \D+ 20 FF 2A 00 00 00
+ 1034 * 9	 0D 4B \D+ 20 FF 2B 00 00 00
+ 1035 * 9	 0D 4C \D+ 20 FF 2C 00 00 00
+ 1036 * 9	 0D 4D \D+ 20 FF 2D 00 00 00
+ 1037 * 9	 0D 4E \D+ 20 FF 2E 00 00 00
+ 1038 * 9	 0D 4F \D+ 20 FF 2F 00 00 00
+ 1039 * 9	 0D 50 \D+ 20 FF 30 00 00 00
+ 1040 * 9	 0D 51 \D+ 20 FF 31 00 00 00
+ 1041 * 9	 0D 52 \D+ 20 FF 32 00 00 00
+ 1042 * 9	 0D 53 \D+ 20 FF 33 00 00 00
+ 1043 * 9	 0D 54 \D+ 20 FF 34 00 00 00
+ 1044 * 9	 0D 55 \D+ 20 FF 35 00 00 00
+ 1045 * 9	 0D 56 \D+ 20 FF 36 00 00 00
+ 1046 * 9	 0D 57 \D+ 20 FF 37 00 00 00
+ 1047 * 9	 0D 58 \D+ 20 FF 38 00 00 00
+ 1048 * 9	 0D 59 \D+ 20 FF 39 00 00 00
+ 1049 * 9	 0D 5A \D+ 20 FF 3A 00 00 00
+ 1050 * 9	 0D 5B \D+ 20 FF 3B 00 00 00
+ 1051 * 9	 0D 5C \D+ 20 FF 3C 00 00 00
+ 1052 * 9	 0D 5D \D+ 20 FF 3D 00 00 00
+ 1053 * 9	 0D 5E \D+ 20 FF 3E 00 00 00
+ 1054 * 9	 0D 5F \D+ 20 FF 3F 00 00 00
+ 1055 * 9	 0D 60 \D+ 20 FF 40 00 00 00
+ 1056 * 9	 0D 61 \D+ 20 FF 41 00 00 00
+ 1057 * 9	 0D 62 \D+ 20 FF 42 00 00 00
+ 1058 * 9	 0D 63 \D+ 20 FF 43 00 00 00
 
    //this allocates the following graphics (realsprites) into the sprites which were reserved earlier (in the order they are defined below)
- 1059 * 5	 06 10 02 03 FF 
+ 1059 * 5	 06 20 02 03 FF
 	//sprite number 00 00 (the first sprite below) now gets changed to whatever number the grm picked for the first of the reserved sprites, then each subsequent sprite
 	//is allocated that number + 1 (which corresponds to the number of the param above)
  1060 * 5	 0A 01 44 00 00
@@ -3179,77 +3179,77 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 
 
 	//this reserves some sprites into temp. params
- 1511 * 9	 0D 20 \D= \DR FE FF 08 3C 00 //this "main" param is used to allocate all of the graphics via the following action 6
- 1512 * 9	 0D 21 \D+ 10 FF 01 00 00 00 //each sprite then gets its own param # to use in the final action 6's which determine placement
- 1513 * 9	 0D 22 \D+ 10 FF 02 00 00 00
- 1514 * 9	 0D 23 \D+ 10 FF 03 00 00 00
- 1515 * 9	 0D 24 \D+ 10 FF 04 00 00 00
- 1516 * 9	 0D 25 \D+ 10 FF 05 00 00 00
- 1517 * 9	 0D 26 \D+ 10 FF 06 00 00 00
- 1518 * 9	 0D 27 \D+ 10 FF 07 00 00 00
- 1519 * 9	 0D 28 \D+ 10 FF 08 00 00 00
- 1520 * 9	 0D 29 \D+ 10 FF 09 00 00 00
- 1521 * 9	 0D 2A \D+ 10 FF 0A 00 00 00
- 1522 * 9	 0D 2B \D+ 10 FF 0B 00 00 00
- 1523 * 9	 0D 2C \D+ 10 FF 0C 00 00 00
- 1524 * 9	 0D 2D \D+ 10 FF 0D 00 00 00
- 1525 * 9	 0D 2E \D+ 10 FF 0E 00 00 00
- 1526 * 9	 0D 2F \D+ 10 FF 0F 00 00 00
- 1527 * 9	 0D 30 \D+ 10 FF 10 00 00 00
- 1528 * 9	 0D 31 \D+ 10 FF 11 00 00 00
- 1529 * 9	 0D 32 \D+ 10 FF 12 00 00 00
- 1530 * 9	 0D 33 \D+ 10 FF 13 00 00 00
- 1531 * 9	 0D 34 \D+ 10 FF 14 00 00 00
- 1532 * 9	 0D 35 \D+ 10 FF 15 00 00 00
- 1533 * 9	 0D 36 \D+ 10 FF 16 00 00 00
- 1534 * 9	 0D 37 \D+ 10 FF 17 00 00 00
- 1535 * 9	 0D 38 \D+ 10 FF 18 00 00 00
- 1536 * 9	 0D 39 \D+ 10 FF 19 00 00 00
- 1537 * 9	 0D 3A \D+ 10 FF 1A 00 00 00
- 1538 * 9	 0D 3B \D+ 10 FF 1B 00 00 00
- 1539 * 9	 0D 3C \D+ 10 FF 1C 00 00 00
- 1540 * 9	 0D 3D \D+ 10 FF 1D 00 00 00
- 1541 * 9	 0D 3E \D+ 10 FF 1E 00 00 00
- 1542 * 9	 0D 3F \D+ 10 FF 1F 00 00 00
- 1543 * 9	 0D 40 \D+ 10 FF 20 00 00 00
- 1544 * 9	 0D 41 \D+ 10 FF 21 00 00 00
- 1545 * 9	 0D 42 \D+ 10 FF 22 00 00 00
- 1546 * 9	 0D 43 \D+ 10 FF 23 00 00 00
- 1547 * 9	 0D 44 \D+ 10 FF 24 00 00 00
- 1548 * 9	 0D 45 \D+ 10 FF 25 00 00 00
- 1549 * 9	 0D 46 \D+ 10 FF 26 00 00 00
- 1550 * 9	 0D 47 \D+ 10 FF 27 00 00 00
- 1551 * 9	 0D 48 \D+ 10 FF 28 00 00 00
- 1552 * 9	 0D 49 \D+ 10 FF 29 00 00 00
- 1553 * 9	 0D 4A \D+ 10 FF 2A 00 00 00
- 1554 * 9	 0D 4B \D+ 10 FF 2B 00 00 00
- 1555 * 9	 0D 4C \D+ 10 FF 2C 00 00 00
- 1556 * 9	 0D 4D \D+ 10 FF 2D 00 00 00
- 1557 * 9	 0D 4E \D+ 10 FF 2E 00 00 00
- 1558 * 9	 0D 4F \D+ 10 FF 2F 00 00 00
- 1559 * 9	 0D 50 \D+ 10 FF 30 00 00 00
- 1560 * 9	 0D 51 \D+ 10 FF 31 00 00 00
- 1561 * 9	 0D 52 \D+ 10 FF 32 00 00 00
- 1562 * 9	 0D 53 \D+ 10 FF 33 00 00 00
- 1563 * 9	 0D 54 \D+ 10 FF 34 00 00 00
- 1564 * 9	 0D 55 \D+ 10 FF 35 00 00 00
- 1565 * 9	 0D 56 \D+ 10 FF 36 00 00 00
- 1566 * 9	 0D 57 \D+ 10 FF 37 00 00 00
- 1567 * 9	 0D 58 \D+ 10 FF 38 00 00 00
- 1568 * 9	 0D 59 \D+ 10 FF 39 00 00 00
- 1569 * 9	 0D 5A \D+ 10 FF 3A 00 00 00
- 1570 * 9	 0D 5B \D+ 10 FF 3B 00 00 00
- 1571 * 9	 0D 5C \D+ 10 FF 3C 00 00 00
- 1572 * 9	 0D 5D \D+ 10 FF 3D 00 00 00
- 1573 * 9	 0D 5E \D+ 10 FF 3E 00 00 00
- 1574 * 9	 0D 5F \D+ 10 FF 3F 00 00 00
- 1575 * 9	 0D 60 \D+ 10 FF 40 00 00 00
- 1576 * 9	 0D 61 \D+ 10 FF 41 00 00 00
- 1577 * 9	 0D 62 \D+ 10 FF 42 00 00 00
- 1578 * 9	 0D 63 \D+ 10 FF 43 00 00 00
+ 1511 * 9	 0D 20 \D= \DR FE FF 08 44 00 //this "main" param is used to allocate all of the graphics via the following action 6
+ 1512 * 9	 0D 21 \D+ 20 FF 01 00 00 00 //each sprite then gets its own param # to use in the final action 6's which determine placement
+ 1513 * 9	 0D 22 \D+ 20 FF 02 00 00 00
+ 1514 * 9	 0D 23 \D+ 20 FF 03 00 00 00
+ 1515 * 9	 0D 24 \D+ 20 FF 04 00 00 00
+ 1516 * 9	 0D 25 \D+ 20 FF 05 00 00 00
+ 1517 * 9	 0D 26 \D+ 20 FF 06 00 00 00
+ 1518 * 9	 0D 27 \D+ 20 FF 07 00 00 00
+ 1519 * 9	 0D 28 \D+ 20 FF 08 00 00 00
+ 1520 * 9	 0D 29 \D+ 20 FF 09 00 00 00
+ 1521 * 9	 0D 2A \D+ 20 FF 0A 00 00 00
+ 1522 * 9	 0D 2B \D+ 20 FF 0B 00 00 00
+ 1523 * 9	 0D 2C \D+ 20 FF 0C 00 00 00
+ 1524 * 9	 0D 2D \D+ 20 FF 0D 00 00 00
+ 1525 * 9	 0D 2E \D+ 20 FF 0E 00 00 00
+ 1526 * 9	 0D 2F \D+ 20 FF 0F 00 00 00
+ 1527 * 9	 0D 30 \D+ 20 FF 10 00 00 00
+ 1528 * 9	 0D 31 \D+ 20 FF 11 00 00 00
+ 1529 * 9	 0D 32 \D+ 20 FF 12 00 00 00
+ 1530 * 9	 0D 33 \D+ 20 FF 13 00 00 00
+ 1531 * 9	 0D 34 \D+ 20 FF 14 00 00 00
+ 1532 * 9	 0D 35 \D+ 20 FF 15 00 00 00
+ 1533 * 9	 0D 36 \D+ 20 FF 16 00 00 00
+ 1534 * 9	 0D 37 \D+ 20 FF 17 00 00 00
+ 1535 * 9	 0D 38 \D+ 20 FF 18 00 00 00
+ 1536 * 9	 0D 39 \D+ 20 FF 19 00 00 00
+ 1537 * 9	 0D 3A \D+ 20 FF 1A 00 00 00
+ 1538 * 9	 0D 3B \D+ 20 FF 1B 00 00 00
+ 1539 * 9	 0D 3C \D+ 20 FF 1C 00 00 00
+ 1540 * 9	 0D 3D \D+ 20 FF 1D 00 00 00
+ 1541 * 9	 0D 3E \D+ 20 FF 1E 00 00 00
+ 1542 * 9	 0D 3F \D+ 20 FF 1F 00 00 00
+ 1543 * 9	 0D 40 \D+ 20 FF 20 00 00 00
+ 1544 * 9	 0D 41 \D+ 20 FF 21 00 00 00
+ 1545 * 9	 0D 42 \D+ 20 FF 22 00 00 00
+ 1546 * 9	 0D 43 \D+ 20 FF 23 00 00 00
+ 1547 * 9	 0D 44 \D+ 20 FF 24 00 00 00
+ 1548 * 9	 0D 45 \D+ 20 FF 25 00 00 00
+ 1549 * 9	 0D 46 \D+ 20 FF 26 00 00 00
+ 1550 * 9	 0D 47 \D+ 20 FF 27 00 00 00
+ 1551 * 9	 0D 48 \D+ 20 FF 28 00 00 00
+ 1552 * 9	 0D 49 \D+ 20 FF 29 00 00 00
+ 1553 * 9	 0D 4A \D+ 20 FF 2A 00 00 00
+ 1554 * 9	 0D 4B \D+ 20 FF 2B 00 00 00
+ 1555 * 9	 0D 4C \D+ 20 FF 2C 00 00 00
+ 1556 * 9	 0D 4D \D+ 20 FF 2D 00 00 00
+ 1557 * 9	 0D 4E \D+ 20 FF 2E 00 00 00
+ 1558 * 9	 0D 4F \D+ 20 FF 2F 00 00 00
+ 1559 * 9	 0D 50 \D+ 20 FF 30 00 00 00
+ 1560 * 9	 0D 51 \D+ 20 FF 31 00 00 00
+ 1561 * 9	 0D 52 \D+ 20 FF 32 00 00 00
+ 1562 * 9	 0D 53 \D+ 20 FF 33 00 00 00
+ 1563 * 9	 0D 54 \D+ 20 FF 34 00 00 00
+ 1564 * 9	 0D 55 \D+ 20 FF 35 00 00 00
+ 1565 * 9	 0D 56 \D+ 20 FF 36 00 00 00
+ 1566 * 9	 0D 57 \D+ 20 FF 37 00 00 00
+ 1567 * 9	 0D 58 \D+ 20 FF 38 00 00 00
+ 1568 * 9	 0D 59 \D+ 20 FF 39 00 00 00
+ 1569 * 9	 0D 5A \D+ 20 FF 3A 00 00 00
+ 1570 * 9	 0D 5B \D+ 20 FF 3B 00 00 00
+ 1571 * 9	 0D 5C \D+ 20 FF 3C 00 00 00
+ 1572 * 9	 0D 5D \D+ 20 FF 3D 00 00 00
+ 1573 * 9	 0D 5E \D+ 20 FF 3E 00 00 00
+ 1574 * 9	 0D 5F \D+ 20 FF 3F 00 00 00
+ 1575 * 9	 0D 60 \D+ 20 FF 40 00 00 00
+ 1576 * 9	 0D 61 \D+ 20 FF 41 00 00 00
+ 1577 * 9	 0D 62 \D+ 20 FF 42 00 00 00
+ 1578 * 9	 0D 63 \D+ 20 FF 43 00 00 00
 
    //this allocates the following graphics (realsprites) into the sprites which were reserved earlier (in the order they are defined below)
- 1579 * 5	 06 10 02 03 FF 
+ 1579 * 5	 06 20 02 03 FF
 	//sprite number 00 00 (the first sprite below) now gets changed to whatever number the grm picked for the first of the reserved sprites, then each subsequent sprite
 	//is allocated that number + 1 (which corresponds to the number of the param above)
  1580 * 5	 0A 01 44 00 00
