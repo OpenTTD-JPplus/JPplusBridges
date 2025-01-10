@@ -5,13 +5,13 @@
 // Escapes: D= = DR D+ = DF D- = DC Du* = DM D* = DnF Du<< = DnC D<< = DO D& D| Du/ D/ Du% D%
 // Format: spritenum imagefile depth xpos ypos xsize ysize xrel yrel zoom flags
     0 * 4	 D3 01 00 00
-    1 * 289	 14 "C" 
+    1 * 304	 14 "C" 
 		"INFO"
-			"T" "NAME" 00 "JP+ Bridges Extension 0.9 [JGRPP]" 00
+			"T" "NAME" 00 "JP+ Bridges Extension 1.0 [For JapanSet3:Tracks]" 00
 			"T" "DESC" 00 0D "REQUIRES JGR PATCH PACK! Coded by Emperor Jake. GFX by Emperor Jake, GarryG, Sanchimaru and Erato. Based on code by Wallyweb, Quast65 and Andrew350" 00
 			"T" "URL_" 00 "https://www.tt-forums.net/viewtopic.php?p=1230518" 00
 			"B" "PALS" \w1 "D"
-			"B" "VRSN" \w4 \d09
+			"B" "VRSN" \w4 \d20
 			"B" "MINV" \w4 \d00
 		00
 	00
@@ -40,8 +40,8 @@
 
 
 
-    5 * 232	 08 07 4A 4B 47 45
-	"JP+ Bridges Extension 0.8" 00 0D "JP+ Bridges Extension, for JGR Patchpack specific features. Load after JP+ Bridges! Coded by Emperor Jake. GFX by Emperor Jake, Andrew350 and GarryG. Based on code by Wallyweb, Quast65 and Andrew350" 00
+    5 * 269	 08 07 4A 4B 47 45
+	"JP+ Bridges Extension 1.0" 00 0D "JP+ Bridges Extension, for JGR Patchpack specific features. Designed to match JapanSet3: Tracks. Load after JP+ Bridges! Coded by Emperor Jake. GFX by Emperor Jake, Andrew350 and GarryG. Based on code by Wallyweb, Quast65 and Andrew350" 00
 
 
 
@@ -60,7 +60,7 @@
 			 0B F0 //cost factor
 			 0C 00 00 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
-			 0F 9E 07 00 00 //long format intro date
+			 0F 80 07 00 00 //long format intro date
 			 10 27 DC //purchase text. these texts #s increase in line with above
 			 11 28 DC //rail bridge info window
 			 12 29 DC //road bridge info window
@@ -181,15 +181,15 @@
 
    //and finally these action 6's tell where to place each of the reserved sprites (organized by table layout for easier viewing)
    //Ack, I had to split them up individually because there aren't enough hex ids to do all in one
-  114 * 32	 06
+  114 * 56	 06
 			 0A 02 08    0F 02 0C    //rail x 16 19
 			 10 02 18    0D 02 1C    //rail y 17 18
 			 24 02 28    25 02 2C    22 02 30 //road x
 			 26 02 38    27 02 3C    23 02 40 //road y
-			     //mono x
-			     //mono y
-			     //mlev x
-			     //mlev y
+			 0A 02 48    0F 02 4C    //mono x
+			 10 02 58    0D 02 5C    //mono y
+			 0A 02 68    0F 02 6C    //mlev x
+			 10 02 78    0D 02 7C    //mlev y
 			 FF
 
 // SKY WAY Bridge 09
@@ -200,20 +200,20 @@
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
-E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
-E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
-0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
-0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  116 * 38	 06
+  116 * 74	 06
 			 0A 02 08    0F 02 0C    08 02 10    //rail x 12 15
 			 10 02 18    0D 02 1C    09 02 20    //rail y 13 14
 			 28 02 28    29 02 2C    22 02 30   //road x
 			 2A 02 38    2B 02 3C    23 02 40  //road y
-			     //mono x
-			     //mono y
-			     //mlev x
-			     //mlev y
+			 0A 02 48    0F 02 4C    08 02 50    //mono x
+			 10 02 58    0D 02 5C    09 02 60    //mono y
+			 0A 02 68    0F 02 6C    08 02 70    //mlev x
+			 10 02 78    0D 02 7C    09 02 80    //mlev y
 			 FF
 
 //table 01
@@ -223,20 +223,20 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
-E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
-E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
-0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
-0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  118 * 38	 06
+  118 * 74	 06
 			 0A 02 08    0F 02 0C    08 02 10    //rail x
 			 10 02 18    0D 02 1C    09 02 20    //rail y
 			 2C 02 28    2D 02 2C    22 02 30   //road x
 			 2E 02 38    2F 02 3C    23 02 40  //road y
-			     //mono x
-			     //mono y
-			     //mlev x
-			     //mlev y
+			 0A 02 48    0F 02 4C    08 02 50    //mono x
+			 10 02 58    0D 02 5C    09 02 60    //mono y
+			 0A 02 68    0F 02 6C    08 02 70    //mlev x
+			 10 02 78    0D 02 7C    09 02 80    //mlev y
 			 FF
 
 //table 02
@@ -246,20 +246,20 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
-E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
-E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
-0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
-0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  120 * 38	 06
+  120 * 74	 06
 			 0A 02 08    0F 02 0C    08 02 10    //rail x
 			 10 02 18    0D 02 1C    09 02 20    //rail y
 			 2C 02 28    2D 02 2C    22 02 30    //road x
 			 2E 02 38    2F 02 3C    23 02 40    //road y
-			     //mono x
-			     //mono y
-			     //mlev x
-			     //mlev y
+			 0A 02 48    0F 02 4C    08 02 50    //mono x
+			 10 02 58    0D 02 5C    09 02 60    //mono y
+			 0A 02 68    0F 02 6C    08 02 70    //mlev x
+			 10 02 78    0D 02 7C    09 02 80    //mlev y
 			 FF
 
 //table 03
@@ -269,20 +269,20 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
-E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
-E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
-0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
-0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  122 * 38	 06
+  122 * 74	 06
 			 0A 02 08    0F 02 0C    08 02 10     //rail x
 			 10 02 18    0D 02 1C    09 02 20    //rail y
 			 2C 02 28    2D 02 2C    22 02 30   //road x
 			 2E 02 38    2F 02 3C    23 02 40  //road y
-			     //mono x
-			     //mono y
-			     //mlev x
-			     //mlev y
+			 0A 02 48    0F 02 4C    08 02 50    //mono x
+			 10 02 58    0D 02 5C    09 02 60    //mono y
+			 0A 02 68    0F 02 6C    08 02 70    //mlev x
+			 10 02 78    0D 02 7C    09 02 80    //mlev y
 			 FF
 
 //table 04
@@ -292,20 +292,20 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
-E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
-E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
-0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
-0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  124 * 38	 06
+  124 * 74	 06
 			 0A 02 08    0F 02 0C    08 02 10    //rail x
 			 10 02 18    0D 02 1C    09 02 20    //rail y
 			 2C 02 28    2D 02 2C    22 02 30    //road x
 			 2E 02 38    2F 02 3C    23 02 40    //road y
-			     //mono x
-			     //mono y
-			     //mlev x
-			     //mlev y
+			 0A 02 48    0F 02 4C    08 02 50    //mono x
+			 10 02 58    0D 02 5C    09 02 60    //mono y
+			 0A 02 68    0F 02 6C    08 02 70    //mlev x
+			 10 02 78    0D 02 7C    09 02 80    //mlev y
 			 FF
 
 //table 05
@@ -315,20 +315,20 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
-E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
-E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
-0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
-0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  126 * 50	 06
+  126 * 98	 06
 			 00 02 08    01 02 0C    02 02 10    03 02 14    //rail flat
 			 04 02 18    05 02 1C    06 02 20    07 02 24    //rail ramp
 			 1A 02 28    1B 02 2C    1C 02 30    1D 02 34    //road flat
 			 1E 02 38    1F 02 3C    20 02 40    21 02 44    //road ramp
-			     //mono flat
-			     //mono ramp
-			     //mlev flat
-			     //mlev ramp
+			 00 02 48    01 02 4C    02 02 50    03 02 54    //mono flat
+			 04 02 58    05 02 5C    06 02 60    07 02 64    //mono ramp
+			 00 02 68    01 02 6C    02 02 70    03 02 74    //mlev flat
+			 04 02 78    05 02 7C    06 02 80    07 02 84    //mlev ramp
 			 FF
 
 //table 06
@@ -338,10 +338,10 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail ramp: northern end X, northern end Y, southern end X, southern end Y //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //road flat: northern end X, northern end Y, southern end X, southern end Y //28, 2C, 30, 34
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //road ramp: northern end X, northern end Y, southern end X, southern end Y //38, 3C, 40, 44
-E7 90 23 03  E9 90 23 03  E6 90 23 03  E8 90 23 03 //mono flat: northern end X, northern end Y, southern end X, southern end Y 
-EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, northern end Y, southern end X, southern end Y 
-0F 91 23 03  11 91 23 03  0E 91 23 03  10 91 23 03 //mlev flat: northern end X, northern end Y, southern end X, southern end Y 
-13 91 23 03  15 91 23 03  12 91 23 03  14 91 23 03 //mlev ramp: northern end X, northern end Y, southern end X, southern end Y //78, 7C, 80, 84
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //mono flat: northern end X, northern end Y, southern end X, southern end Y 
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //mono ramp: northern end X, northern end Y, southern end X, southern end Y 
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //mlev flat: northern end X, northern end Y, southern end X, southern end Y 
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //mlev ramp: northern end X, northern end Y, southern end X, southern end Y //78, 7C, 80, 84
 
 
 //================
@@ -359,7 +359,7 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 			 0B F0 //cost factor
 			 0C 00 00 //max speed
 			 0E 01 //flags (set to 01 to disable far pillars)
-			 0F 9E 07 00 00 //long format intro date
+			 0F 80 07 00 00 //long format intro date
 			 10 2A DC //purchase text. these texts #s increase in line with above
 			 11 2B DC //rail bridge info window
 			 12 2C DC //road bridge info window
@@ -480,15 +480,15 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 
    //and finally these action 6's tell where to place each of the reserved sprites (organized by table layout for easier viewing)
    //Ack, I had to split them up individually because there aren't enough hex ids to do all in one
-  236 * 26	 06
+  236 * 50	 06
 			 0E 02 08    0B 02 0C    //rail x (part 0 should probably never have pillars set)
 			 0C 02 18    11 02 1C    //rail y
 			 24 02 28    25 02 2C    //road x
 			 26 02 38    27 02 3C    //road y
-			     //mono x
-			     //mono y
-			     //mlev x
-			     //mlev y
+			 0E 02 48    0B 02 4C    //mono x
+			 0C 02 58    11 02 5C    //mono y
+			 0E 02 68    0B 02 6C    //mlev x
+			 0C 02 78    11 02 7C    //mlev y
 			 FF
 
 // SKY WAY Bridge 09
@@ -499,20 +499,20 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
-E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
-E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
-0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
-0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  238 * 32	 06
+  238 * 68	 06
 			 0E 02 08    0B 02 0C    08 02 10    //rail x 12 15
 			 0C 02 18    11 02 1C    09 02 20    //rail y 13 14
 			 24 02 28    25 02 2C    //road x
 			 26 02 38    27 02 3C    //road y
-			     //mono x
-			     //mono y
-			     //mlev x
-			     //mlev y
+			 0E 02 48    0B 02 4C    08 02 50    //mono x
+			 0C 02 58    11 02 5C    09 02 60    //mono y
+			 0E 02 68    0B 02 6C    08 02 70    //mlev x
+			 0C 02 78    11 02 7C    09 02 80    //mlev y
 			 FF
 
 //table 01
@@ -522,20 +522,20 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
-E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
-E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
-0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
-0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  240 * 32	 06
+  240 * 68	 06
 			 0E 02 08    0B 02 0C    08 02 10    //rail x
 			 0C 02 18    11 02 1C    09 02 20    //rail y
 			 24 02 28    25 02 2C    //road x
 			 26 02 38    27 02 3C    //road y
-			     //mono x
-			     //mono y
-			     //mlev x
-			     //mlev y
+			 0E 02 48    0B 02 4C    08 02 50    //mono x
+			 0C 02 58    11 02 5C    09 02 60    //mono y
+			 0E 02 68    0B 02 6C    08 02 70    //mlev x
+			 0C 02 78    11 02 7C    09 02 80    //mlev y
 			 FF
 
 //table 02
@@ -545,20 +545,20 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
-E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
-E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
-0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
-0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  242 * 32	 06
+  242 * 68	 06
 			 0E 02 08    0B 02 0C    08 02 10    //rail x
 			 0C 02 18    11 02 1C    09 02 20    //rail y
 			 24 02 28    25 02 2C    //road x
 			 26 02 38    27 02 3C    //road y
-			     //mono x
-			     //mono y
-			     //mlev x
-			     //mlev y
+			 0E 02 48    0B 02 4C    08 02 50    //mono x
+			 0C 02 58    11 02 5C    09 02 60    //mono y
+			 0E 02 68    0B 02 6C    08 02 70    //mlev x
+			 0C 02 78    11 02 7C    09 02 80    //mlev y
 			 FF
 
 //table 03
@@ -568,20 +568,20 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
-E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
-E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
-0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
-0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  244 * 32	 06
+  244 * 68	 06
 			 0E 02 08    0B 02 0C    08 02 10     //rail x
 			 0C 02 18    11 02 1C    09 02 20    //rail y
 			 24 02 28    25 02 2C    //road x
 			 26 02 38    27 02 3C    //road y
-			     //mono x
-			     //mono y
-			     //mlev x
-			     //mlev y
+			 0E 02 48    0B 02 4C    08 02 50    //mono x
+			 0C 02 58    11 02 5C    09 02 60    //mono y
+			 0E 02 68    0B 02 6C    08 02 70    //mlev x
+			 0C 02 78    11 02 7C    09 02 80    //mlev y
 			 FF
 
 //table 04
@@ -591,20 +591,20 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
-E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
-E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
-0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
-0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  246 * 32	 06
+  246 * 68	 06
 			 0E 02 08    0B 02 0C    08 02 10    //rail x
 			 0C 02 18    11 02 1C    09 02 20    //rail y
 			 24 02 28    25 02 2C    //road x
 			 26 02 38    27 02 3C    //road y
-			     //mono x
-			     //mono y
-			     //mlev x
-			     //mlev y
+			 0E 02 48    0B 02 4C    08 02 50    //mono x
+			 0C 02 58    11 02 5C    09 02 60    //mono y
+			 0E 02 68    0B 02 6C    08 02 70    //mlev x
+			 0C 02 78    11 02 7C    09 02 80    //mlev y
 			 FF
 
 //table 05
@@ -614,20 +614,20 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
-E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
-E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
-0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
-0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  248 * 50	 06
+  248 * 98	 06
 			 00 02 08    01 02 0C    02 02 10    03 02 14    //rail flat
 			 04 02 18    05 02 1C    06 02 20    07 02 24    //rail ramp
 			 1A 02 28    1B 02 2C    1C 02 30    1D 02 34    //road flat
 			 1E 02 38    1F 02 3C    20 02 40    21 02 44    //road ramp
-			     //mono flat
-			     //mono ramp
-			     //mlev flat
-			     //mlev ramp
+			 00 02 48    01 02 4C    02 02 50    03 02 54    //mono flat
+			 04 02 58    05 02 5C    06 02 60    07 02 64    //mono ramp
+			 00 02 68    01 02 6C    02 02 70    03 02 74    //mlev flat
+			 04 02 78    05 02 7C    06 02 80    07 02 84    //mlev ramp
 			 FF
 
 //table 06
@@ -637,10 +637,10 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail ramp: northern end X, northern end Y, southern end X, southern end Y //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //road flat: northern end X, northern end Y, southern end X, southern end Y //28, 2C, 30, 34
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //road ramp: northern end X, northern end Y, southern end X, southern end Y //38, 3C, 40, 44
-E7 90 23 03  E9 90 23 03  E6 90 23 03  E8 90 23 03 //mono flat: northern end X, northern end Y, southern end X, southern end Y 
-EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, northern end Y, southern end X, southern end Y 
-0F 91 23 03  11 91 23 03  0E 91 23 03  10 91 23 03 //mlev flat: northern end X, northern end Y, southern end X, southern end Y 
-13 91 23 03  15 91 23 03  12 91 23 03  14 91 23 03 //mlev ramp: northern end X, northern end Y, southern end X, southern end Y //78, 7C, 80, 84
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //mono flat: northern end X, northern end Y, southern end X, southern end Y 
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //mono ramp: northern end X, northern end Y, southern end X, southern end Y 
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //mlev flat: northern end X, northern end Y, southern end X, southern end Y 
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //mlev ramp: northern end X, northern end Y, southern end X, southern end Y //78, 7C, 80, 84
 
 
 //================
@@ -779,15 +779,15 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 
    //and finally these action 6's tell where to place each of the reserved sprites (organized by table layout for easier viewing)
    //Ack, I had to split them up individually because there aren't enough hex ids to do all in one
-  358 * 26	 06
+  358 * 50	 06
 			 0A 02 08    0B 02 0C    //rail x (part 0 should probably never have pillars set)
 			 0C 02 18    0D 02 1C    //rail y
 			 28 02 28    29 02 2C    //road x
 			 2A 02 38    2B 02 3C    //road y
-			     //mono x
-			     //mono y
-			     //mlev x
-			     //mlev y
+			 0A 02 48    0B 02 4C    //mono x
+			 0C 02 58    0D 02 5C    //mono y
+			 0A 02 68    0B 02 6C    //mlev x
+			 0C 02 78    0D 02 7C    //mlev y
 			 FF
 
 //!!Error (141): ID 0F out of valid range (00..0C).
@@ -797,20 +797,20 @@ EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, 
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
-E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
-E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
-0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
-0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  360 * 38	 06
+  360 * 74	 06
 			 0A 02 08    0B 02 0C    08 02 10    //rail x
 			 0C 02 18    0D 02 1C    09 02 20    //rail y
 			 24 02 28    25 02 2C    22 02 30    //road x
 			 26 02 38    27 02 3C    23 02 40    //road y
-			     //mono x
-			     //mono y
-			     //mlev x
-			     //mlev y
+			 0A 02 48    0B 02 4C    08 02 50	//mono x
+			 0C 02 58    0D 02 5C    09 02 60	//mono y
+			 0A 02 68    0B 02 6C    08 02 70	//mlev x
+			 0C 02 78    0D 02 7C    09 02 80	//mlev y
 			 FF
 
 //table 01
@@ -820,20 +820,20 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
-E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
-E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
-0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
-0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  362 * 38	 06
+  362 * 74	 06
 			 0A 02 08    0B 02 0C    08 02 10    //rail x
 			 0C 02 18    0D 02 1C    09 02 20    //rail y
 			 24 02 28    25 02 2C    22 02 30    //road x
 			 26 02 38    27 02 3C    23 02 40    //road y
-			     //mono x
-			     //mono y
-			     //mlev x
-			     //mlev y
+			 0A 02 48    0B 02 4C    08 02 50	//mono x
+			 0C 02 58    0D 02 5C    09 02 60	//mono y
+			 0A 02 68    0B 02 6C    08 02 70	//mlev x
+			 0C 02 78    0D 02 7C    09 02 80	//mlev y
 			 FF
 
 //table 02
@@ -843,20 +843,20 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
-E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
-E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
-0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
-0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  364 * 32	 06
+  364 * 68	 06
 			 0A 02 08    0B 02 0C    08 02 10    //rail x
 			 0C 02 18    0D 02 1C    09 02 20    //rail y
 			 28 02 28    29 02 2C    //road x
 			 2A 02 38    2B 02 3C    //road y
-			     //mono x
-			     //mono y
-			     //mlev x
-			     //mlev y
+			 0A 02 48    0B 02 4C    08 02 50	//mono x
+			 0C 02 58    0D 02 5C    09 02 60	//mono y
+			 0A 02 68    0B 02 6C    08 02 70	//mlev x
+			 0C 02 78    0D 02 7C    09 02 80	//mlev y
 			 FF
 
 //table 03
@@ -866,20 +866,20 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
-E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
-E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
-0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
-0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  366 * 38	 06
+  366 * 74	 06
 			 0A 02 08    0B 02 0C    08 02 10    //rail x
 			 0C 02 18    0D 02 1C    09 02 20    //rail y
 			 30 02 28    31 02 2C    22 02 30    //road x
 			 32 02 38    33 02 3C    23 02 40    //road y
-			     //mono x
-			     //mono y
-			     //mlev x
-			     //mlev y
+			 0A 02 48    0B 02 4C    08 02 50	//mono x
+			 0C 02 58    0D 02 5C    09 02 60	//mono y
+			 0A 02 68    0B 02 6C    08 02 70	//mlev x
+			 0C 02 78    0D 02 7C    09 02 80	//mlev y
 			 FF
 
 //table 04
@@ -889,20 +889,20 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
-E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
-E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
-0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
-0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  368 * 32	 06
+  368 * 68	 06
 			 0A 02 08    0B 02 0C    08 02 10    //rail x
 			 0C 02 18    0D 02 1C    09 02 20    //rail y
 			 2C 02 28    2D 02 2C    //road x
 			 2E 02 38    2F 02 3C    //road y
-			     //mono x
-			     //mono y
-			     //mlev x
-			     //mlev y
+			 0A 02 48    0B 02 4C    08 02 50	//mono x
+			 0C 02 58    0D 02 5C    09 02 60	//mono y
+			 0A 02 68    0B 02 6C    08 02 70	//mlev x
+			 0C 02 78    0D 02 7C    09 02 80	//mlev y
 			 FF
 
 //table 05
@@ -912,20 +912,20 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail Y: Back&Floor, Front, Pillars, 0 //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road X: Back&Floor, Front, Pillars, 0 //28, 2C, 30, 34
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Road Y: Back&Floor, Front, Pillars, 0 //38, 3C, 40, 44
-E4 10 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
-E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
-0C 11 00 00  C7 09 00 00  C9 09 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
-0D 11 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev X: Back&Floor, Front, Pillars, 0
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //Mlev Y: Back&Floor, Front, Pillars, 0 //78, 7C, 80, 84
 
-  370 * 50	 06
+  370 * 98	 06
 			 00 02 08    01 02 0C    02 02 10    03 02 14    //rail flat
 			 04 02 18    05 02 1C    06 02 20    07 02 24    //rail ramp
 			 1A 02 28    1B 02 2C    1C 02 30    1D 02 34    //road flat
 			 1E 02 38    1F 02 3C    20 02 40    21 02 44    //road ramp
-			     //mono flat
-			     //mono ramp
-			     //mlev flat
-			     //mlev ramp
+			 00 02 48    01 02 4C    02 02 50    03 02 54    //mono flat
+			 04 02 58    05 02 5C    06 02 60    07 02 64    //mono ramp
+			 00 02 68    01 02 6C    02 02 70    03 02 74    //mlev flat
+			 04 02 78    05 02 7C    06 02 80    07 02 84    //mlev ramp
 			 FF
 
 //table 06
@@ -935,10 +935,10 @@ E5 10 00 00  C8 09 00 00  CA 09 00 00  00 00 00 00 //Mono Y: Back&Floor, Front, 
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //rail ramp: northern end X, northern end Y, southern end X, southern end Y //18, 1C, 20, 24
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //road flat: northern end X, northern end Y, southern end X, southern end Y //28, 2C, 30, 34
 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //road ramp: northern end X, northern end Y, southern end X, southern end Y //38, 3C, 40, 44
-E7 90 23 03  E9 90 23 03  E6 90 23 03  E8 90 23 03 //mono flat: northern end X, northern end Y, southern end X, southern end Y 
-EB 90 23 03  ED 90 23 03  EA 90 23 03  EC 90 23 03 //mono ramp: northern end X, northern end Y, southern end X, southern end Y 
-0F 91 23 03  11 91 23 03  0E 91 23 03  10 91 23 03 //mlev flat: northern end X, northern end Y, southern end X, southern end Y 
-13 91 23 03  15 91 23 03  12 91 23 03  14 91 23 03 //mlev ramp: northern end X, northern end Y, southern end X, southern end Y //78, 7C, 80, 84
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //mono flat: northern end X, northern end Y, southern end X, southern end Y 
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //mono ramp: northern end X, northern end Y, southern end X, southern end Y 
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //mlev flat: northern end X, northern end Y, southern end X, southern end Y 
+00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00 //mlev ramp: northern end X, northern end Y, southern end X, southern end Y //78, 7C, 80, 84
 
 
 
